@@ -2,7 +2,6 @@
 
 <html class="dark" lang="en">
 <head>
-<meta name="google-site-verification" content="0mAKhBmdT6xoq84LTV5QSqVt0i0WmY84Ax4OYzLTZY8" />
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
@@ -48,9 +47,14 @@
   "logo": "https://joelxorbit.com/logo.png",
   "description": "Joelx Orbit is a full-service web and mobile app development company specializing in Android app development, iOS app development, Flutter, React Native, ecommerce website development, UI/UX design, and custom web application development.",
   "foundingDate": "2020",
-  "sameAs": [],
+  "sameAs": [
+    "https://www.instagram.com/joelxorbit/",
+    "https://www.youtube.com/@joelxorbit"
+  ],
   "contactPoint": {
     "@type": "ContactPoint",
+    "telephone": "+91-8838343971",
+    "email": "joelxorbit@gmail.com",
     "contactType": "customer service",
     "availableLanguage": ["English"]
   },
@@ -759,20 +763,106 @@
 
 </main>
 
-<!-- BottomNavBar (Mobile & Global Anchor) -->
-<div class="fixed bottom-8 left-0 w-full flex justify-center px-4 z-50">
-  <nav class="bg-[#1a1a1a]/60 backdrop-blur-xl rounded-full w-[90%] md:w-auto md:px-8 h-16 flex items-center justify-around md:justify-center md:gap-12 border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
-    <a class="flex items-center justify-center text-gray-400 p-3 hover:bg-white/10 rounded-full transition-all" href="#">
-      <span class="material-symbols-outlined" data-icon="home">home</span>
-    </a>
-    <a class="flex items-center justify-center bg-[#f9c591] text-[#0e0e0e] rounded-full p-3 transition-all scale-100 active:scale-90" href="#">
-      <span class="material-symbols-outlined" data-icon="grid_view" style="font-variation-settings: 'FILL' 1;">grid_view</span>
-    </a>
-    <a class="flex items-center justify-center text-gray-400 p-3 hover:bg-white/10 rounded-full transition-all" href="#">
-      <span class="material-symbols-outlined" data-icon="person">person</span>
-    </a>
-  </nav>
-</div>
+<!-- ============================================================
+     FOOTER SECTION
+     ============================================================ -->
+<footer class="border-t border-white/5 bg-[#0a0a0a] pt-20 pb-36 text-on-surface-variant relative overflow-hidden">
+  <!-- Subtle ambient light flare in the background -->
+  <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+  
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 relative z-10">
+    
+    <!-- Column 1: Brand & Bio -->
+    <div class="md:col-span-4 space-y-6">
+      <div class="flex items-center gap-3">
+        <span class="text-2xl font-headline italic text-primary">Joelx Orbit</span>
+      </div>
+      <p class="text-sm text-on-surface-variant/80 max-w-sm leading-relaxed font-body">
+        A premium full-stack development and design studio crafting exceptional web applications, cross-platform mobile apps, and refined UI/UX experiences.
+      </p>
+      <div class="text-xs text-on-surface-variant/40 pt-4">
+        &copy; <span id="footer-year">2026</span> Joelx Orbit. All rights reserved.
+      </div>
+    </div>
+    
+    <!-- Column 2: Explore -->
+    <div class="md:col-span-2 space-y-4">
+      <h4 class="font-headline italic text-lg text-primary">Explore</h4>
+      <ul class="space-y-3 text-sm">
+        <li>
+          <a href="#" class="group flex items-center gap-2 hover:text-primary transition-colors duration-300">
+            <span class="h-[1px] w-0 bg-primary group-hover:w-3 transition-all duration-300"></span> Projects
+          </a>
+        </li>
+        <li>
+          <a href="#services" class="group flex items-center gap-2 hover:text-primary transition-colors duration-300">
+            <span class="h-[1px] w-0 bg-primary group-hover:w-3 transition-all duration-300"></span> Services
+          </a>
+        </li>
+        <li>
+          <a href="#" class="group flex items-center gap-2 hover:text-primary transition-colors duration-300">
+            <span class="h-[1px] w-0 bg-primary group-hover:w-3 transition-all duration-300"></span> About
+          </a>
+        </li>
+        <li>
+          <a href="#" class="group flex items-center gap-2 hover:text-primary transition-colors duration-300">
+            <span class="h-[1px] w-0 bg-primary group-hover:w-3 transition-all duration-300"></span> Archive
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Contact -->
+    <div class="md:col-span-3 space-y-4">
+      <h4 class="font-headline italic text-lg text-primary">Contact</h4>
+      <ul class="space-y-4 text-sm">
+        <li>
+          <a href="tel:+918838343971" class="group flex items-start gap-3 hover:text-primary transition-colors duration-300">
+            <span class="material-symbols-outlined text-primary/80 group-hover:scale-110 transition-transform mt-0.5 text-lg" style="font-variation-settings: 'FILL' 0, 'wght' 300;">call</span>
+            <div class="space-y-0.5">
+              <span class="block text-[10px] text-on-surface-variant/40 uppercase tracking-widest font-bold">Mobile</span>
+              <span class="font-mono tracking-wider text-on-surface group-hover:text-primary transition-colors">+91 8838343971</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:joelxorbit@gmail.com" class="group flex items-start gap-3 hover:text-primary transition-colors duration-300">
+            <span class="material-symbols-outlined text-primary/80 group-hover:scale-110 transition-transform mt-0.5 text-lg" style="font-variation-settings: 'FILL' 0, 'wght' 300;">mail</span>
+            <div class="space-y-0.5">
+              <span class="block text-[10px] text-on-surface-variant/40 uppercase tracking-widest font-bold">Email</span>
+              <span class="font-mono tracking-tight text-on-surface group-hover:text-primary transition-colors">joelxorbit@gmail.com</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Column 4: Follow -->
+    <div class="md:col-span-3 space-y-4">
+      <h4 class="font-headline italic text-lg text-primary">Follow</h4>
+      <ul class="space-y-3 text-sm">
+        <li>
+          <a href="https://www.instagram.com/joelxorbit/" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-2 hover:text-primary transition-colors duration-300">
+            <span class="h-[1px] w-0 bg-primary group-hover:w-3 transition-all duration-300"></span> Instagram
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/@joelxorbit" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-2 hover:text-primary transition-colors duration-300">
+            <span class="h-[1px] w-0 bg-primary group-hover:w-3 transition-all duration-300"></span> YouTube
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  // Dynamically update footer year to keep it fresh
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
+
+
 
 </body>
 </html>
