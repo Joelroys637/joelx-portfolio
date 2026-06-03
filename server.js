@@ -6,18 +6,22 @@ const admin = require('firebase-admin');
 // Initialize Firebase Admin
 let serviceAccount;
 try {
-    if (!process.env.FIREBASE_SERVICE_ACCOUNT) {
-        throw new Error("FIREBASE_SERVICE_ACCOUNT environment variable is not set!");
+    if (process.env.FIREBASE_SERVICE_ACCOUNT_BASE64) {
+        const decoded = Buffer.from(process.env.FIREBASE_SERVICE_ACCOUNT_BASE64, 'base64').toString('utf8');
+        serviceAccount = JSON.parse(decoded);
+    } else if (process.env.FIREBASE_SERVICE_ACCOUNT) {
+        // Check if the user accidentally included single quotes around the JSON
+        let envVal = process.env.FIREBASE_SERVICE_ACCOUNT;
+        if (envVal.startsWith("'") && envVal.endsWith("'")) {
+            envVal = envVal.slice(1, -1);
+        }
+        serviceAccount = JSON.parse(envVal);
+    } else {
+        throw new Error("FIREBASE_SERVICE_ACCOUNT_BASE64 environment variable is not set!");
     }
-    // Check if the user accidentally included single quotes around the JSON
-    let envVal = process.env.FIREBASE_SERVICE_ACCOUNT;
-    if (envVal.startsWith("'") && envVal.endsWith("'")) {
-        envVal = envVal.slice(1, -1);
-    }
-    serviceAccount = JSON.parse(envVal);
     
-    // Fix private_key newlines if they are escaped literal "\n" strings
-    if (serviceAccount.private_key) {
+    // Fix private_key newlines if they are escaped literal "\n" strings (common when passing JSON as env vars)
+    if (serviceAccount && serviceAccount.private_key) {
         serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
     }
 
