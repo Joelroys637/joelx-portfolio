@@ -4,14 +4,28 @@ const path = require('path');
 const admin = require('firebase-admin');
 
 // Initialize Firebase Admin
-if (!process.env.FIREBASE_SERVICE_ACCOUNT) {
-    console.error("FIREBASE_SERVICE_ACCOUNT environment variable is not set!");
-    process.exit(1);
+let serviceAccount;
+try {
+    if (!process.env.FIREBASE_SERVICE_ACCOUNT) {
+        throw new Error("FIREBASE_SERVICE_ACCOUNT environment variable is not set!");
+    }
+    // Check if the user accidentally included single quotes around the JSON
+    let envVal = process.env.FIREBASE_SERVICE_ACCOUNT;
+    if (envVal.startsWith("'") && envVal.endsWith("'")) {
+        envVal = envVal.slice(1, -1);
+    }
+    serviceAccount = JSON.parse(envVal);
+} catch (error) {
+    console.error("Firebase Initialization Error:", error.message);
+    console.error("Please check your FIREBASE_SERVICE_ACCOUNT environment variable in Vercel.");
+    // We will let it continue, but Firebase calls will fail. This prevents the entire serverless function from crashing on startup.
 }
-const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
+
+if (serviceAccount) {
+    admin.initializeApp({
+      credential: admin.credential.cert(serviceAccount)
+    });
+}
 const db = admin.firestore();
 
 const app = express();
