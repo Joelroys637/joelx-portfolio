@@ -3,12 +3,16 @@ const router = express.Router();
 const admin = require('firebase-admin');
 const nodemailer = require('nodemailer');
 
-// Ideally this should use a model, but for simplicity we access db here
-const db = admin.firestore();
+// db is initialized dynamically in the route
 
 // API endpoint to handle inquiry submission
 router.post('/inquiries', async (req, res) => {
     try {
+        if (!admin.apps.length) {
+            console.error("Firebase is not initialized. Cannot save inquiry.");
+            return res.status(500).json({ error: 'Database configuration error' });
+        }
+        const db = admin.firestore();
         const data = req.body;
         // Validate required fields
         if (!data.name || !data.phone || !data.package || !data.email) {

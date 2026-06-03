@@ -26,7 +26,7 @@ if (serviceAccount) {
       credential: admin.credential.cert(serviceAccount)
     });
 }
-const db = admin.firestore();
+// db initialized in routes if needed
 
 const app = express();
 const port = process.env.PORT || 3000;
