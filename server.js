@@ -15,16 +15,21 @@ try {
         envVal = envVal.slice(1, -1);
     }
     serviceAccount = JSON.parse(envVal);
+    
+    // Fix private_key newlines if they are escaped literal "\n" strings
+    if (serviceAccount.private_key) {
+        serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n');
+    }
+
+    if (serviceAccount) {
+        admin.initializeApp({
+          credential: admin.credential.cert(serviceAccount)
+        });
+    }
 } catch (error) {
     console.error("Firebase Initialization Error:", error.message);
     console.error("Please check your FIREBASE_SERVICE_ACCOUNT environment variable in Vercel.");
-    // We will let it continue, but Firebase calls will fail. This prevents the entire serverless function from crashing on startup.
-}
-
-if (serviceAccount) {
-    admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount)
-    });
+    // We will let it continue, but Firebase calls will fail gracefully in the API route.
 }
 // db initialized in routes if needed
 
