@@ -1,0 +1,57 @@
+  <!-- TopAppBar -->
+  <nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/90 backdrop-blur-md px-6 h-14 border-b border-white/5">
+    <div class="flex items-center justify-between h-full max-w-7xl mx-auto">
+      <div class="flex items-center gap-2">
+        <span class="text-xl font-body font-bold text-white tracking-tight">Joelx <span
+            class="text-[#f9c591]">Orbit</span></span>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex gap-8 items-center">
+        <a class="text-[#f9c591] font-label text-sm font-semibold hover:text-[#f9c591]/80 transition-colors"
+          href="/">Home</a>
+        <a class="text-gray-300 hover:text-[#f9c591] transition-colors font-label text-sm font-semibold"
+          href="/#about">About</a>
+        <a class="text-gray-300 hover:text-[#f9c591] transition-colors font-label text-sm font-semibold"
+          href="/services">Services</a>
+        <a class="text-gray-300 hover:text-[#f9c591] transition-colors font-label text-sm font-semibold"
+          href="/#pricing">Pricing</a>
+        <a class="text-gray-300 hover:text-[#f9c591] transition-colors font-label text-sm font-semibold"
+          href="/#projects">Projects</a>
+      </div>
+
+      <div class="hidden md:flex items-center gap-4">
+        <!-- Translate Widget Container -->
+        <div id="google_translate_element" class="h-8 overflow-hidden rounded"></div>
+        <button onclick="openGetInTouchModal('Custom Quote', 'TBD')"
+          class="px-6 py-2.5 rounded border border-[#f9c591] text-[#f9c591] font-label text-sm font-bold tracking-wide hover:bg-[#f9c591]/10 transition-colors">Request
+          A Quote</button>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn"
+        class="lg:hidden text-gray-300 hover:text-[#f9c591] transition-colors flex items-center justify-center">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu"
+      class="hidden absolute top-14 left-0 w-full bg-[#131313] border-b border-white/5 flex-col py-6 px-6 gap-6 shadow-2xl lg:hidden">
+      <a class="mobile-link text-[#f9c591] font-label text-lg font-semibold" href="/">Home</a>
+      <a class="mobile-link text-gray-300 hover:text-[#f9c591] transition-colors font-label text-lg font-semibold"
+        href="/#about">About</a>
+      <a class="mobile-link text-gray-300 hover:text-[#f9c591] transition-colors font-label text-lg font-semibold"
+        href="/services">Services</a>
+      <a class="mobile-link text-gray-300 hover:text-[#f9c591] transition-colors font-label text-lg font-semibold"
+        href="/#pricing">Pricing</a>
+      <a class="mobile-link text-gray-300 hover:text-[#f9c591] transition-colors font-label text-lg font-semibold"
+        href="/#projects">Projects</a>
+      <!-- Mobile Translate Widget Container -->
+      <div id="google_translate_element_mobile" class="h-8 overflow-hidden rounded w-full flex justify-center"></div>
+      
+      <button onclick="openGetInTouchModal('Custom Quote', 'TBD')"
+        class="w-full mt-2 px-6 py-3 rounded bg-gradient-to-r from-[#f9c591] to-[#c79767] text-[#0e0e0e] font-label text-sm font-bold tracking-wide transition-colors">Request
+        A Quote</button>
+    </div>
+  </nav>
