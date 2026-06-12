@@ -10,6 +10,11 @@
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
+/* ---- Global Text Justification ---- */
+p {
+    text-align: justify;
+}
+
 /* ---- SEO Services Section ---- */
 .seo-service-card {
     background: #131313;

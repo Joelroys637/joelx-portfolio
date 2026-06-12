@@ -6,21 +6,66 @@ if (footerYear) {
 
 // Mobile Menu Toggle Logic
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenuCloseBtn = document.getElementById('mobile-menu-close');
 const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
 const mobileLinks = document.querySelectorAll('.mobile-link');
 
-if (mobileMenuBtn && mobileMenu) {
-  mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-    mobileMenu.classList.toggle('flex');
-  });
+function openMobileMenu() {
+  if (!mobileMenu || !mobileMenuOverlay) return;
+  
+  // Show elements
+  mobileMenu.classList.remove('hidden');
+  mobileMenu.classList.add('flex');
+  mobileMenuOverlay.classList.remove('hidden');
+  mobileMenuOverlay.classList.add('block');
+  
+  // Trigger reflow
+  void mobileMenu.offsetWidth;
+  
+  // Animate in
+  mobileMenu.classList.remove('translate-x-full');
+  mobileMenu.classList.add('translate-x-0');
+  mobileMenuOverlay.classList.remove('opacity-0');
+  mobileMenuOverlay.classList.add('opacity-100');
+  
+  // Prevent body scroll
+  document.body.style.overflow = 'hidden';
+}
 
-// Close menu when a link is clicked
+function closeMobileMenu() {
+  if (!mobileMenu || !mobileMenuOverlay) return;
+  
+  // Animate out
+  mobileMenu.classList.remove('translate-x-0');
+  mobileMenu.classList.add('translate-x-full');
+  mobileMenuOverlay.classList.remove('opacity-100');
+  mobileMenuOverlay.classList.add('opacity-0');
+  
+  // Hide elements after animation
+  setTimeout(() => {
+    mobileMenu.classList.add('hidden');
+    mobileMenu.classList.remove('flex');
+    mobileMenuOverlay.classList.add('hidden');
+    mobileMenuOverlay.classList.remove('block');
+  }, 300);
+  
+  // Restore body scroll
+  document.body.style.overflow = '';
+}
+
+if (mobileMenuBtn && mobileMenu && mobileMenuOverlay) {
+  mobileMenuBtn.addEventListener('click', openMobileMenu);
+  
+  if (mobileMenuCloseBtn) {
+    mobileMenuCloseBtn.addEventListener('click', closeMobileMenu);
+  }
+  
+  mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+  // Close menu when a link is clicked
   mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-      mobileMenu.classList.remove('flex');
-    });
+    link.addEventListener('click', closeMobileMenu);
   });
 }
 

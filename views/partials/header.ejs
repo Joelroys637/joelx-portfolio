@@ -3,20 +3,20 @@
     <div class="flex items-center justify-between h-full max-w-7xl mx-auto">
       <div class="flex items-center gap-2">
         <span class="text-xl font-body font-bold text-white tracking-tight">Joelx <span
-            class="text-[#f9c591]">Orbit</span></span>
+            class="text-[#d2a373]">Orbit</span></span>
       </div>
 
       <!-- Desktop Menu -->
       <div class="hidden lg:flex gap-8 items-center">
-        <a class="text-[#f9c591] font-label text-sm font-semibold hover:text-[#f9c591]/80 transition-colors"
+        <a class="text-[#d2a373] font-label text-sm font-semibold hover:text-[#d2a373]/80 transition-colors"
           href="/">Home</a>
-        <a class="text-gray-300 hover:text-[#f9c591] transition-colors font-label text-sm font-semibold"
+        <a class="text-gray-300 hover:text-[#d2a373] transition-colors font-label text-sm font-semibold"
           href="/#about">About</a>
-        <a class="text-gray-300 hover:text-[#f9c591] transition-colors font-label text-sm font-semibold"
+        <a class="text-gray-300 hover:text-[#d2a373] transition-colors font-label text-sm font-semibold"
           href="/services">Services</a>
-        <a class="text-gray-300 hover:text-[#f9c591] transition-colors font-label text-sm font-semibold"
+        <a class="text-gray-300 hover:text-[#d2a373] transition-colors font-label text-sm font-semibold"
           href="/#pricing">Pricing</a>
-        <a class="text-gray-300 hover:text-[#f9c591] transition-colors font-label text-sm font-semibold"
+        <a class="text-gray-300 hover:text-[#d2a373] transition-colors font-label text-sm font-semibold"
           href="/#projects">Projects</a>
       </div>
 
@@ -24,34 +24,46 @@
         <!-- Translate Widget Container -->
         <div id="google_translate_element" class="h-8 overflow-hidden rounded"></div>
         <button onclick="openGetInTouchModal('Custom Quote', 'TBD')"
-          class="px-6 py-2.5 rounded border border-[#f9c591] text-[#f9c591] font-label text-sm font-bold tracking-wide hover:bg-[#f9c591]/10 transition-colors">Request
+          class="px-6 py-2.5 rounded bg-[#d2a373] text-[#0e0e0e] font-label text-sm font-bold tracking-wide hover:bg-[#c99668] transition-colors">Request
           A Quote</button>
       </div>
 
       <!-- Mobile Menu Button -->
       <button id="mobile-menu-btn"
-        class="lg:hidden text-gray-300 hover:text-[#f9c591] transition-colors flex items-center justify-center">
+        class="lg:hidden text-gray-300 hover:text-[#d2a373] transition-colors flex items-center justify-center">
         <span class="material-symbols-outlined text-3xl">menu</span>
       </button>
     </div>
 
-    <!-- Mobile Menu Dropdown -->
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="hidden fixed inset-0 bg-black/60 z-40 lg:hidden opacity-0 transition-opacity duration-300"></div>
+
+    <!-- Mobile Menu Drawer -->
     <div id="mobile-menu"
-      class="hidden absolute top-14 left-0 w-full bg-[#131313] border-b border-white/5 flex-col py-6 px-6 gap-6 shadow-2xl lg:hidden">
-      <a class="mobile-link text-[#f9c591] font-label text-lg font-semibold" href="/">Home</a>
-      <a class="mobile-link text-gray-300 hover:text-[#f9c591] transition-colors font-label text-lg font-semibold"
-        href="/#about">About</a>
-      <a class="mobile-link text-gray-300 hover:text-[#f9c591] transition-colors font-label text-lg font-semibold"
-        href="/services">Services</a>
-      <a class="mobile-link text-gray-300 hover:text-[#f9c591] transition-colors font-label text-lg font-semibold"
-        href="/#pricing">Pricing</a>
-      <a class="mobile-link text-gray-300 hover:text-[#f9c591] transition-colors font-label text-lg font-semibold"
-        href="/#projects">Projects</a>
+      class="fixed top-0 right-0 h-screen w-64 bg-[#131313] border-l border-white/5 flex-col py-6 px-6 gap-6 shadow-2xl z-50 lg:hidden hidden translate-x-full transition-transform duration-300">
+      
+      <!-- Drawer Header with Logo and Close Button -->
+      <div class="flex justify-between items-center mb-4">
+        <span class="text-xl font-body font-bold text-white tracking-tight">Joelx <span class="text-[#d2a373]">Orbit</span></span>
+        <button id="mobile-menu-close" class="text-gray-300 hover:text-[#d2a373] transition-colors flex items-center justify-center">
+          <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+      </div>
+
+      <!-- Links -->
+      <div class="flex flex-col gap-6 mt-4 flex-grow">
+        <a class="mobile-link text-[#d2a373] font-label text-lg font-semibold" href="/">Home</a>
+        <a class="mobile-link text-gray-300 hover:text-[#d2a373] transition-colors font-label text-lg font-semibold" href="/#about">About</a>
+        <a class="mobile-link text-gray-300 hover:text-[#d2a373] transition-colors font-label text-lg font-semibold" href="/services">Services</a>
+        <a class="mobile-link text-gray-300 hover:text-[#d2a373] transition-colors font-label text-lg font-semibold" href="/#pricing">Pricing</a>
+        <a class="mobile-link text-gray-300 hover:text-[#d2a373] transition-colors font-label text-lg font-semibold" href="/#projects">Projects</a>
+      </div>
+
       <!-- Mobile Translate Widget Container -->
-      <div id="google_translate_element_mobile" class="h-8 overflow-hidden rounded w-full flex justify-center"></div>
+      <div id="google_translate_element_mobile" class="h-8 overflow-hidden rounded w-full flex justify-center mt-auto"></div>
       
       <button onclick="openGetInTouchModal('Custom Quote', 'TBD')"
-        class="w-full mt-2 px-6 py-3 rounded bg-gradient-to-r from-[#f9c591] to-[#c79767] text-[#0e0e0e] font-label text-sm font-bold tracking-wide transition-colors">Request
+        class="w-full mt-2 px-6 py-3 rounded bg-[#d2a373] hover:bg-[#c99668] text-[#0e0e0e] font-label text-sm font-bold tracking-wide transition-colors">Request
         A Quote</button>
     </div>
   </nav>
