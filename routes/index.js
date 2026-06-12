@@ -8,5 +8,6 @@ router.get('/services.html', pageController.renderServices); // backward compati
 router.get('/services', pageController.renderServices);
 router.get('/quote.html', pageController.renderQuote); // backward compatibility
 router.get('/quote', pageController.renderQuote);
+router.get('/gallery', pageController.renderGallery);
 
 module.exports = router;
