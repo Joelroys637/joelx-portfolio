@@ -91,3 +91,50 @@ if (projectsGallery) {
   }, 2000);
 }
 
+// Service Page Loader Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const serviceLinks = document.querySelectorAll('a[href="/services"]');
+  
+  if (serviceLinks.length > 0) {
+    // Create loader overlay
+    const loaderOverlay = document.createElement('div');
+    loaderOverlay.id = 'service-page-loader';
+    // Use fixed positioning with inline z-index to cover the whole screen properly
+    loaderOverlay.className = 'fixed inset-0 bg-[#0e0e0e] flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300';
+    loaderOverlay.style.zIndex = '99999';
+    
+    const loaderImg = document.createElement('img');
+    loaderImg.src = '/assert/service page loader/giphy.gif';
+    loaderImg.alt = 'Loading Services...';
+    loaderImg.className = 'w-48 h-48 md:w-64 md:h-64 object-contain';
+    
+    const loaderText = document.createElement('p');
+    loaderText.textContent = 'Loading Services...';
+    loaderText.className = 'text-[#d2a373] mt-4 font-label font-bold tracking-widest uppercase animate-pulse';
+
+    loaderOverlay.appendChild(loaderImg);
+    loaderOverlay.appendChild(loaderText);
+    document.body.appendChild(loaderOverlay);
+
+    serviceLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        // Only intercept left clicks without modifier keys
+        if (e.button === 0 && !e.ctrlKey && !e.shiftKey && !e.metaKey && !e.altKey) {
+          e.preventDefault();
+          
+          // If we are in mobile menu, close it first so it doesn't glitch under the overlay
+          closeMobileMenu();
+
+          // Show loader
+          loaderOverlay.classList.remove('opacity-0', 'pointer-events-none');
+          loaderOverlay.classList.add('opacity-100', 'pointer-events-auto');
+          
+          // Wait 2 seconds then navigate
+          setTimeout(() => {
+            window.location.href = link.href;
+          }, 2000);
+        }
+      });
+    });
+  }
+});
