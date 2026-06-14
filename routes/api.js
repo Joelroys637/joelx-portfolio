@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const admin = require('firebase-admin');
 const nodemailer = require('nodemailer');
+const path = require('path');
 
 // db is initialized dynamically in the route
 
@@ -42,7 +43,27 @@ router.post('/inquiries', async (req, res) => {
                 to: data.email,
                 subject: 'Inquiry Received - JoelX Orbit',
                 text: `Hello ${data.name},\n\nThank you for reaching out! We have received your inquiry for the ${data.package} package.\nOur team will get back to you shortly.\n\nBest regards,\nJoelX Orbit Team`,
-                html: `<p>Hello <strong>${data.name}</strong>,</p><p>Thank you for reaching out! We have received your inquiry for the <strong>${data.package}</strong> package.</p><p>Our team will get back to you shortly.</p><br/><p>Best regards,<br/>JoelX Orbit Team</p>`
+                html: `<p>Hello <strong>${data.name}</strong>,</p>
+                       <p>Thank you for reaching out! We have received your inquiry. Here are your project details:</p>
+                       <table style="width: 100%; max-width: 600px; border-collapse: collapse; margin-bottom: 20px; font-family: sans-serif;">
+                           <tr>
+                               <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #f2f2f2; color: #333;">Package</th>
+                               <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #f2f2f2; color: #333;">Estimated Price</th>
+                           </tr>
+                           <tr>
+                               <td style="border: 1px solid #ddd; padding: 12px; color: #555;"><strong>${data.package}</strong></td>
+                               <td style="border: 1px solid #ddd; padding: 12px; color: #555;"><strong>${data.price || 'TBD'}</strong></td>
+                           </tr>
+                       </table>
+                       <p>Our team will get back to you shortly with more information.</p>
+                       <br/>
+                       <p>Best regards,<br/><strong>JoelX Orbit Team</strong></p>`,
+                attachments: [
+                    {
+                        filename: 'proposal.png',
+                        path: path.join(__dirname, '../public/assert/mail send image/proposal.png')
+                    }
+                ]
             };
 
             try {
