@@ -1,3 +1,18 @@
+  <!-- Image Popup Modal -->
+  <div id="image-popup-modal" class="hidden fixed inset-0 z-[110] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 font-body transition-opacity duration-300">
+    <div class="relative max-w-5xl max-h-[90vh] flex justify-center">
+      <div class="relative inline-block">
+        <!-- Close Button -->
+        <button id="close-image-popup" class="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-black/20 border-2 border-white text-white hover:bg-black/50 hover:scale-105 transition-all z-[120] backdrop-blur-sm shadow-lg">
+          <span class="material-symbols-outlined" style="font-size: 24px;">close</span>
+        </button>
+        
+        <!-- Popup Image -->
+        <img src="/assert/main%20popup/ide.png" alt="Special Offer" class="block max-w-full h-auto max-h-[90vh] object-contain rounded-xl shadow-2xl">
+      </div>
+    </div>
+  </div>
+
   <!-- Get in Touch Modal -->
   <div id="get-in-touch-modal" class="hidden fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 font-body">
     <div class="bg-[#111111] border border-white/10 rounded-2xl w-full max-w-lg p-8 relative shadow-2xl overflow-y-auto max-h-[90vh]">
@@ -105,6 +120,32 @@
     }
     
     document.addEventListener('DOMContentLoaded', () => {
+      // Image Popup logic
+      const imagePopup = document.getElementById('image-popup-modal');
+      const closeImagePopup = document.getElementById('close-image-popup');
+      
+      if (imagePopup && closeImagePopup) {
+        // Show popup automatically on load with a slight delay
+        setTimeout(() => {
+          imagePopup.classList.remove('hidden');
+          imagePopup.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        }, 500);
+        
+        closeImagePopup.addEventListener('click', () => {
+          imagePopup.style.display = 'none';
+          imagePopup.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        });
+        
+        imagePopup.addEventListener('click', (e) => {
+          if (e.target === imagePopup) {
+            closeImagePopup.click();
+          }
+        });
+      }
+
+      // Existing Get in Touch Modal logic
       const modal = document.getElementById('get-in-touch-modal');
       const closeBtn = document.getElementById('close-modal');
       const form = document.getElementById('inquiry-form');

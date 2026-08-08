@@ -4,6 +4,42 @@
 
 <head>
   <%- include('../partials/head') %>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    .productSwiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 70px;
+      overflow: visible;
+    }
+    .productSwiper .swiper-slide {
+      width: 320px;
+      height: 480px;
+      transition: all 0.3s ease;
+      background-position: center;
+      background-size: cover;
+    }
+    @media (min-width: 768px) {
+      .productSwiper .swiper-slide {
+        width: 380px;
+        height: 520px;
+      }
+    }
+    .productSwiper .swiper-slide-active {
+      filter: drop-shadow(0 20px 40px rgba(249,197,145,0.15));
+    }
+    .productSwiper .swiper-pagination-bullet {
+      background: rgba(255, 255, 255, 0.4);
+    }
+    .productSwiper .swiper-pagination-bullet-active {
+      background: #f9c591;
+    }
+    /* Dim inactive slides slightly for more focus on center */
+    .productSwiper .swiper-slide:not(.swiper-slide-active) {
+      opacity: 0.6;
+    }
+  </style>
 </head>
 
 <body class="bg-[#0e0e0e] text-white font-body selection:bg-primary/30 selection:text-primary overflow-x-hidden">
@@ -368,6 +404,100 @@
       </section>
 
       <!-- ============================================================
+       OUR PRODUCTS SECTION
+       ============================================================ -->
+      <section id="products" class="mt-32 max-w-7xl mx-auto">
+        <div class="mb-16 text-center space-y-4">
+          <h2 class="font-body font-bold text-4xl text-white">
+            Our Products
+          </h2>
+          <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed text-[15px]">
+            Explore our suite of powerful tools and generators designed to simplify your digital workflow.
+          </p>
+        </div>
+
+        <!-- Swiper Container -->
+        <div class="swiper productSwiper">
+          <div class="swiper-wrapper">
+            
+            <!-- Product 1: QR Code Generator -->
+            <div class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden" onclick="window.open('https://joelx-qrcode.vercel.app/', '_blank')">
+              <img src="/images/qrcode_generator_ui_1786198997048.png" alt="QR Code Generator" class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
+              
+              <!-- Dark overlay for text readability -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/80 to-transparent z-10"></div>
+              
+              <!-- Badge -->
+              <div class="absolute top-[45%] left-6 -translate-y-1/2 bg-[#f9c591]/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold z-20 border border-[#f9c591]/30">
+                GENERATOR
+              </div>
+              
+              <!-- Number -->
+              <div class="absolute top-4 right-6 text-6xl md:text-8xl font-headline italic font-bold text-white/20 z-10 select-none">
+                01
+              </div>
+              
+              <!-- Content -->
+              <div class="absolute bottom-0 left-0 w-full z-20 flex flex-col justify-end p-6 md:p-8">
+                <h3 class="text-white font-headline italic text-2xl md:text-3xl mb-2 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">QR Code Generator</h3>
+                <p class="text-gray-400 text-sm md:text-[15px] leading-relaxed">
+                  Create custom, high-quality QR codes instantly for your links, text, or business needs.
+                </p>
+              </div>
+            </div>
+
+            <!-- Product 2: Text to Speech -->
+            <div class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden" onclick="window.open('https://speech-ai.streamlit.app/', '_blank')">
+              <img src="/images/text_speech_ui_1786199018828.png" alt="Text to Speech" class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
+              
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/80 to-transparent z-10"></div>
+              
+              <div class="absolute top-[45%] left-6 -translate-y-1/2 bg-[#f9c591]/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold z-20 border border-[#f9c591]/30">
+                AI TOOL
+              </div>
+              
+              <div class="absolute top-4 right-6 text-6xl md:text-8xl font-headline italic font-bold text-white/20 z-10 select-none">
+                02
+              </div>
+              
+              <div class="absolute bottom-0 left-0 w-full z-20 flex flex-col justify-end p-6 md:p-8">
+                <h3 class="text-white font-headline italic text-2xl md:text-3xl mb-2 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">Text to Speech</h3>
+                <p class="text-gray-400 text-sm md:text-[15px] leading-relaxed">
+                  Convert your text into natural-sounding speech using advanced AI voice generation.
+                </p>
+              </div>
+            </div>
+
+            <!-- Product 3: Certificate Generator -->
+            <div class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden" onclick="window.open('https://certificate-leo123.streamlit.app/', '_blank')">
+              <img src="/images/certificate_generator_ui_1786199031985.png" alt="Certificate Generator" class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
+              
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/80 to-transparent z-10"></div>
+              
+              <div class="absolute top-[45%] left-6 -translate-y-1/2 bg-[#f9c591]/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold z-20 border border-[#f9c591]/30">
+                GENERATOR
+              </div>
+              
+              <div class="absolute top-4 right-6 text-6xl md:text-8xl font-headline italic font-bold text-white/20 z-10 select-none">
+                03
+              </div>
+              
+              <div class="absolute bottom-0 left-0 w-full z-20 flex flex-col justify-end p-6 md:p-8">
+                <h3 class="text-white font-headline italic text-2xl md:text-3xl mb-2 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">Certificate Generator</h3>
+                <p class="text-gray-400 text-sm md:text-[15px] leading-relaxed">
+                  Design and generate professional certificates automatically for your events and courses.
+                </p>
+              </div>
+            </div>
+
+          </div>
+          
+          <!-- Pagination -->
+          <div class="swiper-pagination relative mt-10"></div>
+        </div>
+      </section>
+
+      <!-- ============================================================
        PRICING SECTION
        ============================================================ -->
       <section id="pricing" class="mt-32">
@@ -652,6 +782,32 @@
 
     <%- include('../partials/footer') %>
       <%- include('../partials/modal') %>
+      
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var swiper = new Swiper(".productSwiper", {
+              effect: "coverflow",
+              grabCursor: true,
+              centeredSlides: true,
+              slidesPerView: "auto",
+              loop: true,
+              coverflowEffect: {
+                rotate: 15,
+                stretch: 0,
+                depth: 250,
+                modifier: 1,
+                slideShadows: true,
+              },
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+            });
+          });
+        </script>
+        
         <script src="/script.js?v=4"></script>
 </body>
 
