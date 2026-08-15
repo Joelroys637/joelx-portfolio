@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TamilScript Tutorial — Syntax, Variables, Loops &amp; Functions | தமிழ் தா கெத்து</title>
+<meta name="description" content="Full TamilScript reference: introduction, features, basic syntax, variables, input/output, operators, control flow, loops, functions and a worked example program.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23e6812c%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-weight=%22900%22 fill=%22%230b0805%22>த</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">த</span>
+      <span class="brand-ta">தமிழ் தா கெத்து</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="tutorial.html#introduction">Introduction</a>
+      <a href="tutorial.html#features">Features</a>
+      <a href="tutorial.html#basic-syntax">Basic Syntax</a>
+      <a href="tutorial.html#variables">Variables</a>
+      <a href="tutorial.html#example" class="nav-cta">Full Example →</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap tut-shell">
+
+  <!-- ============ TABLE OF CONTENTS ============ -->
+  <aside class="toc" aria-label="Table of contents">
+    <div class="toc-title">Chapters</div>
+    <a href="#introduction"><span class="n">01</span> Introduction</a>
+    <a href="#features"><span class="n">02</span> Features</a>
+    <a href="#basic-syntax"><span class="n">03</span> Basic Syntax</a>
+    <a href="#variables"><span class="n">04</span> Data Types &amp; Variables</a>
+    <a href="#io"><span class="n">05</span> Input &amp; Output</a>
+    <a href="#operators"><span class="n">06</span> Operators</a>
+    <a href="#control-flow"><span class="n">07</span> Control Flow</a>
+    <a href="#loops"><span class="n">08</span> Loops</a>
+    <a href="#functions"><span class="n">09</span> Functions</a>
+    <a href="#example"><span class="n">10</span> Example Program</a>
+  </aside>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="tut-main">
+
+    <div class="tut-topbar">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>தமிழ்ஸ்கிரிப்ட் · TAMILSCRIPT DOCS</span>
+        <h1 class="tut-title">TamilScript Documentation</h1>
+        <p class="tut-lede">A complete, ordered reference — from your first variable to a full recursive program. Every keyword is Tamil; every example shows its output.</p>
+      </div>
+    </div>
+
+    <!-- ================= 01 INTRODUCTION ================= -->
+    <section class="doc-section" id="introduction">
+      <span class="num">01 / 10</span>
+      <h2>Introduction <span class="ta">அறிமுகம்</span></h2>
+      <p>TamilScript (தமிழ்ஸ்கிரிப்ட்) is a small programming language whose entire vocabulary — every keyword, every control word — is written in Tamil. Instead of learning <code>if</code>, <code>while</code> and <code>function</code> before you can express an idea, you write <strong>என்றால்</strong>, <strong>வரை</strong> and <strong>செயல்</strong> directly.</p>
+      <p>The goal isn't to replace English-based languages — it's to remove the translation step for learners who think in Tamil first, so the logic of programming (variables, decisions, repetition, reuse) can be learned on its own, without a language barrier on top of it.</p>
+      <div class="note"><b>How to use this reference:</b> chapters are ordered the way you'll actually need them. Read top to bottom the first time; come back to any chapter later as a lookup.</div>
+      <h3>A first look</h3>
+      <p>Here's a two-line program: it stores your name, then greets you with it.</p>
+      <div class="code-card">
+        <div class="code-head"><span class="label">வணக்கம்.tamil</span><button class="copy-btn">Copy</button></div>
+        <pre><code><span class="tk-kw">எழுத்து</span> பெயர் = <span class="tk-str">"தமிழ்"</span>
+<span class="tk-kw">காட்டு</span> <span class="tk-str">"வணக்கம், "</span> + பெயர்</code></pre>
+      </div>
+      <div class="output-card"><span class="label">Output</span>வணக்கம், தமிழ்</div>
+    </section>
+
+    <!-- ================= 02 FEATURES ================= -->
+    <section class="doc-section" id="features">
+      <span class="num">02 / 10</span>
+      <h2>Features <span class="ta">சிறப்பியல்புகள்</span></h2>
+      <p>What TamilScript supports, in one scan — each item is covered in full in its own chapter below.</p>
+      <div class="grid" style="grid-template-columns:repeat(2,1fr); margin-bottom:8px;">
+        <div class="card">
+          <div class="card-icon">🔤</div>
+          <h3>Tamil-native keywords</h3>
+          <p>Every reserved word — types, conditionals, loops, functions — is written in Tamil script.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🧱</div>
+          <h3>Two core data types</h3>
+          <p><strong>எண்</strong> (Number) for all numeric values and <strong>எழுத்து</strong> (String) for text, plus boolean literals <strong>உண்மை</strong> / <strong>பொய்</strong>.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔀</div>
+          <h3>Full control flow</h3>
+          <p><strong>என்றால்</strong> / <strong>இல்லை என்றால்</strong> / <strong>இல்லையெனில்</strong> branches, all closed by one consistent <strong>முடிவு</strong>.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔁</div>
+          <h3>Two loop styles</h3>
+          <p>A condition-based <strong>வரை</strong> (while) loop and a range-based <strong>ஒவ்வொரு</strong> (for) loop, with break/continue.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🧩</div>
+          <h3>Functions &amp; recursion</h3>
+          <p>Reusable blocks defined with <strong>செயல்</strong>, returning values with <strong>திருப்பு</strong> — including calling themselves.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">➗</div>
+          <h3>Standard operators</h3>
+          <p>Mathematical, relational and logical operators, matching what you'd expect from any general-purpose language.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 03 BASIC SYNTAX ================= -->
+    <section class="doc-section" id="basic-syntax">
+      <span class="num">03 / 10</span>
+      <h2>Basic Syntax <span class="ta">அடிப்படை இலக்கணம்</span></h2>
+      <p>A few rules apply across the whole language, before you even get to variables or loops.</p>
+
+      <h3>1. Every block ends with முடிவு</h3>
+      <p>Functions, if/else chains, and loops all open with their own keyword, but they all close the same way — with <strong>முடிவு</strong> (End). If you forget it, the block never closes.</p>
+
+      <h3>2. Comments start with #</h3>
+      <p>Anything after a <code>#</code> on a line is a comment, ignored when the program runs. Use it to explain <em>why</em>, not just <em>what</em>.</p>
+      <div class="code-card">
+        <div class="code-head"><span class="label">comments.tamil</span><button class="copy-btn">Copy</button></div>
+        <pre><code><span class="tk-cmt"># இது ஒரு கருத்துரை (this is a comment)</span>
+<span class="tk-kw">காட்டு</span> <span class="tk-str">"இது இயங்கும்"</span>  <span class="tk-cmt"># this runs</span></code></pre>
+      </div>
+
+      <h3>3. Statements run top to bottom</h3>
+      <p>Like most languages, TamilScript executes one line at a time, in order, unless a loop or function call changes that order.</p>
+
+      <h3>4. Indentation shows structure</h3>
+      <p>Code inside a block is indented for readability. TamilScript doesn't require a specific indent size, but consistent indentation makes nested blocks (a loop inside a function, for example) far easier to read.</p>
+      <div class="note"><b>Rule of thumb:</b> one keyword opens a block (<strong>என்றால்</strong>, <strong>வரை</strong>, <strong>ஒவ்வொரு</strong>, <strong>செயல்</strong>) → one <strong>முடிவு</strong> closes it. Count your openers and closers if a program misbehaves.</div>
+    </section>
+
+    <!-- ================= 04 VARIABLES ================= -->
+    <section class="doc-section" id="variables">
+      <span class="num">04 / 10</span>
+      <h2>Data Types &amp; Variables <span class="ta">மாறிகள்</span></h2>
+      <p>Variables must be declared with their type. TamilScript keeps this deliberately small: two core types for values, plus two boolean literals.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Keyword</th><th>Meaning</th><th>Used for</th><th>Default value</th></tr></thead>
+          <tbody>
+            <tr><td class="ta">எண்</td><td>Number</td><td>All numeric values (whole or decimal)</td><td><code>0</code></td></tr>
+            <tr><td class="ta">எழுத்து</td><td>String</td><td>Text, always inside double quotes <code>"..."</code></td><td><code>""</code></td></tr>
+            <tr><td class="ta">உண்மை</td><td>True</td><td>Boolean true literal</td><td>—</td></tr>
+            <tr><td class="ta">பொய்</td><td>False</td><td>Boolean false literal</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Declaring and assigning a variable</h3>
+      <p>Write the type keyword, then the variable name, then <code>=</code> and a value. You can also declare a variable without a value — it falls back to its default.</p>
+      <div class="code-card">
+        <div class="code-head"><span class="label">மாறிகள்.tamil</span><button class="copy-btn">Copy</button></div>
+        <pre><code><span class="tk-kw">எண்</span> வயது = <span class="tk-num">25</span>
+<span class="tk-kw">எழுத்து</span> பெயர் = <span class="tk-str">"தமிழ்"</span>
+
+<span class="tk-kw">எண்</span> மதிப்பு       <span class="tk-cmt"># Defaults to 0</span>
+<span class="tk-kw">எழுத்து</span> காலி     <span class="tk-cmt"># Defaults to ""</span></code></pre>
+      </div>
+      <p><strong>வயது</strong> ("age") is declared as a number and set to <code>25</code>. <strong>பெயர்</strong> ("name") is declared as a string and set to <code>"தமிழ்"</code>. <strong>மதிப்பு</strong> and <strong>காலி</strong> are declared with no value, so they take their type's default — <code>0</code> and <code>""</code> respectively.</p>
+      <div class="note"><b>Tip:</b> a string's value must always be wrapped in double quotes. <code>எழுத்து பெயர் = தமிழ்</code> (without quotes) is not valid — TamilScript would try to read <code>தமிழ்</code> as another variable, not text.</div>
+    </section>
+
+    <!-- ================= 05 INPUT & OUTPUT ================= -->
+    <section class="doc-section" id="io">
+      <span class="num">05 / 10</span>
+      <h2>Input &amp; Output <span class="ta">உள்ளீடு · வெளியீடு</span></h2>
+      <p>Two keywords cover all interaction with the person running the program.</p>
+      <div class="kw-list">
+        <span class="kw"><span class="ta">காட்டு</span><span class="en">Print</span></span>
+        <span class="kw"><span class="ta">பெறு</span><span class="en">Input</span></span>
+      </div>
+      <p><strong>காட்டு</strong> prints a value to the screen. <strong>பெறு</strong> pauses the program, waits for the person to type something, and stores it in the variable named after it.</p>
+
+      <div class="code-card">
+        <div class="code-head"><span class="label">உரையாடல்.tamil</span><button class="copy-btn">Copy</button></div>
+        <pre><code><span class="tk-kw">எழுத்து</span> பெயர்
+
+<span class="tk-kw">காட்டு</span> <span class="tk-str">"உங்கள் பெயரை உள்ளிடவும்:"</span>
+<span class="tk-kw">பெறு</span> பெயர்
+<span class="tk-kw">காட்டு</span> <span class="tk-str">"வணக்கம், "</span> + பெயர்</code></pre>
+      </div>
+      <p>Line by line: declare an empty string <strong>பெயர்</strong>, print a prompt asking for a name, wait for input with <strong>பெறு பெயர்</strong> (whatever is typed is stored into <strong>பெயர்</strong>), then print a greeting built by joining two strings with <code>+</code>.</p>
+      <div class="output-card"><span class="label">Sample run — if the person types "கார்த்திக்"</span>உங்கள் பெயரை உள்ளிடவும்:
+கார்த்திக்
+வணக்கம், கார்த்திக்</div>
+    </section>
+
+    <!-- ================= 06 OPERATORS ================= -->
+    <section class="doc-section" id="operators">
+      <span class="num">06 / 10</span>
+      <h2>Operators <span class="ta">செயற்குறிகள்</span></h2>
+      <p>TamilScript supports the standard mathematical, relational and logical operations you'd expect, grouped into three families.</p>
+
+      <h3>Mathematical</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Symbol</th><th class="ta">Tamil name</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td><code>+</code></td><td class="ta">கூட்டல்</td><td>Addition</td></tr>
+            <tr><td><code>-</code></td><td class="ta">கழித்தல்</td><td>Subtraction</td></tr>
+            <tr><td><code>*</code></td><td class="ta">பெருக்கல்</td><td>Multiplication</td></tr>
+            <tr><td><code>/</code></td><td class="ta">வகுத்தல்</td><td>Division</td></tr>
+            <tr><td><code>%</code></td><td class="ta">மீதி</td><td>Modulo (remainder)</td></tr>
+            <tr><td><code>^</code></td><td class="ta">அடுக்கு</td><td>Power</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Relational (comparison)</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Symbol</th><th class="ta">Tamil name</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td><code>==</code></td><td class="ta">சமம்</td><td>Equal to</td></tr>
+            <tr><td><code>!=</code></td><td class="ta">சமமில்லை</td><td>Not equal to</td></tr>
+            <tr><td><code>&gt;</code></td><td class="ta">பெரியது</td><td>Greater than</td></tr>
+            <tr><td><code>&lt;</code></td><td class="ta">சிறியது</td><td>Less than</td></tr>
+            <tr><td><code>&gt;=</code></td><td class="ta">பெரியது அல்லது சமம்</td><td>Greater than or equal to</td></tr>
+            <tr><td><code>&lt;=</code></td><td class="ta">சிறியது அல்லது சமம்</td><td>Less than or equal to</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Logical</h3>
+      <div class="kw-list">
+        <span class="kw"><span class="ta">மற்றும்</span><span class="en">AND</span></span>
+        <span class="kw"><span class="ta">அல்லது</span><span class="en">OR</span></span>
+        <span class="kw"><span class="ta">இல்லை</span><span class="en">NOT</span></span>
+      </div>
+
+      <div class="code-card">
+        <div class="code-head"><span class="label">operators.tamil</span><button class="copy-btn">Copy</button></div>
+        <pre><code><span class="tk-kw">எண்</span> வயது = <span class="tk-num">20</span>
+<span class="tk-kw">எண்</span> மதிப்பெண் = <span class="tk-num">85</span>
+
+<span class="tk-kw">என்றால்</span> வயது &gt;= <span class="tk-num">18</span> <span class="tk-kw">மற்றும்</span> மதிப்பெண் &gt; <span class="tk-num">50</span>
+    <span class="tk-kw">காட்டு</span> <span class="tk-str">"தகுதி பெற்றவர்"</span>  <span class="tk-cmt"># eligible</span>
+<span class="tk-kw">முடிவு</span></code></pre>
+      </div>
+      <div class="output-card"><span class="label">Output</span>தகுதி பெற்றவர்</div>
+    </section>
+
+    <!-- ================= 07 CONTROL FLOW ================= -->
+    <section class="doc-section" id="control-flow">
+      <span class="num">07 / 10</span>
+      <h2>Control Flow <span class="ta">என்றால் / இல்லை</span></h2>
+      <p>Make decisions in your code using conditional blocks. Every block — no matter how many branches it has — closes with a single <strong>முடிவு</strong>.</p>
+      <div class="kw-list">
+        <span class="kw"><span class="ta">என்றால்</span><span class="en">If</span></span>
+        <span class="kw"><span class="ta">இல்லை என்றால்</span><span class="en">Else If</span></span>
+        <span class="kw"><span class="ta">இல்லையெனில்</span><span class="en">Else</span></span>
+        <span class="kw"><span class="ta">முடிவு</span><span class="en">End</span></span>
+      </div>
+
+      <div class="code-card">
+        <div class="code-head"><span class="label">வயது_சரிபார்.tamil</span><button class="copy-btn">Copy</button></div>
+        <pre><code><span class="tk-kw">எண்</span> வயது = <span class="tk-num">18</span>
+
+<span class="tk-kw">என்றால்</span> வயது &gt; <span class="tk-num">18</span>
+    <span class="tk-kw">காட்டு</span> <span class="tk-str">"நீங்கள் பெரியவர்"</span>
+<span class="tk-kw">இல்லை</span> <span class="tk-kw">என்றால்</span> வயது == <span class="tk-num">18</span>
+    <span class="tk-kw">காட்டு</span> <span class="tk-str">"சரியாக 18 வயது"</span>
+<span class="tk-kw">இல்லையெனில்</span>
+    <span class="tk-kw">காட்டு</span> <span class="tk-str">"நீங்கள் சிறியவர்"</span>
+<span class="tk-kw">முடிவு</span></code></pre>
+      </div>
+      <p>TamilScript checks each condition top to bottom and runs the first branch that matches. Here <strong>வயது == 18</strong> is true, so only <em>"சரியாக 18 வயது"</em> prints — the first and third branches are skipped.</p>
+      <div class="output-card"><span class="label">Output</span>சரியாக 18 வயது</div>
+      <div class="note"><b>Note:</b> <strong>இல்லை என்றால்</strong> (else if) is optional and repeatable — chain as many as you need. <strong>இல்லையெனில்</strong> (else) is also optional, and always comes last.</div>
+    </section>
+
+    <!-- ================= 08 LOOPS ================= -->
+    <section class="doc-section" id="loops">
+      <span class="num">08 / 10</span>
+      <h2>Loops <span class="ta">வரை · ஒவ்வொரு</span></h2>
+      <p>TamilScript supports two loop styles: a condition-based while loop, and a range-based for loop.</p>
+
+      <h3>While loop — வரை</h3>
+      <p>Executes its block for as long as a condition stays true.</p>
+      <div class="kw-list">
+        <span class="kw"><span class="ta">வரை</span><span class="en">While</span></span>
+        <span class="kw"><span class="ta">முடிவு</span><span class="en">End</span></span>
+      </div>
+      <div class="code-card">
+        <div class="code-head"><span class="label">while_loop.tamil</span><button class="copy-btn">Copy</button></div>
+        <pre><code><span class="tk-kw">எண்</span> எண் = <span class="tk-num">1</span>
+<span class="tk-kw">வரை</span> எண் &lt;= <span class="tk-num">5</span>
+    <span class="tk-kw">காட்டு</span> எண்
+    எண் = எண் + <span class="tk-num">1</span>
+<span class="tk-kw">முடிவு</span></code></pre>
+      </div>
+      <p><strong>எண்</strong> ("count") starts at 1. The loop checks <code>எண் &lt;= 5</code> before every pass, prints it, then increments it. Once <strong>எண்</strong> reaches 6 the condition is false and the loop ends.</p>
+      <div class="output-card"><span class="label">Output</span>1
+2
+3
+4
+5</div>
+
+      <h3>For loop — ஒவ்வொரு</h3>
+      <p>Iterates over a numeric range: <code>ஒவ்வொரு [variable] = வரம்பு [start], [end], [step]</code>. The step is optional and defaults to 1.</p>
+      <div class="kw-list">
+        <span class="kw"><span class="ta">ஒவ்வொரு</span><span class="en">For</span></span>
+        <span class="kw"><span class="ta">வரம்பு</span><span class="en">Range</span></span>
+        <span class="kw"><span class="ta">முடிவு</span><span class="en">End</span></span>
+      </div>
+      <div class="code-card">
+        <div class="code-head"><span class="label">for_loop.tamil</span><button class="copy-btn">Copy</button></div>
+        <pre><code><span class="tk-cmt"># 1 முதல் 5 வரை அச்சிடும்</span>
+<span class="tk-kw">ஒவ்வொரு</span> i = <span class="tk-kw">வரம்பு</span> <span class="tk-num">1</span>, <span class="tk-num">5</span>
+    <span class="tk-kw">காட்டு</span> i
+<span class="tk-kw">முடிவு</span>
+
+<span class="tk-cmt"># 1 முதல் 10 வரை 2 படிகளில் அச்சிடும் (1, 3, 5...)</span>
+<span class="tk-kw">ஒவ்வொரு</span> x = <span class="tk-kw">வரம்பு</span> <span class="tk-num">1</span>, <span class="tk-num">10</span>, <span class="tk-num">2</span>
+    <span class="tk-kw">காட்டு</span> x
+<span class="tk-kw">முடிவு</span></code></pre>
+      </div>
+      <p>The first loop steps through 1 to 5 one at a time. The second loop adds an explicit step of 2, so it prints every other number from 1 to 10.</p>
+      <div class="output-card"><span class="label">Output</span>1
+2
+3
+4
+5
+1
+3
+5
+7
+9</div>
+
+      <h3>Loop controls</h3>
+      <div class="kw-list">
+        <span class="kw"><span class="ta">நிறுத்து</span><span class="en">Break — exits the loop immediately</span></span>
+        <span class="kw"><span class="ta">தொடர்</span><span class="en">Continue — skips to the next iteration</span></span>
+      </div>
+    </section>
+
+    <!-- ================= 09 FUNCTIONS ================= -->
+    <section class="doc-section" id="functions">
+      <span class="num">09 / 10</span>
+      <h2>Functions <span class="ta">செயல்</span></h2>
+      <p>Define a reusable block of code once, then call it wherever you need it.</p>
+      <div class="kw-list">
+        <span class="kw"><span class="ta">செயல்</span><span class="en">Function</span></span>
+        <span class="kw"><span class="ta">திருப்பு</span><span class="en">Return</span></span>
+        <span class="kw"><span class="ta">முடிவு</span><span class="en">End</span></span>
+      </div>
+      <div class="code-card">
+        <div class="code-head"><span class="label">கூட்டல்.tamil</span><button class="copy-btn">Copy</button></div>
+        <pre><code><span class="tk-cmt"># இரண்டு எண்களை கூட்டும் செயல்</span>
+<span class="tk-kw">செயல்</span> <span class="tk-fn">கூட்டல்</span>(அ, ஆ)
+    <span class="tk-kw">திருப்பு</span> அ + ஆ
+<span class="tk-kw">முடிவு</span>
+
+<span class="tk-kw">எண்</span> விடை = <span class="tk-fn">கூட்டல்</span>(<span class="tk-num">10</span>, <span class="tk-num">20</span>)
+<span class="tk-kw">காட்டு</span> விடை</code></pre>
+      </div>
+      <p><strong>கூட்டல்</strong> ("add") is defined with two parameters, <strong>அ</strong> and <strong>ஆ</strong>, and returns their sum with <strong>திருப்பு</strong>. Calling <strong>கூட்டல்(10, 20)</strong> hands back <code>30</code>, which is stored in <strong>விடை</strong> and printed.</p>
+      <div class="output-card"><span class="label">Output</span>30</div>
+      <div class="note"><b>Note:</b> a function can call itself — see the recursive factorial function in the next chapter.</div>
+    </section>
+
+    <!-- ================= 10 EXAMPLE PROGRAM ================= -->
+    <section class="doc-section" id="example">
+      <span class="num">10 / 10</span>
+      <h2>Example Program <span class="ta">காரணியப் பெருக்கம்</span></h2>
+      <p>A complete program that combines everything above — variables, a function, recursion, a conditional, and input/output — to calculate the <strong>factorial</strong> of a number the person types in.</p>
+
+      <div class="code-card">
+        <div class="code-head"><span class="label">காரணியம்.tamil</span><button class="copy-btn">Copy</button></div>
+        <pre><code><span class="tk-cmt"># Factorial Program / காரணியப் பெருக்கம்</span>
+<span class="tk-kw">செயல்</span> <span class="tk-fn">காரணியம்</span>(n)
+    <span class="tk-kw">என்றால்</span> n &lt;= <span class="tk-num">1</span>
+        <span class="tk-kw">திருப்பு</span> <span class="tk-num">1</span>
+    <span class="tk-kw">இல்லையெனில்</span>
+        <span class="tk-kw">திருப்பு</span> n * <span class="tk-fn">காரணியம்</span>(n - <span class="tk-num">1</span>)
+    <span class="tk-kw">முடிவு</span>
+<span class="tk-kw">முடிவு</span>
+
+<span class="tk-kw">எண்</span> உள்ளீடு_எண்
+<span class="tk-kw">காட்டு</span> <span class="tk-str">"ஒரு எண்ணை உள்ளிடவும்:"</span>
+<span class="tk-kw">பெறு</span> உள்ளீடு_எண்
+
+<span class="tk-kw">எண்</span> விடை = <span class="tk-fn">காரணியம்</span>(உள்ளீடு_எண்)
+<span class="tk-kw">காட்டு</span> <span class="tk-str">"விடை: "</span>
+<span class="tk-kw">காட்டு</span> விடை</code></pre>
+      </div>
+
+      <h3>Walkthrough</h3>
+      <p>1. <strong>காரணியம்</strong> ("factorial") is a function that takes one parameter, <strong>n</strong>.</p>
+      <p>2. Inside, <strong>என்றால் n &lt;= 1</strong> checks the base case: the factorial of 0 or 1 is always 1, so it returns immediately.</p>
+      <p>3. Otherwise, <strong>இல்லையெனில்</strong> returns <code>n * காரணியம்(n - 1)</code> — the function calling itself with a smaller number. This is <strong>recursion</strong>: each call waits on a smaller version of the same problem, until the base case is reached.</p>
+      <p>4. Outside the function, <strong>உள்ளீடு_எண்</strong> is declared, a prompt is printed, and <strong>பெறு</strong> reads what the person types into it.</p>
+      <p>5. <strong>காரணியம்(உள்ளீடு_எண்)</strong> is called with that number, and the result is stored in <strong>விடை</strong> ("answer") and printed.</p>
+
+      <div class="output-card"><span class="label">Sample run — if the person enters 5</span>ஒரு எண்ணை உள்ளிடவும்:
+5
+விடை: 
+120</div>
+      <div class="note"><b>Try it yourself:</b> trace through the recursive calls by hand for <code>காரணியம்(4)</code> — write down each call and what it returns, until it unwinds back to <code>24</code>.</div>
+    </section>
+
+    <div class="prevnext">
+      <a href="#introduction"><span class="dir">↑ Back to</span>01 · Introduction</a>
+      <a href="index.html" class="next"><span class="dir">Back to</span>Home</a>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>தமிழ் தா கெத்து · TamilScript documentation — a community reference.</span>
+    <span>Built with 🧡 for Tamil-first learners.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

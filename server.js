@@ -46,6 +46,9 @@ app.use(express.json());
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Serve tamilproject files at /tamilide
+app.use('/tamilide', express.static(path.join(__dirname, 'tamilproject')));
+
 // Use routes
 const routes = require('./routes/index');
 const apiRoutes = require('./routes/api');
