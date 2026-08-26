@@ -47,7 +47,15 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Serve tamilproject files at /tamilide
-app.use('/tamilide', express.static(path.join(__dirname, 'tamilproject')));
+// Force .exe downloads (Microsoft Store Package URL + site download button)
+app.use('/tamilide', (req, res, next) => {
+    if (/\.exe$/i.test(req.path)) {
+        const fileName = path.basename(req.path);
+        res.setHeader('Content-Type', 'application/octet-stream');
+        res.setHeader('Content-Disposition', `attachment; filename="${fileName}"`);
+    }
+    next();
+}, express.static(path.join(__dirname, 'tamilproject')));
 
 // Use routes
 const routes = require('./routes/index');
