@@ -29,6 +29,28 @@
 
       <!-- Gallery Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+        <!-- Intro Video Card -->
+        <div class="gallery-item cursor-pointer group relative overflow-hidden rounded-2xl bg-[#131313] transition-all duration-500 hover:bg-[#1a1a1a] border border-white/5 hover:border-[#f9c591]/30 hover:shadow-[0_0_30px_rgba(249,197,145,0.1)]"
+          data-type="video" data-src="/assert/main%20popup/video/intro.mp4">
+          <div class="aspect-[4/3] overflow-hidden relative">
+            <video class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110" src="/assert/main%20popup/video/intro.mp4" autoplay loop muted playsinline></video>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500">
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+              <span class="material-symbols-outlined text-6xl text-white drop-shadow-lg">play_circle</span>
+            </div>
+          </div>
+          <div
+            class="p-6 absolute bottom-0 left-0 w-full z-10 flex flex-col justify-end h-full pointer-events-none">
+            <h3
+              class="font-headline text-2xl italic text-white group-hover:text-[#f9c591] transition-colors drop-shadow-lg">
+              Showcase Reel
+            </h3>
+          </div>
+        </div>
+
         <% if (images && images.length> 0) { %>
           <% images.forEach(function(image) { %>
             <div
@@ -559,6 +581,8 @@
           <div class="relative w-full h-full p-4 flex justify-center items-center pointer-events-none">
             <img id="lightbox-img" src="" alt="Gallery Image"
               class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300 pointer-events-auto" />
+            <video id="lightbox-video" src="" controls
+              class="hidden max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300 pointer-events-auto"></video>
           </div>
         </div>
 
@@ -567,19 +591,38 @@
           document.addEventListener('DOMContentLoaded', () => {
             const lightbox = document.getElementById('lightbox-modal');
             const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxVideo = document.getElementById('lightbox-video');
             const closeBtn = document.getElementById('lightbox-close');
 
             document.querySelectorAll('.gallery-item').forEach(item => {
               item.addEventListener('click', (e) => {
                 e.preventDefault();
                 const imgSrc = item.getAttribute('data-src');
-                if (imgSrc && lightbox && lightboxImg) {
-                  lightboxImg.src = imgSrc;
+                const isVideo = item.getAttribute('data-type') === 'video';
+
+                if (imgSrc && lightbox) {
+                  if (isVideo && lightboxVideo) {
+                    lightboxImg.classList.add('hidden');
+                    lightboxImg.src = '';
+                    lightboxVideo.classList.remove('hidden');
+                    lightboxVideo.src = imgSrc;
+                  } else if (lightboxImg) {
+                    if (lightboxVideo) lightboxVideo.classList.add('hidden');
+                    if (lightboxVideo) lightboxVideo.src = '';
+                    lightboxImg.classList.remove('hidden');
+                    lightboxImg.src = imgSrc;
+                  }
+
                   lightbox.classList.remove('hidden');
                   setTimeout(() => {
                     lightbox.classList.remove('opacity-0');
-                    lightboxImg.classList.remove('scale-95');
-                    lightboxImg.classList.add('scale-100');
+                    if (isVideo && lightboxVideo) {
+                      lightboxVideo.classList.remove('scale-95');
+                      lightboxVideo.classList.add('scale-100');
+                    } else if (lightboxImg) {
+                      lightboxImg.classList.remove('scale-95');
+                      lightboxImg.classList.add('scale-100');
+                    }
                   }, 10);
                   document.body.style.overflow = 'hidden';
                 }
@@ -589,11 +632,19 @@
             const closeLightbox = () => {
               if (lightbox) {
                 lightbox.classList.add('opacity-0');
-                lightboxImg.classList.remove('scale-100');
-                lightboxImg.classList.add('scale-95');
+                if (lightboxImg) {
+                  lightboxImg.classList.remove('scale-100');
+                  lightboxImg.classList.add('scale-95');
+                }
+                if (lightboxVideo) {
+                  lightboxVideo.classList.remove('scale-100');
+                  lightboxVideo.classList.add('scale-95');
+                  lightboxVideo.pause();
+                }
                 setTimeout(() => {
                   lightbox.classList.add('hidden');
-                  lightboxImg.src = '';
+                  if (lightboxImg) lightboxImg.src = '';
+                  if (lightboxVideo) lightboxVideo.src = '';
                   document.body.style.overflow = '';
                 }, 300);
               }

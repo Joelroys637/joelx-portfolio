@@ -515,15 +515,38 @@
             ecosystems,
             we provide exceptional value at every tier.
           </p>
+
+          <!-- Currency Selector -->
+          <div class="flex justify-center mt-8">
+            <div class="relative bg-[#131313] border border-white/10 rounded-full px-4 py-2 flex items-center transition-all hover:border-[#f9c591]/50">
+              <span class="material-symbols-outlined text-[#f9c591] text-sm pl-1 pointer-events-none">payments</span>
+              <select id="currencySelector" class="appearance-none bg-[#131313] text-white font-label text-sm outline-none cursor-pointer pl-2 pr-6 py-1 border-none focus:ring-0" style="background-color: #131313 !important;">
+                <option class="bg-[#131313] text-white" value="USD">USD ($)</option>
+                <option class="bg-[#131313] text-white" value="EUR">EUR (€)</option>
+                <option class="bg-[#131313] text-white" value="GBP">GBP (£)</option>
+                <option class="bg-[#131313] text-white" value="INR">INR (₹)</option>
+                <option class="bg-[#131313] text-white" value="VND">VND (₫)</option>
+                <option class="bg-[#131313] text-white" value="PLN">PLN (zł)</option>
+                <option class="bg-[#131313] text-white" value="BRL">BRL (R$)</option>
+                <option class="bg-[#131313] text-white" value="MXN">MXN ($)</option>
+                <option class="bg-[#131313] text-white" value="UAH">UAH (₴)</option>
+                <option class="bg-[#131313] text-white" value="MYR">MYR (RM)</option>
+                <option class="bg-[#131313] text-white" value="SGD">SGD (S$)</option>
+              </select>
+              <div class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 flex items-center text-gray-400">
+                <span class="material-symbols-outlined text-sm">expand_more</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
           <!-- Basic Plan -->
-          <div class="pricing-card cursor-pointer" onclick="openGetInTouchModal('Basic', '1999')">
+          <div class="pricing-card cursor-pointer" onclick="openDynamicModal('Basic', 29)">
             <h3 class="font-headline italic text-2xl text-white mb-2">Basic</h3>
             <div class="mb-6">
-              <span class="text-4xl font-bold text-[#f9c591]">₹1999</span>
+              <span class="price-value text-4xl font-bold text-[#f9c591]" data-base-price="29">$29</span>
             </div>
             <div class="space-y-4 mb-8 text-gray-300">
               <div class="pricing-feature">
@@ -539,7 +562,7 @@
                 <span>Default domain</span>
               </div>
             </div>
-            <button onclick="openGetInTouchModal('Basic', '1999')"
+            <button onclick="openDynamicModal('Basic', 29); event.stopPropagation();"
               class="w-full py-3 rounded-full border border-[#f9c591]/50 text-[#f9c591] font-label font-bold tracking-widest hover:bg-[#f9c591]/10 transition-colors">
               Get Started
             </button>
@@ -547,13 +570,13 @@
 
           <!-- Silver Plan (Popular) -->
           <div class="pricing-card popular transform md:-translate-y-4 cursor-pointer"
-            onclick="openGetInTouchModal('Silver', '4999')">
+            onclick="openDynamicModal('Silver', 59)">
             <div
               class="absolute top-0 right-0 bg-gradient-to-r from-[#f9c591] to-[#e8a86a] text-[#0e0e0e] text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-bl-xl">
               Most Popular</div>
             <h3 class="font-headline italic text-3xl text-white mb-2">Silver</h3>
             <div class="mb-6">
-              <span class="text-5xl font-bold text-[#f9c591]">₹4999</span>
+              <span class="price-value text-5xl font-bold text-[#f9c591]" data-base-price="59">$59</span>
             </div>
             <div class="space-y-4 mb-8 text-gray-300">
               <div class="pricing-feature">
@@ -573,17 +596,17 @@
                 <span>Custom domain</span>
               </div>
             </div>
-            <button onclick="openGetInTouchModal('Silver', '4999')"
+            <button onclick="openDynamicModal('Silver', 59); event.stopPropagation();"
               class="w-full py-4 rounded-full bg-gradient-to-r from-[#f9c591] to-[#e8a86a] text-[#0e0e0e] font-label font-bold tracking-widest hover:scale-[1.02] transition-transform shadow-lg shadow-[#f9c591]/20">
               Choose Silver
             </button>
           </div>
 
           <!-- Gold Plan -->
-          <div class="pricing-card cursor-pointer" onclick="openGetInTouchModal('Gold', '8999')">
+          <div class="pricing-card cursor-pointer" onclick="openDynamicModal('Gold', 109)">
             <h3 class="font-headline italic text-2xl text-white mb-2">Gold</h3>
             <div class="mb-6">
-              <span class="text-4xl font-bold text-[#f9c591]">₹8999</span>
+              <span class="price-value text-4xl font-bold text-[#f9c591]" data-base-price="109">$109</span>
             </div>
             <div class="space-y-4 mb-8 text-gray-300">
               <div class="pricing-feature">
@@ -611,13 +634,63 @@
                 <span>Custom domain</span>
               </div>
             </div>
-            <button onclick="openGetInTouchModal('Gold', '8999')"
+            <button onclick="openDynamicModal('Gold', 109); event.stopPropagation();"
               class="w-full py-3 rounded-full border border-[#f9c591]/50 text-[#f9c591] font-label font-bold tracking-widest hover:bg-[#f9c591]/10 transition-colors">
               Go Gold
             </button>
           </div>
 
         </div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const exchangeRates = {
+              'USD': { rate: 1, symbol: '$' },
+              'EUR': { rate: 0.92, symbol: '€' },
+              'GBP': { rate: 0.79, symbol: '£' },
+              'INR': { rate: 83.5, symbol: '₹' },
+              'VND': { rate: 25400, symbol: '₫' },
+              'PLN': { rate: 4.05, symbol: 'zł' },
+              'BRL': { rate: 5.45, symbol: 'R$' },
+              'MXN': { rate: 18.20, symbol: '$' },
+              'UAH': { rate: 41.50, symbol: '₴' },
+              'MYR': { rate: 4.75, symbol: 'RM' },
+              'SGD': { rate: 1.35, symbol: 'S$' }
+            };
+
+            const currencySelector = document.getElementById('currencySelector');
+            const priceElements = document.querySelectorAll('.price-value');
+
+            currencySelector.addEventListener('change', (e) => {
+              const selectedCurrency = e.target.value;
+              const { rate, symbol } = exchangeRates[selectedCurrency];
+
+              priceElements.forEach(el => {
+                const basePrice = parseFloat(el.getAttribute('data-base-price'));
+                const convertedPrice = Math.round(basePrice * rate);
+                el.textContent = `${symbol}${convertedPrice}`;
+              });
+            });
+            
+            window.getCurrentCurrencyInfo = function() {
+              const selectedCurrency = currencySelector.value;
+              return exchangeRates[selectedCurrency];
+            };
+          });
+
+          window.openDynamicModal = function(pkg, basePrice) {
+            let finalPrice = basePrice;
+            if (window.getCurrentCurrencyInfo) {
+              const { rate, symbol } = window.getCurrentCurrencyInfo();
+              finalPrice = `${symbol}${Math.round(basePrice * rate)}`;
+            } else {
+              finalPrice = `$${basePrice}`;
+            }
+            if (typeof openGetInTouchModal === 'function') {
+              openGetInTouchModal(pkg, finalPrice);
+            }
+          };
+        </script>
       </section>
 
 
