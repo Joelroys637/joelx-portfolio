@@ -18,7 +18,7 @@
           "value": "joelxorbit.vercel.app"
         }
       ],
-      "destination": "https://joelxorbit.in/$1",
+      "destination": "https://www.joelxorbit.in/$1",
       "permanent": true
     }
   ],
