@@ -9,6 +9,19 @@
       }
     }
   ],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "joelxorbit.vercel.app"
+        }
+      ],
+      "destination": "https://joelxorbit.in/$1",
+      "permanent": true
+    }
+  ],
   "routes": [
     {
       "src": "/(.*)",
