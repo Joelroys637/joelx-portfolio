@@ -5,7 +5,7 @@
 <head>
   <%- include('../partials/head') %>
   <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@11.0.5/swiper-bundle.min.css" />
   <style>
     .productSwiper {
       width: 100%;
@@ -401,6 +401,14 @@
             </div>
           </a>
         </div>
+        
+        <!-- Explore Gallery Button -->
+        <div class="mt-12 flex justify-center animate-bounce">
+          <a href="/gallery" class="inline-flex items-center gap-3 bg-transparent border border-[#f9c591]/30 text-white font-label font-bold tracking-widest uppercase text-sm px-8 py-4 rounded-full hover:bg-[#f9c591] hover:text-[#0e0e0e] hover:border-[#f9c591] transition-all duration-300 group shadow-[0_0_20px_rgba(249,197,145,0.05)] hover:shadow-[0_0_30px_rgba(249,197,145,0.2)]">
+            Explore Our Gallery
+            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+        </div>
       </section>
 
       <!-- ============================================================
@@ -420,16 +428,16 @@
         <div class="swiper productSwiper">
           <div class="swiper-wrapper">
             
-            <!-- Product 1: QR Code Generator -->
-            <div class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden" onclick="window.open('https://joelx-qrcode.vercel.app/', '_blank')">
-              <img src="/images/qrcode_generator_ui_1786198997048.png" alt="QR Code Generator" class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
+            <!-- Product 1: JoelX Tools -->
+            <div class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden" onclick="window.open('https://tools.joelxorbit.in/', '_blank')">
+              <img src="/images/qrcode_generator_ui_1786198997048.png" alt="JoelX Tools" class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
               
               <!-- Dark overlay for text readability -->
               <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/80 to-transparent z-10"></div>
               
               <!-- Badge -->
               <div class="absolute top-[45%] left-6 -translate-y-1/2 bg-[#f9c591]/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold z-20 border border-[#f9c591]/30">
-                GENERATOR
+                TOOLS HUB
               </div>
               
               <!-- Number -->
@@ -439,9 +447,9 @@
               
               <!-- Content -->
               <div class="absolute bottom-0 left-0 w-full z-20 flex flex-col justify-end p-6 md:p-8">
-                <h3 class="text-white font-headline italic text-2xl md:text-3xl mb-2 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">QR Code Generator</h3>
+                <h3 class="text-white font-headline italic text-2xl md:text-3xl mb-2 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">JoelX Orbit Tools</h3>
                 <p class="text-gray-400 text-sm md:text-[15px] leading-relaxed">
-                  Create custom, high-quality QR codes instantly for your links, text, or business needs.
+                  Generate professional certificates and create custom QR codes instantly in one unified platform.
                 </p>
               </div>
             </div>
@@ -468,29 +476,7 @@
               </div>
             </div>
 
-            <!-- Product 3: Certificate Generator -->
-            <div class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden" onclick="window.open('https://certificate-leo123.streamlit.app/', '_blank')">
-              <img src="/images/certificate_generator_ui_1786199031985.png" alt="Certificate Generator" class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
-              
-              <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/80 to-transparent z-10"></div>
-              
-              <div class="absolute top-[45%] left-6 -translate-y-1/2 bg-[#f9c591]/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold z-20 border border-[#f9c591]/30">
-                GENERATOR
-              </div>
-              
-              <div class="absolute top-4 right-6 text-6xl md:text-8xl font-headline italic font-bold text-white/20 z-10 select-none">
-                03
-              </div>
-              
-              <div class="absolute bottom-0 left-0 w-full z-20 flex flex-col justify-end p-6 md:p-8">
-                <h3 class="text-white font-headline italic text-2xl md:text-3xl mb-2 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">Certificate Generator</h3>
-                <p class="text-gray-400 text-sm md:text-[15px] leading-relaxed">
-                  Design and generate professional certificates automatically for your events and courses.
-                </p>
-              </div>
-            </div>
-
-            <!-- Product 4: Sindhai IDE -->
+            <!-- Product 3: Sindhai IDE -->
             <div class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden" onclick="window.open('https://apps.microsoft.com/store/detail/XPDNSMWSJBNGVQ', '_blank')">
               
               <img src="/images/sinthai.png" alt="சிந்தை IDE" class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
@@ -502,7 +488,7 @@
               </div>
               
               <div class="absolute top-4 right-6 text-6xl md:text-8xl font-headline italic font-bold text-white/20 z-10 select-none">
-                04
+                03
               </div>
               
               <div class="absolute bottom-0 left-0 w-full z-20 flex flex-col justify-end p-6 md:p-8">
@@ -513,7 +499,7 @@
               </div>
             </div>
 
-            <!-- Product 5: StreamLine - Video Call -->
+            <!-- Product 4: StreamLine - Video Call -->
             <div class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden" onclick="window.open('https://joelx-videocall.vercel.app/', '_blank')">
               
               <img src="/assert/images/project image/videocall.png" alt="StreamLine - Video Call" class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
@@ -525,7 +511,7 @@
               </div>
               
               <div class="absolute top-4 right-6 text-6xl md:text-8xl font-headline italic font-bold text-white/20 z-10 select-none">
-                05
+                04
               </div>
               
               <div class="absolute bottom-0 left-0 w-full z-20 flex flex-col justify-end p-6 md:p-8">
@@ -897,13 +883,67 @@
         </div>
       </section>
 
+      <!-- ============================================================
+       LOCATION SECTION
+       ============================================================ -->
+      <section id="location" class="mt-32 mb-16 max-w-7xl mx-auto px-4 md:px-6">
+        <div class="mb-16 text-center space-y-4">
+          <div class="flex items-center justify-center gap-3">
+            <span class="h-[1px] w-8 bg-[#f9c591]"></span>
+            <span class="font-label text-xs uppercase tracking-[0.3em] text-gray-400">Our Location</span>
+            <span class="h-[1px] w-8 bg-[#f9c591]"></span>
+          </div>
+          <h2 class="font-headline italic text-4xl text-white">
+            Find <span class="text-[#f9c591]">Us</span>
+          </h2>
+        </div>
+
+        <div class="w-full rounded-2xl overflow-hidden border border-white/5 shadow-[0_10px_40px_rgba(249,197,145,0.05)] bg-[#131313] p-2">
+          <div class="w-full h-full rounded-xl overflow-hidden relative group">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5225.941725964462!2d78.9391688621919!3d10.964138645436176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baae7001aca93bd%3A0x3727c1bf2dbc8c5c!2sJoelx%20orbit!5e0!3m2!1sen!2sin!4v1791631477322!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" class="opacity-90 group-hover:opacity-100 transition-opacity duration-300"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SEO CONTENT SECTION (Optimized for Search Engines)
+       ============================================================ -->
+      <section class="max-w-7xl mx-auto px-4 md:px-6 mb-24 text-gray-400 font-body text-[15px] leading-relaxed space-y-8">
+        <div class="border-t border-white/5 pt-16">
+          <h2 class="text-[#f9c591] font-headline italic text-3xl mb-4">Joelx Orbit: The Premier Global IT & Software Development Company</h2>
+          <p class="mb-4">
+            Welcome to <strong>Joelx Orbit</strong>, the industry-leading <strong>global IT service company</strong> and innovative digital agency. We specialize in providing top-tier <strong>web development</strong>, <strong>mobile app development</strong> (including native Android, iOS, Flutter, and React Native), custom CRM software, and robust desktop applications. Our dedicated tech experts transform your business with scalable, secure, and modern solutions tailored specifically to your unique requirements.
+          </p>
+          <p>
+            Whether you need a cutting-edge corporate website, a high-converting eCommerce platform, or a complex custom web application, our <strong>web development experts</strong> utilize the latest technologies like React, Node.js, and Next.js to deliver unparalleled performance. In the mobile space, our <strong>app development</strong> team builds applications that offer seamless user experiences, driving engagement and growth for your brand on both Google Play and the Apple App Store.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-[#131313] p-8 rounded-2xl border border-white/5 shadow-lg">
+            <h3 class="text-white font-headline text-2xl mb-3">Custom CRM & Desktop Apps</h3>
+            <p>
+              Streamline your business operations with our bespoke <strong>CRM software development</strong> services. We design custom billing apps, enterprise resource planning (ERP) systems, and comprehensive customer relationship management tools that integrate flawlessly into your existing workflow. Additionally, our high-performance <strong>desktop application development</strong> ensures that your internal teams have the powerful, offline-capable tools they need to succeed in today's competitive landscape.
+            </p>
+          </div>
+          
+          <div class="bg-[#131313] p-8 rounded-2xl border border-white/5 shadow-lg">
+            <h3 class="text-white font-headline text-2xl mb-3">Serving Clients Worldwide</h3>
+            <p>
+              As a top-rated global tech partner, <strong>Joelx Orbit</strong> proudly delivers software and IT solutions to a diverse, international clientele. We have a proven track record of successful deployments across the globe, empowering businesses in Vietnam, Poland, Brazil, Mexico, Ukraine, Malaysia, Singapore, and beyond. Partner with the best IT company today to elevate your digital presence and achieve sustainable, long-term success.
+            </p>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <%- include('../partials/footer') %>
       <%- include('../partials/modal') %>
+      <%- include('../partials/chatbot') %>
       
         <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/swiper@11.0.5/swiper-bundle.min.js"></script>
         <script>
           document.addEventListener('DOMContentLoaded', function() {
             var swiper = new Swiper(".productSwiper", {
