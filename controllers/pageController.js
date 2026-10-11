@@ -34,3 +34,11 @@ exports.renderGallery = (req, res) => {
   
   res.render('pages/gallery', { images });
 };
+
+exports.renderTerms = (req, res) => {
+  res.render('pages/terms');
+};
+
+exports.renderPrivacy = (req, res) => {
+  res.render('pages/privacy');
+};
