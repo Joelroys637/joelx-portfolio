@@ -3,27 +3,63 @@
 <link rel="icon" href="/joelx.png" type="image/png" />
 <link rel="apple-touch-icon" href="/joelx.png" />
 
+<%
+  const currentSeo = (typeof seo !== 'undefined' && seo) ? seo : {};
+  const pageTitle = currentSeo.title || "Joelx Orbit | Global Web Service, Mobile App Development, CRM & Desktop Application";
+  const pageDescription = currentSeo.description || "Joelx Orbit is a leading global IT service company specializing in top-tier web development, mobile app development (Android & iOS), custom CRM solutions, and robust desktop applications. Transform your business with our tech experts, providing innovative solutions for clients in Vietnam, Poland, Brazil, Mexico, Ukraine, Malaysia, and Singapore.";
+  const pageKeywords = currentSeo.keywords || "best IT company, web development, app development, custom CRM web application, billing app, global web service, mobile app development, CRM software development, desktop application development, top IT company, custom software development, Android app development, iOS app development, Joelx Orbit, Vietnam web development, Poland app development, Brazil CRM solutions, Mexico software development, Ukraine IT services, Malaysia web development, Singapore tech experts";
+  const pageCanonical = currentSeo.canonicalUrl || "https://joelxorbit.in/";
+  const pageOgType = currentSeo.ogType || "website";
+  const pageOgImage = currentSeo.ogImage || "https://joelxorbit.in/joelx.png";
+  const pageStructuredData = currentSeo.structuredData || null;
+%>
+
 <!-- ============================================================
      PRIMARY SEO META TAGS
      ============================================================ -->
-<title>Joelx Orbit | Global Web Service, Mobile App Development, CRM & Desktop Application</title>
-<meta name="description"
-  content="Joelx Orbit is a leading global IT service company specializing in top-tier web development, mobile app development (Android & iOS), custom CRM solutions, and robust desktop applications. Transform your business with our tech experts, providing innovative solutions for clients in Vietnam, Poland, Brazil, Mexico, Ukraine, Malaysia, and Singapore." />
-<meta name="keywords"
-  content="best IT company, web development, app development, custom CRM web application, billing app, global web service, mobile app development, CRM software development, desktop application development, top IT company, custom software development, Android app development, iOS app development, Joelx Orbit, Vietnam web development, Poland app development, Brazil CRM solutions, Mexico software development, Ukraine IT services, Malaysia web development, Singapore tech experts" />
+<title><%= pageTitle %></title>
+<meta name="description" content="<%= pageDescription %>" />
+<meta name="keywords" content="<%= pageKeywords %>" />
 <meta name="author" content="Joelx Orbit" />
 <meta name="google-site-verification" content="5uieVT_Zcf0XzZxJ9rmwJlKvO9L3PPYDgraSarxlq44" />
 <meta name="google-adsense-account" content="ca-pub-5342182227761563" />
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5342182227761563"
-  crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5342182227761563" crossorigin="anonymous"></script>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 <meta name="theme-color" content="#d2a373" />
-<link rel="canonical" href="https://joelxorbit.in/" />
+<link rel="canonical" href="<%= pageCanonical %>" />
+
+<!-- ============================================================
+     OPEN GRAPH (FACEBOOK / LINKEDIN)
+     ============================================================ -->
+<meta property="og:type" content="<%= pageOgType %>" />
+<meta property="og:url" content="<%= pageCanonical %>" />
+<meta property="og:title" content="<%= pageTitle %>" />
+<meta property="og:description" content="<%= pageDescription %>" />
+<meta property="og:image" content="<%= pageOgImage %>" />
+<meta property="og:site_name" content="Joelx Orbit" />
+<meta property="og:locale" content="en_US" />
+
+<!-- ============================================================
+     TWITTER CARD
+     ============================================================ -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="<%= pageTitle %>" />
+<meta name="twitter:description" content="<%= pageDescription %>" />
+<meta name="twitter:image" content="<%= pageOgImage %>" />
 
 <!-- ============================================================
      STRUCTURED DATA (JSON-LD) FOR ADVANCED SEO
      ============================================================ -->
-<script type="application/ld+json">
+<% if (pageStructuredData) { %>
+  <% if (Array.isArray(pageStructuredData)) { %>
+    <% pageStructuredData.forEach(function(sd) { %>
+      <script type="application/ld+json"><%- JSON.stringify(sd) %></script>
+    <% }); %>
+  <% } else { %>
+    <script type="application/ld+json"><%- JSON.stringify(pageStructuredData) %></script>
+  <% } %>
+<% } else { %>
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -32,7 +68,7 @@
     "url": "https://joelxorbit.in/"
   }
   </script>
-<script type="application/ld+json">
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -48,128 +84,11 @@
       "addressCountry": "IN"
     },
     "description": "A leading global IT service company specializing in web development, mobile app development, CRM, and desktop application development. Providing cutting-edge technology solutions for clients in Vietnam, Poland, Brazil, Mexico, Ukraine, Malaysia, and Singapore.",
-    "areaServed": ["Vietnam", "Poland", "Brazil", "Mexico", "Ukraine", "Malaysia", "Singapore", "Global"],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "IT Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Web Service & Web Development"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Mobile App Development"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "CRM Software Solutions"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Desktop Application Development"
-          }
-        }
-      ]
-    }
+    "areaServed": ["Vietnam", "Poland", "Brazil", "Mexico", "Ukraine", "Malaysia", "Singapore", "Global"]
   }
   </script>
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Joelx Orbit",
-    "image": "https://joelxorbit.in/joelx.png",
-    "@id": "https://joelxorbit.in/",
-    "url": "https://joelxorbit.in/",
-    "telephone": "+91-9000000000",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Tiruchirappalli",
-      "addressRegion": "Tamil Nadu",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 10.790483,
-      "longitude": 78.704673
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "opens": "09:00",
-      "closes": "20:00"
-    },
-    "priceRange": "$$"
-  }
-  </script>
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": "What services does Joelx Orbit provide?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Joelx Orbit is a premier global IT company providing cutting-edge web development, mobile app development (Android and iOS), custom CRM solutions, billing apps, and robust desktop applications."
-      }
-    },{
-      "@type": "Question",
-      "name": "Does Joelx Orbit serve international clients?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we are a global web service agency serving clients in Vietnam, Poland, Brazil, Mexico, Ukraine, Malaysia, Singapore, and worldwide."
-      }
-    },{
-      "@type": "Question",
-      "name": "Why choose Joelx Orbit for custom software development?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our tech experts deliver scalable, highly secure, and performance-optimized digital solutions tailored to transform your business and boost your online presence."
-      }
-    }]
-  }
-  </script>
+<% } %>
 
-<!-- ============================================================
-     OPEN GRAPH (FACEBOOK / LINKEDIN)
-     ============================================================ -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://joelxorbit.in/" />
-<meta property="og:title" content="Joelx Orbit | Web & Mobile App Development Company" />
-<meta property="og:description"
-  content="Premium web development, mobile app development (Android, iOS, Flutter, React Native), UI/UX design, and full stack development services. Trusted by brands worldwide." />
-<meta property="og:image" content="https://joelxorbit.in/og-image.jpg" />
-<meta property="og:site_name" content="Joelx Orbit" />
-<meta property="og:locale" content="en_US" />
-
-<!-- ============================================================
-     TWITTER CARD
-     ============================================================ -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Joelx Orbit | Web & Mobile App Development Company" />
-<meta name="twitter:description"
-  content="Android app development, iOS app development, Flutter, React Native, ecommerce website development, UI/UX design, and full stack development." />
-<meta name="twitter:image" content="https://joelxorbit.in/og-image.jpg" />
-
-<link
-  href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
-  rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-  rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-  rel="stylesheet" />
-
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
 <link href="/styles.css" rel="stylesheet" />

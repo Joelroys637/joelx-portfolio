@@ -1,0 +1,75 @@
+name: Automated Daily IT Blog & SEO Engine
+
+on:
+  schedule:
+    # 03:30 UTC = 09:00 AM IST (India Standard Time)
+    - cron: '30 3 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run in dry-run mode without creating PR'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate-blog:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci || npm install
+
+      - name: Run Unit Tests & SEO Audit
+        run: |
+          npm test
+          npm run seo:audit
+
+      - name: Generate Daily IT Blog Post
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            npm run blog:generate -- --dry-run
+          else
+            npm run blog:generate
+          fi
+
+      - name: Create Pull Request with Proposed Draft
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Check if git status has modified data files
+          if git status --porcelain | grep -E 'data/'; then
+            BRANCH_NAME="auto/blog-$(date +%Y%m%d-%H%M%S)"
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+
+            git checkout -b "$BRANCH_NAME"
+            git add data/
+            git commit -m "content: automated daily IT blog draft [$(date +'%Y-%m-%d')]"
+            git push origin "$BRANCH_NAME"
+
+            PR_BODY=$(cat seo-review-report.md 2>/dev/null || echo "Automated daily IT blog article proposal.")
+
+            gh pr create \
+              --title "📝 Proposed Daily IT Blog: $(date +'%Y-%m-%d')" \
+              --body "$PR_BODY" \
+              --base main \
+              --head "$BRANCH_NAME"
+          else
+            echo "No new article generated or no file changes detected. Skipping PR creation."
+          fi
