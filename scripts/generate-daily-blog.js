@@ -161,7 +161,7 @@ Generate a JSON object (strictly valid JSON, no markdown formatting ticks around
   "icon": "smart_toy or cloud_sync or security or code_blocks or phone_iphone or database",
   "gradient": "from-amber-500/20 via-orange-500/10 to-transparent",
   "tagColor": "text-[#f9c591] bg-[#f9c591]/10 border-[#f9c591]/30",
-  "featured": false,
+  "featured": true,
   "date": "Current Date (e.g., October 24, 2025)",
   "readTime": "5 min read",
   "primaryKeyword": "primary keyword phrase",
@@ -180,6 +180,8 @@ Generate a JSON object (strictly valid JSON, no markdown formatting ticks around
     const jsonMatch = responseText.match(/\{[\s\S]*\}/);
     if (jsonMatch) {
       const article = JSON.parse(jsonMatch[0]);
+      // Set new article as featured
+      article.featured = true;
       // Attach stock web image
       const imgObj = STOCK_TECH_IMAGES[Math.floor(Math.random() * STOCK_TECH_IMAGES.length)];
       article.coverImage = imgObj.url;
@@ -216,7 +218,7 @@ function generateFallbackArticle(candidates, existingIndex) {
     icon: "code_blocks",
     gradient: "from-amber-500/20 via-orange-500/10 to-transparent",
     tagColor: "text-[#f9c591] bg-[#f9c591]/10 border-[#f9c591]/30",
-    featured: false,
+    featured: true,
     date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }),
     readTime: "5 min read",
     primaryKeyword: `modern engineering ${timestamp}`,
@@ -255,12 +257,13 @@ function generateFallbackArticle(candidates, existingIndex) {
 }
 
 function writeArticleToBlogsFile(newArticle) {
-  const blogsContent = fs.readFileSync(BLOGS_FILE_PATH, 'utf8');
-
-  // Parse blogs array from file content using regex or node evaluation safely
   const { blogs, categories } = require(BLOGS_FILE_PATH);
 
-  // Prepend new article
+  // Reset featured flag on previous articles so the newest article is the sole featured post at top
+  blogs.forEach(b => { b.featured = false; });
+
+  // Prepend new article at index 0 as featured
+  newArticle.featured = true;
   blogs.unshift(newArticle);
 
   const updatedFileContent = `// data/blogs.js - Curated IT Field & Tech Sector Blog Content for Joelx Orbit
@@ -298,6 +301,7 @@ async function main() {
   console.log(`URL Slug: /blog/${article.slug}`);
   console.log(`Primary Keyword: ${article.primaryKeyword}`);
   console.log(`Search Intent: ${article.searchIntent}`);
+  console.log(`Featured Status: ${article.featured ? 'Featured First (Top Spotlight)' : 'Standard'}`);
   console.log(`Featured Image URL: ${article.coverImage}`);
   console.log(`Image Source: ${article.imageSource}`);
   console.log(`Image License: ${article.imageLicense}`);
@@ -320,7 +324,7 @@ async function main() {
 
   // Update blogs.js
   writeArticleToBlogsFile(article);
-  console.log(`[File System] Updated data/blogs.js with new article.`);
+  console.log(`[File System] Updated data/blogs.js with new featured article at index 0.`);
 
   // Update content index
   existingIndex.unshift({
@@ -347,6 +351,7 @@ async function main() {
 - **Slug:** \`/blog/${article.slug}\`
 - **Category:** ${article.category}
 - **Publication Date:** ${article.date}
+- **Placement:** Featured Spotlight (First on Blog Page)
 
 ### SEO & Keyword Analysis
 - **Primary Keyword:** \`${article.primaryKeyword}\`

@@ -4,14 +4,14 @@
 <link rel="apple-touch-icon" href="/joelx.png" />
 
 <%
-  const currentSeo = (typeof seo !== 'undefined' && seo) ? seo : {};
-  const pageTitle = currentSeo.title || "Joelx Orbit | Global Web Service, Mobile App Development, CRM & Desktop Application";
-  const pageDescription = currentSeo.description || "Joelx Orbit is a leading global IT service company specializing in top-tier web development, mobile app development (Android & iOS), custom CRM solutions, and robust desktop applications. Transform your business with our tech experts, providing innovative solutions for clients in Vietnam, Poland, Brazil, Mexico, Ukraine, Malaysia, and Singapore.";
-  const pageKeywords = currentSeo.keywords || "best IT company, web development, app development, custom CRM web application, billing app, global web service, mobile app development, CRM software development, desktop application development, top IT company, custom software development, Android app development, iOS app development, Joelx Orbit, Vietnam web development, Poland app development, Brazil CRM solutions, Mexico software development, Ukraine IT services, Malaysia web development, Singapore tech experts";
-  const pageCanonical = currentSeo.canonicalUrl || "https://joelxorbit.in/";
-  const pageOgType = currentSeo.ogType || "website";
-  const pageOgImage = currentSeo.ogImage || "https://joelxorbit.in/joelx.png";
-  const pageStructuredData = currentSeo.structuredData || null;
+  const currentSeo = (typeof seo !== 'undefined' && seo) ? seo : null;
+  const pageTitle = currentSeo && currentSeo.title ? currentSeo.title : "Joelx Orbit | Global Web Service, Mobile App Development, CRM & Desktop Application";
+  const pageDescription = currentSeo && currentSeo.description ? currentSeo.description : "Joelx Orbit is a leading global IT service company specializing in top-tier web development, mobile app development (Android & iOS), custom CRM solutions, and robust desktop applications. Transform your business with our tech experts, providing innovative solutions for clients in Vietnam, Poland, Brazil, Mexico, Ukraine, Malaysia, and Singapore.";
+  const pageKeywords = currentSeo && currentSeo.keywords ? currentSeo.keywords : "best IT company, web development, app development, custom CRM web application, billing app, global web service, mobile app development, CRM software development, desktop application development, top IT company, custom software development, Android app development, iOS app development, Joelx Orbit, Vietnam web development, Poland app development, Brazil CRM solutions, Mexico software development, Ukraine IT services, Malaysia web development, Singapore tech experts";
+  const pageCanonical = currentSeo && currentSeo.canonicalUrl ? currentSeo.canonicalUrl : "https://joelxorbit.in/";
+  const pageOgType = currentSeo && currentSeo.ogType ? currentSeo.ogType : "website";
+  const pageOgImage = currentSeo && currentSeo.ogImage ? currentSeo.ogImage : "https://joelxorbit.in/joelx.png";
+  const pageStructuredData = currentSeo && currentSeo.structuredData ? currentSeo.structuredData : null;
 %>
 
 <!-- ============================================================
@@ -85,6 +85,35 @@
     },
     "description": "A leading global IT service company specializing in web development, mobile app development, CRM, and desktop application development. Providing cutting-edge technology solutions for clients in Vietnam, Poland, Brazil, Mexico, Ukraine, Malaysia, and Singapore.",
     "areaServed": ["Vietnam", "Poland", "Brazil", "Mexico", "Ukraine", "Malaysia", "Singapore", "Global"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Joelx Orbit",
+    "image": "https://joelxorbit.in/joelx.png",
+    "@id": "https://joelxorbit.in/",
+    "url": "https://joelxorbit.in/",
+    "telephone": "+91-9000000000",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tiruchirappalli",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 10.790483,
+      "longitude": 78.704673
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    "priceRange": "$$"
   }
   </script>
 <% } %>

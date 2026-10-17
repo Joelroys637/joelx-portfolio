@@ -5,39 +5,15 @@ const { blogs, categories } = require('../data/blogs');
 const BASE_URL = 'https://joelxorbit.in';
 
 exports.renderHome = (req, res) => {
-  const seo = {
-    title: "Joelx Orbit | Global Web Service, Mobile App Development, CRM & Desktop Application",
-    description: "Joelx Orbit is a leading global IT service company specializing in top-tier web development, mobile app development (Android & iOS), custom CRM solutions, and robust desktop applications.",
-    keywords: "best IT company, web development, app development, custom CRM web application, billing app, global web service, mobile app development, CRM software development, desktop application development",
-    canonicalUrl: `${BASE_URL}/`,
-    ogType: "website",
-    ogImage: `${BASE_URL}/joelx.png`
-  };
-  res.render('pages/home', { seo });
+  res.render('pages/home');
 };
 
 exports.renderServices = (req, res) => {
-  const seo = {
-    title: "Our IT & Software Development Services | Joelx Orbit",
-    description: "Explore enterprise software solutions, web development, cross-platform mobile apps, cloud platform engineering, and custom desktop software by Joelx Orbit.",
-    keywords: "web development services, mobile app development, CRM software, desktop applications, cloud solutions",
-    canonicalUrl: `${BASE_URL}/services`,
-    ogType: "website",
-    ogImage: `${BASE_URL}/joelx.png`
-  };
-  res.render('pages/services', { seo });
+  res.render('pages/services');
 };
 
 exports.renderQuote = (req, res) => {
-  const seo = {
-    title: "Get a Project Estimate & Consultation | Joelx Orbit",
-    description: "Request a custom project quote for web development, mobile applications, CRM software, or enterprise IT solutions from Joelx Orbit.",
-    keywords: "IT consultation, project quote, web development pricing, software estimate",
-    canonicalUrl: `${BASE_URL}/quote`,
-    ogType: "website",
-    ogImage: `${BASE_URL}/joelx.png`
-  };
-  res.render('pages/quote', { seo });
+  res.render('pages/quote');
 };
 
 exports.renderGallery = (req, res) => {
@@ -59,28 +35,12 @@ exports.renderGallery = (req, res) => {
     console.error("Error reading gallery directory:", err);
   }
 
-  const seo = {
-    title: "Project Portfolio & UI Design Gallery | Joelx Orbit",
-    description: "Browse featured digital products, luxury client projects, and UI design solutions built by Joelx Orbit.",
-    keywords: "software portfolio, web development gallery, app showcase, Joelx Orbit work",
-    canonicalUrl: `${BASE_URL}/gallery`,
-    ogType: "website",
-    ogImage: `${BASE_URL}/joelx.png`
-  };
-
-  res.render('pages/gallery', { images, seo });
+  res.render('pages/gallery', { images });
 };
 
 exports.renderBlog = (req, res) => {
   const selectedSlug = req.query.post || null;
-  let seo = {
-    title: "IT Blog & Tech Insights | Joelx Orbit - Modern Software & Technology Trends",
-    description: "Explore in-depth articles on Agentic AI, Cloud-Native Platform Engineering, Zero Trust Cybersecurity, Full-Stack Frameworks, and Mobile Architecture by Joelx Orbit.",
-    keywords: "IT blog, Agentic AI, cloud engineering, cybersecurity, Flutter vs KMP, fullstack development, vector databases, software architecture, Joelx Orbit blog",
-    canonicalUrl: `${BASE_URL}/blog`,
-    ogType: "website",
-    ogImage: `${BASE_URL}/joelx.png`
-  };
+  let seo = null;
 
   if (selectedSlug) {
     const post = blogs.find(b => b.slug === selectedSlug || b.id === selectedSlug);
@@ -225,27 +185,11 @@ exports.renderBlogPost = (req, res) => {
 };
 
 exports.renderTerms = (req, res) => {
-  const seo = {
-    title: "Terms & Conditions | Joelx Orbit",
-    description: "Terms and conditions for software development services and website usage provided by Joelx Orbit.",
-    keywords: "terms and conditions, legal, Joelx Orbit terms",
-    canonicalUrl: `${BASE_URL}/terms`,
-    ogType: "website",
-    ogImage: `${BASE_URL}/joelx.png`
-  };
-  res.render('pages/terms', { seo });
+  res.render('pages/terms');
 };
 
 exports.renderPrivacy = (req, res) => {
-  const seo = {
-    title: "Privacy Policy | Joelx Orbit",
-    description: "Privacy policy detailing data collection, processing, and protection practices at Joelx Orbit.",
-    keywords: "privacy policy, data protection, Joelx Orbit privacy",
-    canonicalUrl: `${BASE_URL}/privacy`,
-    ogType: "website",
-    ogImage: `${BASE_URL}/joelx.png`
-  };
-  res.render('pages/privacy', { seo });
+  res.render('pages/privacy');
 };
 
 exports.renderSitemap = (req, res) => {
