@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { blogs, categories } = require('../data/blogs');
 
 exports.renderHome = (req, res) => {
   res.render('pages/home');
@@ -35,6 +36,20 @@ exports.renderGallery = (req, res) => {
   res.render('pages/gallery', { images });
 };
 
+exports.renderBlog = (req, res) => {
+  const selectedSlug = req.query.post || null;
+  res.render('pages/blog', { blogs, categories, selectedSlug });
+};
+
+exports.renderBlogPost = (req, res) => {
+  const { slug } = req.params;
+  const post = blogs.find(b => b.slug === slug || b.id === slug);
+  if (!post) {
+    return res.redirect('/blog');
+  }
+  res.render('pages/blog', { blogs, categories, selectedSlug: post.slug });
+};
+
 exports.renderTerms = (req, res) => {
   res.render('pages/terms');
 };
@@ -42,3 +57,4 @@ exports.renderTerms = (req, res) => {
 exports.renderPrivacy = (req, res) => {
   res.render('pages/privacy');
 };
+

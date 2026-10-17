@@ -9,6 +9,11 @@ router.get('/services', pageController.renderServices);
 router.get('/quote.html', pageController.renderQuote); // backward compatibility
 router.get('/quote', pageController.renderQuote);
 router.get('/gallery', pageController.renderGallery);
+router.get('/blog', pageController.renderBlog);
+router.get('/blog/', pageController.renderBlog);
+router.get('/blogs', (req, res) => res.redirect(301, '/blog'));
+router.get('/blog.html', pageController.renderBlog); // backward compatibility
+router.get('/blog/:slug', pageController.renderBlogPost);
 router.get('/terms', pageController.renderTerms);
 router.get('/terms-and-conditions', pageController.renderTerms);
 router.get('/terms-and-conditions.html', pageController.renderTerms);

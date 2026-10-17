@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+  <%- include('../partials/head') %>
+  <title>IT Blog & Tech Insights | Joelx Orbit - Modern Software & Technology Trends</title>
+  <meta name="description" content="Explore in-depth articles on Agentic AI, Cloud-Native Platform Engineering, Zero Trust Cybersecurity, Full-Stack Frameworks, and Mobile Architecture by Joelx Orbit." />
+  <meta name="keywords" content="IT blog, Agentic AI, cloud engineering, cybersecurity, Flutter vs KMP, fullstack development, vector databases, software architecture, Joelx Orbit blog" />
+
+  <style>
+    .glass-card {
+      background: rgba(19, 19, 19, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .glass-card:hover {
+      border-color: rgba(249, 197, 145, 0.3);
+      box-shadow: 0 10px 40px -10px rgba(249, 197, 145, 0.12);
+    }
+    .filter-btn.active {
+      background: #f9c591;
+      color: #0e0e0e;
+      border-color: #f9c591;
+      box-shadow: 0 0 20px rgba(249, 197, 145, 0.35);
+      font-weight: 700;
+    }
+    /* Reader Modal Animation */
+    #reader-modal {
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    #reader-modal.hidden-modal {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    #reader-modal.visible-modal {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    #reader-dialog {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+    }
+    #reader-modal.hidden-modal #reader-dialog {
+      transform: scale(0.96) translateY(20px);
+      opacity: 0;
+    }
+    #reader-modal.visible-modal #reader-dialog {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="bg-[#0e0e0e] text-white font-body selection:bg-primary/30 selection:text-primary overflow-x-hidden min-h-screen flex flex-col justify-between">
+
+  <%- include('../partials/header') %>
+
+  <!-- Main Content Canvas -->
+  <main class="pt-28 pb-24 px-6 max-w-7xl mx-auto w-full flex-grow">
+
+    <!-- Hero Header -->
+    <header class="mb-14 text-center max-w-4xl mx-auto space-y-4">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f9c591]/10 border border-[#f9c591]/25 text-[#f9c591] text-xs font-label uppercase tracking-widest">
+        <span class="material-symbols-outlined text-sm">terminal</span>
+        <span>IT Sector Insights &amp; Tech Intelligence</span>
+      </div>
+
+      <h1 class="font-headline italic text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-tight">
+        Engineering The <span class="text-[#f9c591] not-italic font-bold">Digital Future.</span>
+      </h1>
+
+      <p class="text-gray-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto font-body">
+        Authoritative perspectives on Agentic AI, cloud-native platforms, enterprise cybersecurity, next-gen full-stack architecture, and mobile engineering.
+      </p>
+
+      <!-- Search & Filters Bar -->
+      <div class="pt-6 max-w-2xl mx-auto space-y-4">
+        <!-- Search Input -->
+        <div class="relative w-full">
+          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-xl pointer-events-none">search</span>
+          <input
+            id="blog-search-input"
+            type="text"
+            placeholder="Search articles by title, tech stack, keyword..."
+            class="w-full pl-12 pr-10 py-3.5 rounded-xl bg-[#131313] border border-white/10 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-[#f9c591] focus:ring-1 focus:ring-[#f9c591] transition-all shadow-inner"
+            aria-label="Search blog articles"
+          />
+          <button id="search-clear-btn" class="hidden absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors" title="Clear search">
+            <span class="material-symbols-outlined text-lg">close</span>
+          </button>
+        </div>
+
+        <!-- Category Pills -->
+        <div class="flex items-center justify-center flex-wrap gap-2 pt-2" id="category-filters">
+          <% categories.forEach(function(cat) { %>
+            <button
+              type="button"
+              data-category="<%= cat %>"
+              class="filter-btn text-xs sm:text-sm font-label px-4 py-1.5 rounded-full border border-white/10 bg-[#131313] text-gray-300 hover:text-white hover:border-[#f9c591]/50 transition-all duration-200 <%= cat === 'All' ? 'active' : '' %>"
+            >
+              <%= cat %>
+            </button>
+          <% }); %>
+        </div>
+      </div>
+    </header>
+
+    <!-- Featured Post Spotlight -->
+    <% const featuredBlog = blogs.find(b => b.featured) || blogs[0]; %>
+    <% if (featuredBlog) { %>
+      <section id="featured-section" class="mb-16">
+        <div class="glass-card rounded-2xl overflow-hidden border border-white/10 transition-all duration-500 hover:border-[#f9c591]/40">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+            <!-- Cover Image -->
+            <div class="lg:col-span-7 relative min-h-[300px] lg:min-h-[420px] overflow-hidden group">
+              <img
+                src="<%= featuredBlog.coverImage %>"
+                alt="<%= featuredBlog.title %>"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="eager"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#131313] via-[#131313]/30 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-[#131313]"></div>
+              
+              <div class="absolute top-4 left-4 flex items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-[#f9c591] text-[#0e0e0e] font-label font-bold text-xs uppercase tracking-wider shadow-lg flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm">local_fire_department</span> Featured Insight
+                </span>
+                <span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-gray-300 text-xs font-label border border-white/10">
+                  <%= featuredBlog.category %>
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="lg:col-span-5 p-6 sm:p-8 lg:p-10 flex flex-col justify-between bg-[#131313]">
+              <div>
+                <div class="flex items-center gap-4 text-xs text-gray-400 mb-3">
+                  <span class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-sm text-[#f9c591]">calendar_today</span> <%= featuredBlog.date %>
+                  </span>
+                  <span>&bull;</span>
+                  <span class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-sm text-[#f9c591]">schedule</span> <%= featuredBlog.readTime %>
+                  </span>
+                </div>
+
+                <h2 class="font-headline text-2xl sm:text-3xl text-white font-bold leading-snug mb-4 hover:text-[#f9c591] transition-colors cursor-pointer" onclick="openReaderModal('<%= featuredBlog.slug %>')">
+                  <%= featuredBlog.title %>
+                </h2>
+
+                <p class="text-gray-400 text-sm leading-relaxed mb-6 font-body">
+                  <%= featuredBlog.excerpt %>
+                </p>
+
+                <!-- Tags -->
+                <div class="flex flex-wrap gap-1.5 mb-6">
+                  <% featuredBlog.tags.slice(0, 4).forEach(function(tag) { %>
+                    <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-white/5 text-gray-300 border border-white/10">#<%= tag %></span>
+                  <% }); %>
+                </div>
+              </div>
+
+              <!-- Author & Action -->
+              <div class="pt-6 border-t border-white/10 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <img src="<%= featuredBlog.author.avatar %>" alt="<%= featuredBlog.author.name %>" class="w-10 h-10 rounded-full border border-[#f9c591]/40 object-cover" />
+                  <div>
+                    <h3 class="text-xs font-bold text-white"><%= featuredBlog.author.name %></h3>
+                    <p class="text-[11px] text-gray-400"><%= featuredBlog.author.role %></p>
+                  </div>
+                </div>
+
+                <button
+                  onclick="openReaderModal('<%= featuredBlog.slug %>')"
+                  class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#f9c591] hover:bg-[#c99668] text-[#0e0e0e] font-label text-xs font-bold tracking-wide transition-all duration-300 shadow-md group"
+                >
+                  <span>Read Article</span>
+                  <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <% } %>
+
+    <!-- Articles Section Header -->
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h2 class="font-headline italic text-2xl sm:text-3xl text-white">
+          Latest <span class="text-[#f9c591]">Publications.</span>
+        </h2>
+        <p class="text-gray-400 text-xs sm:text-sm font-body">Curated architecture breakdowns, case studies, and engineering practices.</p>
+      </div>
+      <div id="articles-count" class="text-xs font-mono text-gray-400 bg-[#131313] px-3 py-1.5 rounded-lg border border-white/10">
+        Showing <%= blogs.length %> articles
+      </div>
+    </div>
+
+    <!-- Blog Grid -->
+    <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <% blogs.forEach(function(post) { %>
+        <article
+          class="blog-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5"
+          data-id="<%= post.id %>"
+          data-slug="<%= post.slug %>"
+          data-category="<%= post.category %>"
+          data-title="<%= post.title.toLowerCase() %>"
+          data-excerpt="<%= post.excerpt.toLowerCase() %>"
+          data-tags="<%= post.tags.join(' ').toLowerCase() %>"
+        >
+          <!-- Card Image & Header -->
+          <div>
+            <div class="aspect-[16/10] overflow-hidden relative cursor-pointer group" onclick="openReaderModal('<%= post.slug %>')">
+              <img
+                src="<%= post.coverImage %>"
+                alt="<%= post.title %>"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#131313] via-transparent to-transparent opacity-80"></div>
+              
+              <!-- Badges -->
+              <div class="absolute top-3 left-3 flex items-center gap-2">
+                <span class="text-xs font-label px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/10 text-white font-medium">
+                  <%= post.category %>
+                </span>
+              </div>
+
+              <div class="absolute bottom-3 right-3 text-xs text-gray-300 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md flex items-center gap-1 border border-white/10 font-mono">
+                <span class="material-symbols-outlined text-xs text-[#f9c591]">schedule</span> <%= post.readTime %>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6">
+              <div class="text-xs text-gray-400 mb-2 flex items-center gap-2">
+                <span><%= post.date %></span>
+              </div>
+
+              <h3
+                class="font-headline text-lg sm:text-xl font-bold text-white mb-3 line-clamp-2 hover:text-[#f9c591] transition-colors cursor-pointer"
+                onclick="openReaderModal('<%= post.slug %>')"
+              >
+                <%= post.title %>
+              </h3>
+
+              <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-3 font-body">
+                <%= post.excerpt %>
+              </p>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <% post.tags.slice(0, 3).forEach(function(tag) { %>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-300 border border-white/5">#<%= tag %></span>
+                <% }); %>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Footer -->
+          <div class="px-6 pb-6 pt-4 border-t border-white/5 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <img src="<%= post.author.avatar %>" alt="<%= post.author.name %>" class="w-7 h-7 rounded-full border border-white/10 object-cover" />
+              <span class="text-xs text-gray-300 font-medium"><%= post.author.name %></span>
+            </div>
+
+            <button
+              onclick="openReaderModal('<%= post.slug %>')"
+              class="text-xs font-label font-bold text-[#f9c591] hover:text-[#c99668] transition-colors flex items-center gap-1 group"
+              aria-label="Read <%= post.title %>"
+            >
+              <span>Read</span>
+              <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+            </button>
+          </div>
+        </article>
+      <% }); %>
+    </div>
+
+    <!-- Empty State -->
+    <div id="no-results" class="hidden py-16 text-center space-y-4 bg-[#131313] rounded-2xl border border-white/10 my-8">
+      <span class="material-symbols-outlined text-5xl text-gray-500">search_off</span>
+      <h3 class="text-xl font-headline italic text-white">No Matching Articles Found</h3>
+      <p class="text-gray-400 text-sm max-w-md mx-auto">We couldn't find any articles matching your search query or category filter. Try clearing filters.</p>
+      <button
+        onclick="resetFilters()"
+        class="px-5 py-2 rounded-xl bg-[#f9c591] text-[#0e0e0e] font-label text-xs font-bold hover:bg-[#c99668] transition-colors"
+      >
+        Reset Filters
+      </button>
+    </div>
+
+    <!-- Consultation CTA Banner -->
+    <section class="mt-24 p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-[#1a1a1a] via-[#131313] to-[#0e0e0e] border border-white/10 relative overflow-hidden shadow-2xl">
+      <div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-[#f9c591]/10 blur-3xl pointer-events-none"></div>
+      <div class="relative z-10 max-w-3xl space-y-4">
+        <span class="text-xs uppercase font-label tracking-widest text-[#f9c591]">Enterprise IT Solutions</span>
+        <h2 class="font-headline italic text-3xl sm:text-4xl text-white">
+          Ready to Implement These Technologies In Your Business?
+        </h2>
+        <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+          From deploying custom AI workflows and migrating to high-performance edge infrastructure, to engineering cross-platform mobile apps and secure full-stack portals—Joelx Orbit turns modern tech theory into business results.
+        </p>
+        <div class="pt-4 flex flex-wrap gap-4 items-center">
+          <button
+            onclick="openGetInTouchModal('Enterprise IT Consultation', 'Custom')"
+            class="px-8 py-3.5 rounded-xl bg-[#f9c591] hover:bg-[#c99668] text-[#0e0e0e] font-label text-sm font-bold tracking-wide transition-all duration-300 shadow-lg hover:shadow-[#f9c591]/20"
+          >
+            Schedule a Tech Consultation
+          </button>
+          <a
+            href="/services"
+            class="px-6 py-3.5 rounded-xl bg-transparent border border-white/20 hover:border-[#f9c591] text-white hover:text-[#f9c591] font-label text-sm font-semibold transition-colors"
+          >
+            Explore All Services
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Full Article Reader Modal -->
+  <div id="reader-modal" class="hidden-modal fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="modal-article-title">
+    <div id="reader-dialog" class="w-full max-w-4xl max-h-[92vh] bg-[#131313] border border-white/15 rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden">
+      
+      <!-- Top Modal Navigation Bar -->
+      <div class="px-6 py-4 border-b border-white/10 flex items-center justify-between bg-[#171717] z-20">
+        <div class="flex items-center gap-2 text-xs font-label text-gray-400">
+          <span id="modal-category" class="px-2.5 py-0.5 rounded-full bg-[#f9c591]/15 text-[#f9c591] font-semibold border border-[#f9c591]/30">Category</span>
+          <span class="hidden sm:inline">&bull;</span>
+          <span id="modal-read-time" class="hidden sm:flex items-center gap-1 font-mono">
+            <span class="material-symbols-outlined text-xs text-[#f9c591]">schedule</span> 5 min read
+          </span>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <!-- Share Button -->
+          <button id="modal-share-btn" onclick="shareArticle()" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white text-xs font-label flex items-center gap-1.5 transition-colors" title="Share article">
+            <span class="material-symbols-outlined text-sm">share</span>
+            <span class="hidden sm:inline">Share</span>
+          </button>
+          
+          <!-- Close Button -->
+          <button onclick="closeReaderModal()" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-colors" title="Close reader" aria-label="Close reader">
+            <span class="material-symbols-outlined text-lg">close</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div class="overflow-y-auto px-6 sm:px-10 py-8 space-y-8 flex-grow focus:outline-none" tabindex="0">
+        
+        <!-- Header Section -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 text-xs text-gray-400 font-mono">
+            <span id="modal-date">Date</span>
+          </div>
+
+          <h2 id="modal-article-title" class="font-headline text-2xl sm:text-4xl text-white font-bold leading-tight">
+            Article Title Goes Here
+          </h2>
+
+          <p id="modal-excerpt" class="text-gray-300 text-base sm:text-lg leading-relaxed font-body italic border-l-2 border-[#f9c591] pl-4">
+            Article excerpt description...
+          </p>
+
+          <!-- Author Info -->
+          <div class="pt-2 flex items-center gap-3">
+            <img id="modal-author-avatar" src="/joelx.png" alt="Author" class="w-11 h-11 rounded-full border border-[#f9c591]/40 object-cover" />
+            <div>
+              <h4 id="modal-author-name" class="text-sm font-bold text-white">Author Name</h4>
+              <p id="modal-author-role" class="text-xs text-gray-400">Author Role</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Banner in Modal -->
+        <div class="rounded-2xl overflow-hidden aspect-[21/9] sm:aspect-[21/8] relative shadow-lg">
+          <img id="modal-cover-image" src="" alt="Cover" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#131313] via-transparent to-transparent opacity-60"></div>
+        </div>
+
+        <!-- Formatted Article Content -->
+        <div id="modal-article-content" class="text-gray-300 font-body leading-relaxed space-y-4 text-sm sm:text-base">
+          <!-- Injected via JavaScript -->
+        </div>
+
+        <!-- Tags List -->
+        <div class="pt-6 border-t border-white/10">
+          <h4 class="text-xs uppercase font-label tracking-wider text-gray-400 mb-3">Topic Tags</h4>
+          <div id="modal-tags" class="flex flex-wrap gap-2"></div>
+        </div>
+
+        <!-- Article Footer Consultation CTA -->
+        <div class="p-6 rounded-2xl bg-[#1c1c1c] border border-[#f9c591]/25 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center sm:text-left">
+            <h4 class="text-base font-bold text-white">Need tailored IT architecture or development?</h4>
+            <p class="text-xs text-gray-400">Our engineering team helps enterprises architect and execute high-impact software.</p>
+          </div>
+          <button
+            onclick="openGetInTouchModal('Blog Consultation', 'TBD'); closeReaderModal();"
+            class="px-5 py-2.5 rounded-xl bg-[#f9c591] hover:bg-[#c99668] text-[#0e0e0e] font-label text-xs font-bold tracking-wide transition-colors whitespace-nowrap shadow-md"
+          >
+            Discuss Your Project
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Share Toast Notification -->
+  <div id="share-toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-[#1f1f1f] border border-[#f9c591]/40 text-white text-xs px-4 py-2.5 rounded-full shadow-2xl flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-300">
+    <span class="material-symbols-outlined text-[#f9c591] text-sm">check_circle</span>
+    <span id="share-toast-msg">Link copied to clipboard!</span>
+  </div>
+
+  <%- include('../partials/footer') %>
+  <%- include('../partials/modal') %>
+  <%- include('../partials/chatbot') %>
+
+  <!-- Blog Interactivity Script -->
+  <script>
+    // Injected blog dataset from server
+    const BLOG_DATA = <%- JSON.stringify(blogs) %>;
+    const INITIAL_SLUG = <%- JSON.stringify(selectedSlug || '') %>;
+
+    let currentCategory = 'All';
+    let currentSearchQuery = '';
+    let currentActivePost = null;
+
+    document.addEventListener('DOMContentLoaded', function() {
+      setupFilters();
+      setupSearch();
+      setupModalKeyboard();
+
+      // Check if a specific post was requested via URL query or slug
+      const urlParams = new URLSearchParams(window.location.search);
+      const postFromUrl = urlParams.get('post') || INITIAL_SLUG;
+      if (postFromUrl) {
+        openReaderModal(postFromUrl, false);
+      }
+    });
+
+    // Setup Category Filter Buttons
+    function setupFilters() {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          buttons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          currentCategory = this.getAttribute('data-category');
+          filterArticles();
+        });
+      });
+    }
+
+    // Setup Search Input
+    function setupSearch() {
+      const searchInput = document.getElementById('blog-search-input');
+      const clearBtn = document.getElementById('search-clear-btn');
+
+      if (!searchInput) return;
+
+      searchInput.addEventListener('input', function() {
+        currentSearchQuery = this.value.trim().toLowerCase();
+        if (currentSearchQuery.length > 0) {
+          clearBtn.classList.remove('hidden');
+        } else {
+          clearBtn.classList.add('hidden');
+        }
+        filterArticles();
+      });
+
+      clearBtn.addEventListener('click', function() {
+        searchInput.value = '';
+        currentSearchQuery = '';
+        clearBtn.classList.add('hidden');
+        filterArticles();
+        searchInput.focus();
+      });
+    }
+
+    // Filter cards based on Category and Search Query
+    function filterArticles() {
+      const cards = document.querySelectorAll('.blog-card');
+      const noResults = document.getElementById('no-results');
+      const countEl = document.getElementById('articles-count');
+      const featuredSec = document.getElementById('featured-section');
+
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        const title = card.getAttribute('data-title');
+        const excerpt = card.getAttribute('data-excerpt');
+        const tags = card.getAttribute('data-tags');
+
+        const matchesCategory = (currentCategory === 'All' || category === currentCategory);
+        const matchesSearch = (!currentSearchQuery || 
+          title.includes(currentSearchQuery) || 
+          excerpt.includes(currentSearchQuery) || 
+          tags.includes(currentSearchQuery)
+        );
+
+        if (matchesCategory && matchesSearch) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      // Update count display
+      if (countEl) {
+        countEl.textContent = `Showing ${visibleCount} article${visibleCount === 1 ? '' : 's'}`;
+      }
+
+      // Hide or show featured section when searching
+      if (featuredSec) {
+        if (currentSearchQuery || currentCategory !== 'All') {
+          featuredSec.classList.add('hidden');
+        } else {
+          featuredSec.classList.remove('hidden');
+        }
+      }
+
+      // Show empty state if nothing found
+      if (visibleCount === 0) {
+        noResults.classList.remove('hidden');
+      } else {
+        noResults.classList.add('hidden');
+      }
+    }
+
+    function resetFilters() {
+      currentCategory = 'All';
+      currentSearchQuery = '';
+      const searchInput = document.getElementById('blog-search-input');
+      const clearBtn = document.getElementById('search-clear-btn');
+      if (searchInput) searchInput.value = '';
+      if (clearBtn) clearBtn.classList.add('hidden');
+
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(b => {
+        if (b.getAttribute('data-category') === 'All') {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+
+      filterArticles();
+    }
+
+    // Open Article Reader Modal
+    function openReaderModal(slugOrId, updateHistory = true) {
+      const post = BLOG_DATA.find(b => b.slug === slugOrId || b.id === slugOrId);
+      if (!post) return;
+
+      currentActivePost = post;
+
+      document.getElementById('modal-article-title').textContent = post.title;
+      document.getElementById('modal-category').textContent = post.category;
+      document.getElementById('modal-read-time').innerHTML = `<span class="material-symbols-outlined text-xs text-[#f9c591]">schedule</span> ${post.readTime}`;
+      document.getElementById('modal-date').textContent = post.date;
+      document.getElementById('modal-excerpt').textContent = post.excerpt;
+      document.getElementById('modal-cover-image').src = post.coverImage;
+      document.getElementById('modal-cover-image').alt = post.title;
+
+      document.getElementById('modal-author-avatar').src = post.author.avatar;
+      document.getElementById('modal-author-name').textContent = post.author.name;
+      document.getElementById('modal-author-role').textContent = post.author.role;
+
+      document.getElementById('modal-article-content').innerHTML = post.content;
+
+      // Populate Tags
+      const tagsContainer = document.getElementById('modal-tags');
+      tagsContainer.innerHTML = '';
+      post.tags.forEach(t => {
+        const span = document.createElement('span');
+        span.className = 'text-xs font-mono px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300';
+        span.textContent = '#' + t;
+        tagsContainer.appendChild(span);
+      });
+
+      // Show Modal
+      const modal = document.getElementById('reader-modal');
+      modal.classList.remove('hidden-modal');
+      modal.classList.add('visible-modal');
+      document.body.style.overflow = 'hidden';
+
+      // Update URL query without full reload
+      if (updateHistory) {
+        const newUrl = `${window.location.pathname}?post=${encodeURIComponent(post.slug)}`;
+        window.history.pushState({ postSlug: post.slug }, post.title, newUrl);
+      }
+    }
+
+    // Close Article Reader Modal
+    function closeReaderModal() {
+      const modal = document.getElementById('reader-modal');
+      modal.classList.remove('visible-modal');
+      modal.classList.add('hidden-modal');
+      document.body.style.overflow = '';
+      currentActivePost = null;
+
+      // Clean URL back to /blog
+      if (window.location.search.includes('post=')) {
+        window.history.pushState({}, document.title, window.location.pathname);
+      }
+    }
+
+    // Keyboard & Backdrop event listeners for Modal
+    function setupModalKeyboard() {
+      const modal = document.getElementById('reader-modal');
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          closeReaderModal();
+        }
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          const modal = document.getElementById('reader-modal');
+          if (modal && modal.classList.contains('visible-modal')) {
+            closeReaderModal();
+          }
+        }
+      });
+
+      // Support browser back/forward buttons
+      window.addEventListener('popstate', function(e) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const postSlug = urlParams.get('post');
+        if (postSlug) {
+          openReaderModal(postSlug, false);
+        } else {
+          closeReaderModal();
+        }
+      });
+    }
+
+    // Share Article Link
+    function shareArticle() {
+      if (!currentActivePost) return;
+      const shareUrl = `${window.location.origin}/blog?post=${encodeURIComponent(currentActivePost.slug)}`;
+      
+      if (navigator.share) {
+        navigator.share({
+          title: currentActivePost.title,
+          text: currentActivePost.excerpt,
+          url: shareUrl
+        }).catch(() => {});
+      } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+          showShareToast('Article link copied to clipboard!');
+        });
+      } else {
+        showShareToast(shareUrl);
+      }
+    }
+
+    function showShareToast(msg) {
+      const toast = document.getElementById('share-toast');
+      const toastMsg = document.getElementById('share-toast-msg');
+      if (!toast || !toastMsg) return;
+
+      toastMsg.textContent = msg;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 3000);
+    }
+  </script>
+
+  <script src="/script.js?v=4"></script>
+</body>
+
+</html>
