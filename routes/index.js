@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const pageController = require('../controllers/pageController');
 
+// SEO Technical routes
+router.get('/sitemap.xml', pageController.renderSitemap);
+router.get('/robots.txt', pageController.renderRobots);
+
 router.get('/', pageController.renderHome);
 router.get('/joelx-orbit-seo.html', pageController.renderHome); // for backward compatibility
 router.get('/services.html', pageController.renderServices); // backward compatibility
