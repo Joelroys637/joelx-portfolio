@@ -6,17 +6,21 @@
   "scripts": {
     "start": "node server.js",
     "build:css": "tailwindcss -i ./public/input.css -o ./public/styles.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/blog-seo.test.js",
+    "seo:audit": "node scripts/seo-audit.js",
+    "blog:generate": "node scripts/generate-daily-blog.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "dotenv": "^17.4.2",
     "ejs": "^6.0.1",
     "express": "^5.2.1",
     "firebase-admin": "^13.10.0",
-    "nodemailer": "^8.0.10"
+    "nodemailer": "^8.0.10",
+    "rss-parser": "^3.13.0"
   },
   "devDependencies": {
     "@tailwindcss/container-queries": "^0.1.1",
