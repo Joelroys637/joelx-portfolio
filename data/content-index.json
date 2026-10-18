@@ -1,10 +1,29 @@
 [
   {
+    "id": "deepseek-search-and-fetch-0-75-per-1000-successful-requests-2026",
+    "slug": "deepseek-search-and-fetch-0-75-per-1000-successful-requests-2026",
+    "title": "Modern Engineering Trends: DeepSeek search and fetch – $0.75 per 1000 successful requests",
+    "primaryKeyword": "modern engineering 1792312743517",
+    "secondaryKeywords": [
+      "software architecture",
+      "fullstack development",
+      "cloud computing"
+    ],
+    "searchIntent": "informational",
+    "category": "Web Development",
+    "date": "October 18, 2026",
+    "sourceUrl": "https://api-docs.deepseek.com/guides/search/"
+  },
+  {
     "id": "agentic-ai-enterprise-sdlc-2026",
     "slug": "agentic-ai-enterprise-sdlc-2026",
     "title": "Agentic AI & Autonomous Workflows: How AI Agents are Revolutionizing Modern IT & Software Engineering",
     "primaryKeyword": "agentic ai enterprise sdlc",
-    "secondaryKeywords": ["llm autonomous workflows", "ai agents software engineering", "devops automation"],
+    "secondaryKeywords": [
+      "llm autonomous workflows",
+      "ai agents software engineering",
+      "devops automation"
+    ],
     "searchIntent": "informational",
     "category": "Artificial Intelligence",
     "date": "October 16, 2025",
@@ -15,7 +34,11 @@
     "slug": "cloud-native-platform-engineering-2026",
     "title": "Cloud-Native Platform Engineering & Edge Runtimes: Beyond Raw Kubernetes",
     "primaryKeyword": "cloud native platform engineering",
-    "secondaryKeywords": ["edge runtimes", "internal developer platforms", "micro-vms"],
+    "secondaryKeywords": [
+      "edge runtimes",
+      "internal developer platforms",
+      "micro-vms"
+    ],
     "searchIntent": "informational",
     "category": "Cloud & DevOps",
     "date": "October 12, 2025",
@@ -26,7 +49,11 @@
     "slug": "zero-trust-ai-cybersecurity-trends",
     "title": "Zero-Trust Architecture & AI-Driven Threat Hunting in Enterprise Cybersecurity",
     "primaryKeyword": "zero trust ai cybersecurity",
-    "secondaryKeywords": ["threat hunting", "ztna", "devsecops"],
+    "secondaryKeywords": [
+      "threat hunting",
+      "ztna",
+      "devsecops"
+    ],
     "searchIntent": "informational",
     "category": "Cybersecurity",
     "date": "October 08, 2025",
@@ -37,7 +64,11 @@
     "slug": "full-stack-web-modern-ecosystem-2026",
     "title": "The Modern Full-Stack Frontier: TypeScript, Rust Tooling & High-Performance Web",
     "primaryKeyword": "modern full stack web development",
-    "secondaryKeywords": ["rust tooling web", "typescript full stack", "frontend performance"],
+    "secondaryKeywords": [
+      "rust tooling web",
+      "typescript full stack",
+      "frontend performance"
+    ],
     "searchIntent": "informational",
     "category": "Web Development",
     "date": "October 05, 2025",
@@ -48,7 +79,11 @@
     "slug": "mobile-app-trends-flutter-kmp-2026",
     "title": "Cross-Platform Mobile App Engineering: Flutter vs Kotlin Multiplatform (KMP)",
     "primaryKeyword": "flutter vs kotlin multiplatform",
-    "secondaryKeywords": ["cross platform mobile app development", "kmp mobile", "flutter 2026"],
+    "secondaryKeywords": [
+      "cross platform mobile app development",
+      "kmp mobile",
+      "flutter 2026"
+    ],
     "searchIntent": "commercial",
     "category": "Mobile Development",
     "date": "September 28, 2025",
@@ -59,7 +94,11 @@
     "slug": "rag-vector-databases-enterprise-data-2026",
     "title": "RAG 2.0 & Vector Databases: Architecting Enterprise Knowledge Engines",
     "primaryKeyword": "rag vector databases enterprise",
-    "secondaryKeywords": ["hybrid search rag", "enterprise knowledge engine", "pgvector"],
+    "secondaryKeywords": [
+      "hybrid search rag",
+      "enterprise knowledge engine",
+      "pgvector"
+    ],
     "searchIntent": "informational",
     "category": "Data & AI",
     "date": "September 20, 2025",
