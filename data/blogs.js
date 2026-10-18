@@ -22,7 +22,7 @@ const blogs = [
     "featured": false,
     "date": "October 18, 2026",
     "readTime": "5 min read",
-    "primaryKeyword": "modern engineering 1792311094855",
+    "primaryKeyword": "modern engineering 1792312743517",
     "secondaryKeywords": [
       "software architecture",
       "fullstack development",
@@ -35,9 +35,9 @@ const blogs = [
       "role": "Lead Architect & Tech Strategist, Joelx Orbit",
       "avatar": "/joelx.png"
     },
-    "coverImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
-    "imageAlt": "High-performance data center server rack and database hardware",
-    "imageSource": "https://unsplash.com/photos/data-center-server",
+    "coverImage": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Cybersecurity binary data stream and network protection shield",
+    "imageSource": "https://unsplash.com/photos/cybersecurity-data",
     "imageLicense": "Unsplash License (Free for commercial and non-commercial use)",
     "excerpt": "Discover the latest architectural breakthroughs in software engineering, modern web frameworks, and cloud infrastructure for 2026.",
     "tags": [
