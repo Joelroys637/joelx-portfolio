@@ -1,5 +1,20 @@
 [
   {
+    "id": "linux-7-3-released-2026",
+    "slug": "linux-7-3-released-2026",
+    "title": "Modern Engineering Trends: Linux 7.3 Released",
+    "primaryKeyword": "modern engineering 1792400869618",
+    "secondaryKeywords": [
+      "software architecture",
+      "fullstack development",
+      "cloud computing"
+    ],
+    "searchIntent": "informational",
+    "category": "Web Development",
+    "date": "October 19, 2026",
+    "sourceUrl": "https://lwn.net/Articles/1101143/"
+  },
+  {
     "id": "deepseek-search-and-fetch-0-75-per-1000-successful-requests-2026",
     "slug": "deepseek-search-and-fetch-0-75-per-1000-successful-requests-2026",
     "title": "Modern Engineering Trends: DeepSeek search and fetch – $0.75 per 1000 successful requests",
