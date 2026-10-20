@@ -1,5 +1,20 @@
 [
   {
+    "id": "nordwand-mono-a-monospace-font-for-coders-and-adventurers-2026",
+    "slug": "nordwand-mono-a-monospace-font-for-coders-and-adventurers-2026",
+    "title": "Modern Engineering Trends: Nordwand Mono – A monospace font for coders and adventurers",
+    "primaryKeyword": "modern engineering 1792485809703",
+    "secondaryKeywords": [
+      "software architecture",
+      "fullstack development",
+      "cloud computing"
+    ],
+    "searchIntent": "informational",
+    "category": "Web Development",
+    "date": "October 20, 2026",
+    "sourceUrl": "https://github.com/tywr/Nordwand-Mono"
+  },
+  {
     "id": "linux-7-3-released-2026",
     "slug": "linux-7-3-released-2026",
     "title": "Modern Engineering Trends: Linux 7.3 Released",

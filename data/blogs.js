@@ -12,6 +12,43 @@ const categories = [
 
 const blogs = [
   {
+    "id": "nordwand-mono-a-monospace-font-for-coders-and-adventurers-2026",
+    "slug": "nordwand-mono-a-monospace-font-for-coders-and-adventurers-2026",
+    "title": "Modern Engineering Trends: Nordwand Mono – A monospace font for coders and adventurers",
+    "category": "Web Development",
+    "icon": "code_blocks",
+    "gradient": "from-amber-500/20 via-orange-500/10 to-transparent",
+    "tagColor": "text-[#f9c591] bg-[#f9c591]/10 border-[#f9c591]/30",
+    "featured": false,
+    "date": "October 20, 2026",
+    "readTime": "5 min read",
+    "primaryKeyword": "modern engineering 1792485809703",
+    "secondaryKeywords": [
+      "software architecture",
+      "fullstack development",
+      "cloud computing"
+    ],
+    "searchIntent": "informational",
+    "sourceUrl": "https://github.com/tywr/Nordwand-Mono",
+    "author": {
+      "name": "Joel Roys",
+      "role": "Lead Architect & Tech Strategist, Joelx Orbit",
+      "avatar": "/joelx.png"
+    },
+    "coverImage": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "AI agentic software development and artificial intelligence concept",
+    "imageSource": "https://unsplash.com/photos/ai-tech-concept",
+    "imageLicense": "Unsplash License (Free for commercial and non-commercial use)",
+    "excerpt": "Discover the latest architectural breakthroughs in software engineering, modern web frameworks, and cloud infrastructure for 2026.",
+    "tags": [
+      "Software Architecture",
+      "Web Development",
+      "Cloud Native",
+      "DevOps"
+    ],
+    "content": "\n      <p class=\"text-lg text-gray-300 leading-relaxed mb-6 font-medium\">\n        As digital ecosystems scale, software engineering teams require resilient architecture, fast builds, and automated workflows to deliver value efficiently.\n      </p>\n\n      <h3 class=\"text-2xl font-headline italic text-[#f9c591] mt-8 mb-4\">Core Architectural Principles</h3>\n      <p class=\"text-gray-300 leading-relaxed mb-4\">\n        Modern web applications prioritize modular component isolation, zero-trust network boundaries, and sub-second edge compute response times.\n      </p>\n\n      <div class=\"p-6 rounded-xl bg-[#1a1a1a] border border-[#f9c591]/20 my-6\">\n        <h4 class=\"text-white font-headline text-lg mb-2\">JoelX Orbit Implementation</h4>\n        <p class=\"text-gray-300 text-sm leading-relaxed\">\n          Explore our custom <a href=\"/services\" class=\"text-[#f9c591] underline\">JoelX Orbit software services</a> to transform your enterprise digital footprint with high-performance architectures. Reference source: <a href=\"https://github.com/tywr/Nordwand-Mono\" target=\"_blank\" rel=\"noopener\" class=\"text-[#f9c591] underline\">Official Release Announcement</a>.\n        </p>\n      </div>\n    "
+  },
+  {
     "id": "linux-7-3-released-2026",
     "slug": "linux-7-3-released-2026",
     "title": "Modern Engineering Trends: Linux 7.3 Released",
