@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <%- include('../partials/head') %>
+</head>
+<body class="bg-[#0e0e0e] text-white font-body selection:bg-primary/30 selection:text-primary overflow-x-hidden">
+
+  <%- include('../partials/header') %>
+
+  <!-- Ambient Glow Effects -->
+  <div class="fixed top-20 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-[#d2a373]/5 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+  <div class="fixed bottom-10 right-10 w-[400px] h-[300px] bg-[#f9c591]/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+  <!-- Main Content Canvas -->
+  <main class="pt-28 pb-32 max-w-4xl mx-auto px-6">
+
+    <!-- Header / Hero Section -->
+    <header class="mb-16 text-center space-y-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f9c591]/10 border border-[#f9c591]/20 text-[#f9c591] text-xs font-label font-bold tracking-widest uppercase">
+        <span class="material-symbols-outlined text-sm">info</span>
+        Legal Notice
+      </div>
+      <h1 class="font-headline italic text-4xl sm:text-5xl text-white tracking-tight">
+        Website &amp; Technical <span class="text-[#f9c591]">Disclaimer.</span>
+      </h1>
+      <p class="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+        Please review this disclaimer regarding information, tutorials, software utilities, and third-party references provided on JoelX Orbit.
+      </p>
+      <div class="text-xs text-gray-500 pt-2">
+        Last Updated: October 2026 &bull; Published by JoelX Orbit
+      </div>
+    </header>
+
+    <div class="p-8 sm:p-12 rounded-2xl bg-[#131313] border border-white/5 space-y-8 text-sm sm:text-base text-gray-300 leading-relaxed">
+      
+      <section class="space-y-3">
+        <h2 class="font-headline italic text-2xl text-white">1. Technical Information &amp; Tutorials</h2>
+        <p>
+          All technical articles, code snippets, guides, and tutorials published on JoelX Orbit (including ASP.NET, Python, Flutter, React, WebRTC, and Firebase guides) are provided in good faith for educational, developer learning, and informational purposes. While we rigorously test and verify all code examples, software ecosystems and third-party dependencies evolve rapidly. We recommend thoroughly testing any implementation in a local staging sandbox before deploying to production environments.
+        </p>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="font-headline italic text-2xl text-white">2. Software Utilities &amp; Online Tools</h2>
+        <p>
+          Our web utilities (such as QR code generators and text utilities) and desktop software products (such as Sindhai IDE) are provided on an "as-is" and "as-available" basis. JoelX Orbit makes no representations or warranties of any kind, express or implied, regarding continuous uptime, merchantability, or fitness for a particular business purpose.
+        </p>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="font-headline italic text-2xl text-white">3. External Links &amp; Third-Party Services</h2>
+        <p>
+          JoelX Orbit may contain hyperlinks to external websites, including package repositories (GitHub, npm, PyPI), official app marketplaces (Microsoft Store), deployment hosts, and developer documentation. We do not control or endorse the content, privacy practices, or availability of these third-party domains.
+        </p>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="font-headline italic text-2xl text-white">4. Advertising &amp; Affiliate Disclosure</h2>
+        <p>
+          JoelX Orbit may display advertisements served by Google AdSense and authorized third-party ad networks. These vendors use cookies (including the DoubleClick cookie) to serve ads based on user visits to this and other websites. We do not endorse the specific products or services advertised within third-party banner units unless explicitly stated.
+        </p>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="font-headline italic text-2xl text-white">5. Contact Information</h2>
+        <p>
+          If you have any questions or require clarification regarding our disclaimer, please contact us at:
+        </p>
+        <div class="p-4 rounded-xl bg-[#0e0e0e] border border-white/5 text-sm space-y-1">
+          <div><strong class="text-white">Email:</strong> <a href="mailto:joelxorbit@gmail.com" class="text-[#f9c591] underline">joelxorbit@gmail.com</a></div>
+          <div><strong class="text-white">Phone / WhatsApp:</strong> <a href="https://wa.me/918838343971" class="text-[#f9c591] underline">+91 88383 43971</a></div>
+          <div><strong class="text-white">Location:</strong> Tiruchirappalli, Tamil Nadu, India</div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <%- include('../partials/footer') %>
+  <%- include('../partials/chatbot') %>
+  <%- include('../partials/modal') %>
+
+</body>
+</html>

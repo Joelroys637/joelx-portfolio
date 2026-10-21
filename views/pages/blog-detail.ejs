@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+  <%- include('../partials/head') %>
+
+  <style>
+    .glass-card {
+      background: rgba(19, 19, 19, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .article-content h3 {
+      font-family: var(--font-headline, sans-serif);
+      font-style: italic;
+      color: #f9c591;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    .article-content p {
+      color: #d1d5db;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+    }
+    .article-content ul, .article-content ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #d1d5db;
+      list-style-type: disc;
+    }
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+    .article-content pre {
+      background: #111111;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      overflow-x: auto;
+      margin-bottom: 1.5rem;
+      font-size: 0.875rem;
+      color: #e5e7eb;
+    }
+    .article-content code {
+      font-family: monospace;
+    }
+    .article-content a {
+      color: #f9c591;
+      text-decoration: underline;
+    }
+    .article-content a.btn-cta-primary,
+    .article-content a[class*="bg-[#f9c591]"],
+    .article-content a[class*="bg-primary"] {
+      color: #0e0e0e !important;
+      text-decoration: none !important;
+      font-weight: 700 !important;
+    }
+    .article-content a.btn-cta-secondary,
+    .article-content a[class*="border-white"] {
+      color: #ffffff !important;
+      text-decoration: none !important;
+    }
+    .article-content a.btn-cta-secondary:hover {
+      color: #f9c591 !important;
+    }
+    .article-content strong {
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body class="bg-[#0e0e0e] text-white font-body selection:bg-primary/30 selection:text-primary overflow-x-hidden min-h-screen flex flex-col justify-between">
+
+  <%- include('../partials/header') %>
+
+  <main class="pt-28 pb-24 px-6 max-w-5xl mx-auto w-full flex-grow">
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="flex items-center gap-2 text-xs font-mono text-gray-400 mb-8 overflow-x-auto whitespace-nowrap py-1" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-[#f9c591] transition-colors">Home</a>
+      <span>/</span>
+      <a href="/blog" class="hover:text-[#f9c591] transition-colors">Tech Blog</a>
+      <span>/</span>
+      <span class="text-gray-300"><%= post.category %></span>
+      <span>/</span>
+      <span class="text-[#f9c591] truncate max-w-xs sm:max-w-md"><%= post.title %></span>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="mb-10 space-y-5">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="px-3.5 py-1 rounded-full bg-[#f9c591]/15 text-[#f9c591] border border-[#f9c591]/30 font-label text-xs uppercase tracking-wider font-bold">
+          <%= post.category %>
+        </span>
+        <span class="text-xs font-mono text-gray-400 flex items-center gap-1">
+          <span class="material-symbols-outlined text-xs text-[#f9c591]">calendar_today</span>
+          <%= post.date %>
+        </span>
+        <span class="text-xs font-mono text-gray-400 flex items-center gap-1">
+          <span class="material-symbols-outlined text-xs text-[#f9c591]">schedule</span>
+          <%= post.readTime %>
+        </span>
+      </div>
+
+      <h1 class="font-headline italic text-3xl sm:text-4xl lg:text-5xl text-white font-bold tracking-tight leading-tight">
+        <%= post.title %>
+      </h1>
+
+      <p class="text-gray-300 text-base sm:text-lg leading-relaxed font-body border-l-2 border-[#f9c591] pl-4 py-1 italic bg-white/[0.02] rounded-r-xl">
+        <%= post.excerpt %>
+      </p>
+
+      <!-- Author Card -->
+      <div class="pt-4 flex items-center justify-between border-t border-white/10">
+        <div class="flex items-center gap-3">
+          <img src="<%= post.author.avatar %>" alt="<%= post.author.name %>" class="w-11 h-11 rounded-full border border-[#f9c591]/40 object-cover" />
+          <div>
+            <h2 class="text-sm font-bold text-white"><%= post.author.name %></h2>
+            <p class="text-xs text-gray-400"><%= post.author.role %></p>
+          </div>
+        </div>
+
+        <a
+          href="/blog"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-label text-gray-300 hover:text-white transition-colors"
+        >
+          <span class="material-symbols-outlined text-sm">arrow_back</span>
+          <span>All Articles</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Cover Image -->
+    <div class="mb-12 rounded-2xl overflow-hidden border border-white/10 relative group">
+      <div class="aspect-[16/9] w-full">
+        <img
+          src="<%= post.coverImage %>"
+          alt="<%= post.imageAlt || post.title %>"
+          class="w-full h-full object-cover"
+          loading="eager"
+          onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80';"
+        />
+      </div>
+      <% if (post.imageSource) { %>
+        <div class="absolute bottom-2 right-2 px-3 py-1 bg-black/70 backdrop-blur-md rounded text-[11px] font-mono text-gray-400 border border-white/10">
+          Photo source: <a href="<%= post.imageSource %>" target="_blank" rel="noopener noreferrer" class="underline hover:text-white">Unsplash</a>
+        </div>
+      <% } %>
+    </div>
+
+    <!-- Article Body Content -->
+    <article class="article-content max-w-none text-gray-200">
+      <%- post.content %>
+    </article>
+
+    <!-- Tags List -->
+    <div class="mt-12 pt-8 border-t border-white/10">
+      <h3 class="text-xs uppercase font-label tracking-widest text-gray-400 mb-3">Topic Tags</h3>
+      <div class="flex flex-wrap gap-2">
+        <% post.tags.forEach(function(tag) { %>
+          <span class="text-xs font-mono px-3.5 py-1.5 rounded-lg bg-[#131313] text-gray-300 border border-white/10">
+            #<%= tag %>
+          </span>
+        <% }); %>
+      </div>
+    </div>
+
+    <!-- Author Bio Box -->
+    <div class="mt-12 p-6 sm:p-8 rounded-2xl glass-card border border-white/10 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+      <img src="<%= post.author.avatar %>" alt="<%= post.author.name %>" class="w-20 h-20 rounded-full border-2 border-[#f9c591]/50 object-cover flex-shrink-0" />
+      <div class="space-y-2 text-center sm:text-left">
+        <div class="flex items-center justify-center sm:justify-start gap-2">
+          <h3 class="text-lg font-bold text-white"><%= post.author.name %></h3>
+          <span class="text-[11px] font-label px-2.5 py-0.5 rounded-full bg-[#f9c591]/15 text-[#f9c591] font-semibold border border-[#f9c591]/30">Author</span>
+        </div>
+        <p class="text-xs text-[#f9c591] font-mono"><%= post.author.role %></p>
+        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-body">
+          Joel Roys leads engineering at JoelX Orbit, specializing in modern full-stack web applications, cross-platform Flutter mobile architectures, distributed cloud deployments, and developer tooling.
+        </p>
+      </div>
+    </div>
+
+    <!-- Related Articles -->
+    <% if (relatedPosts && relatedPosts.length > 0) { %>
+      <section class="mt-20">
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <h2 class="font-headline italic text-2xl sm:text-3xl text-white">
+              Related <span class="text-[#f9c591]">Publications.</span>
+            </h2>
+            <p class="text-gray-400 text-xs sm:text-sm font-body">Continue exploring architectural insights and tutorials.</p>
+          </div>
+          <a href="/blog" class="text-xs font-label text-[#f9c591] hover:underline flex items-center gap-1">
+            <span>View All</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <% relatedPosts.forEach(function(rel) { %>
+            <a href="/blog/<%= rel.slug %>" class="glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-[#f9c591]/40 transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div class="aspect-[16/10] overflow-hidden relative">
+                  <img src="<%= rel.coverImage %>" alt="<%= rel.title %>" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80';" />
+                  <div class="absolute top-2.5 left-2.5">
+                    <span class="text-[11px] font-label px-2.5 py-0.5 rounded-full bg-black/70 backdrop-blur-md text-white border border-white/10">
+                      <%= rel.category %>
+                    </span>
+                  </div>
+                </div>
+                <div class="p-5">
+                  <span class="text-[11px] font-mono text-gray-400 block mb-1.5"><%= rel.date %></span>
+                  <h3 class="font-headline text-base font-bold text-white line-clamp-2 group-hover:text-[#f9c591] transition-colors">
+                    <%= rel.title %>
+                  </h3>
+                </div>
+              </div>
+              <div class="px-5 pb-5 pt-2 border-t border-white/5 flex items-center justify-between text-xs text-[#f9c591] font-label font-bold">
+                <span>Read Article</span>
+                <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+              </div>
+            </a>
+          <% }); %>
+        </div>
+      </section>
+    <% } %>
+
+    <!-- Consultation CTA -->
+    <section class="mt-20 p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-[#1a1a1a] via-[#131313] to-[#0e0e0e] border border-white/10 relative overflow-hidden shadow-2xl">
+      <div class="relative z-10 max-w-2xl space-y-3">
+        <span class="text-xs uppercase font-label tracking-widest text-[#f9c591]">Engineering Partnership</span>
+        <h2 class="font-headline italic text-2xl sm:text-3xl text-white">
+          Need Custom Development for Your Organization?
+        </h2>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          From custom software architecture and enterprise CRM development to mobile apps and cloud optimization, the JoelX Orbit engineering team delivers tailored, high-performance solutions.
+        </p>
+        <div class="pt-3 flex flex-wrap gap-3">
+          <a
+            href="/contact"
+            class="px-6 py-3 rounded-xl bg-[#f9c591] hover:bg-[#c99668] text-[#0e0e0e] font-label text-xs sm:text-sm font-bold tracking-wide transition-all shadow-md"
+          >
+            Start a Conversation
+          </a>
+          <a
+            href="/tools"
+            class="px-5 py-3 rounded-xl bg-transparent border border-white/20 hover:border-[#f9c591] text-white hover:text-[#f9c591] font-label text-xs sm:text-sm font-semibold transition-colors"
+          >
+            Try Developer Tools
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <%- include('../partials/footer') %>
+
+  <script src="/script.js?v=4"></script>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <%- include('../partials/head') %>
+</head>
+<body class="bg-[#0e0e0e] text-white font-body selection:bg-primary/30 selection:text-primary overflow-x-hidden">
+
+  <%- include('../partials/header') %>
+
+  <!-- Ambient Glow Effects -->
+  <div class="fixed top-20 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-[#d2a373]/5 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+  <div class="fixed bottom-10 left-10 w-[450px] h-[300px] bg-[#f9c591]/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+  <!-- Main Content Canvas -->
+  <main class="pt-28 pb-32 max-w-7xl mx-auto px-6">
+
+    <!-- Header / Hero Section -->
+    <header class="mb-16 text-center space-y-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f9c591]/10 border border-[#f9c591]/20 text-[#f9c591] text-xs font-label font-bold tracking-widest uppercase">
+        <span class="material-symbols-outlined text-sm">mail</span>
+        Get in Touch
+      </div>
+      <h1 class="font-headline italic text-4xl sm:text-5xl md:text-6xl text-white tracking-tight">
+        Let's Discuss Your <span class="text-[#f9c591]">Next Project.</span>
+      </h1>
+      <p class="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+        Have a question, need an architecture review, or looking to kick off a new digital product? Contact our engineering team directly. We typically reply within 24 business hours.
+      </p>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-24">
+      
+      <!-- Contact Channels Sidebar -->
+      <aside class="lg:col-span-5 space-y-6">
+        
+        <!-- Direct Communication Card -->
+        <div class="p-8 rounded-2xl bg-[#131313] border border-white/5 space-y-6 shadow-xl">
+          <h2 class="font-headline italic text-2xl text-white">Direct Communication</h2>
+          
+          <div class="space-y-5 text-sm">
+            <!-- Email -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-[#f9c591]/10 flex items-center justify-center text-[#f9c591] shrink-0 mt-0.5">
+                <span class="material-symbols-outlined text-xl">alternate_email</span>
+              </div>
+              <div>
+                <div class="text-xs uppercase tracking-wider text-gray-500 font-label font-bold">Email Address</div>
+                <a href="mailto:joelxorbit@gmail.com" class="text-white font-medium hover:text-[#f9c591] transition-colors break-all">
+                  joelxorbit@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Phone & WhatsApp -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-[#25D366]/10 flex items-center justify-center text-[#25D366] shrink-0 mt-0.5">
+                <span class="material-symbols-outlined text-xl">call</span>
+              </div>
+              <div>
+                <div class="text-xs uppercase tracking-wider text-gray-500 font-label font-bold">Phone / WhatsApp</div>
+                <a href="https://wa.me/918838343971" target="_blank" rel="noopener noreferrer" class="text-white font-medium hover:text-[#25D366] transition-colors">
+                  +91 88383 43971
+                </a>
+                <div class="text-[11px] text-gray-500 mt-0.5">Mon–Sat: 9:00 AM – 7:00 PM IST</div>
+              </div>
+            </div>
+
+            <!-- Business Location -->
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-[#f9c591]/10 flex items-center justify-center text-[#f9c591] shrink-0 mt-0.5">
+                <span class="material-symbols-outlined text-xl">location_on</span>
+              </div>
+              <div>
+                <div class="text-xs uppercase tracking-wider text-gray-500 font-label font-bold">Operating Headquarters</div>
+                <div class="text-white font-medium">Tiruchirappalli, Tamil Nadu, India</div>
+                <div class="text-[11px] text-gray-500 mt-0.5">Postal Code: 620001</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick WhatsApp CTA -->
+          <div class="pt-4 border-t border-white/5">
+            <a href="https://wa.me/918838343971" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#25D366] text-[#0e0e0e] font-label font-bold text-sm hover:bg-[#20b858] transition-colors">
+              <span class="material-symbols-outlined text-lg">chat</span>
+              Chat Directly on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Social Channels Card -->
+        <div class="p-6 rounded-2xl bg-[#131313] border border-white/5 space-y-4">
+          <h3 class="font-headline italic text-lg text-white">Follow Our Work</h3>
+          <div class="flex gap-4">
+            <a href="https://www.instagram.com/joelxorbit/" target="_blank" rel="noopener noreferrer" class="flex-1 p-3 rounded-xl bg-[#1a1a1a] border border-white/5 hover:border-[#f9c591]/30 transition-all text-center">
+              <div class="text-xs font-label font-bold text-white">Instagram</div>
+              <div class="text-[11px] text-gray-500 mt-0.5">@joelxorbit</div>
+            </a>
+            <a href="https://www.youtube.com/@joelxorbit" target="_blank" rel="noopener noreferrer" class="flex-1 p-3 rounded-xl bg-[#1a1a1a] border border-white/5 hover:border-[#f9c591]/30 transition-all text-center">
+              <div class="text-xs font-label font-bold text-white">YouTube</div>
+              <div class="text-[11px] text-gray-500 mt-0.5">@joelxorbit</div>
+            </a>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- Interactive Contact Form -->
+      <section class="lg:col-span-7">
+        <div class="p-8 sm:p-10 rounded-2xl bg-[#131313] border border-white/5 shadow-2xl relative">
+          <h2 class="font-headline italic text-3xl text-white mb-2">Send an Inquiry</h2>
+          <p class="text-gray-400 text-sm mb-8">
+            Tell us about your requirements, project scope, or general question. We will review and provide an informed response.
+          </p>
+
+          <form id="contact-form" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="contact-name" class="block text-xs font-label text-gray-400 mb-2 font-bold uppercase tracking-wider">Your Name *</label>
+                <input type="text" id="contact-name" name="name" required placeholder="e.g. Alex Miller" class="w-full bg-[#0e0e0e] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#f9c591] transition-colors">
+              </div>
+
+              <div>
+                <label for="contact-email" class="block text-xs font-label text-gray-400 mb-2 font-bold uppercase tracking-wider">Email Address *</label>
+                <input type="email" id="contact-email" name="email" required placeholder="alex@company.com" class="w-full bg-[#0e0e0e] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#f9c591] transition-colors">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="contact-phone" class="block text-xs font-label text-gray-400 mb-2 font-bold uppercase tracking-wider">Phone / WhatsApp *</label>
+                <input type="tel" id="contact-phone" name="phone" required placeholder="+91 98765 43210" class="w-full bg-[#0e0e0e] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#f9c591] transition-colors">
+              </div>
+
+              <div>
+                <label for="contact-service" class="block text-xs font-label text-gray-400 mb-2 font-bold uppercase tracking-wider">Service Needed</label>
+                <select id="contact-service" name="package" class="w-full bg-[#0e0e0e] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#f9c591] transition-colors">
+                  <option value="Custom Web Development">Custom Web Development</option>
+                  <option value="Mobile App Development">Mobile App Development (Flutter)</option>
+                  <option value="Desktop Application">Desktop Application (VB.NET / Python)</option>
+                  <option value="Custom CRM / Enterprise Automation">Custom CRM / Enterprise Automation</option>
+                  <option value="Technical Consultation">Technical Consultation &amp; Architecture</option>
+                  <option value="Other Technical Inquiry">Other Technical Inquiry</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="contact-message" class="block text-xs font-label text-gray-400 mb-2 font-bold uppercase tracking-wider">Project Details &amp; Message *</label>
+              <textarea id="contact-message" name="message" rows="5" required placeholder="Please describe your project goals, timeline, and any specific technical preferences..." class="w-full bg-[#0e0e0e] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#f9c591] transition-colors"></textarea>
+            </div>
+
+            <!-- Feedback Message Container -->
+            <div id="contact-feedback" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+
+            <button type="submit" id="contact-submit-btn" class="w-full py-4 rounded-xl bg-[#f9c591] text-[#0e0e0e] font-label font-bold text-sm tracking-widest uppercase hover:bg-[#c99668] transition-colors shadow-lg flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-lg">send</span>
+              Submit Inquiry
+            </button>
+          </form>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Frequently Asked Questions -->
+    <section class="p-8 sm:p-12 rounded-2xl bg-[#131313] border border-white/5 space-y-8">
+      <div class="text-center space-y-3">
+        <h2 class="font-headline italic text-3xl sm:text-4xl text-white">Frequently Asked Questions</h2>
+        <p class="text-gray-400 max-w-xl mx-auto text-sm">Clear answers regarding our development workflow, agreements, and support.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-sm">
+        <div class="p-6 rounded-xl bg-[#0e0e0e] border border-white/5 space-y-2">
+          <h4 class="font-headline italic text-lg text-white">What is your typical project timeline?</h4>
+          <p class="text-gray-400 leading-relaxed">
+            Landing pages and corporate websites typically take 1 to 2 weeks. Complex full-stack web applications, custom CRM platforms, and mobile apps range between 3 to 8 weeks depending on scope.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-[#0e0e0e] border border-white/5 space-y-2">
+          <h4 class="font-headline italic text-lg text-white">Do you sign Non-Disclosure Agreements (NDAs)?</h4>
+          <p class="text-gray-400 leading-relaxed">
+            Yes. We respect client confidentiality and can execute a mutual NDA prior to reviewing proprietary business logic, schemas, or design concepts.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-[#0e0e0e] border border-white/5 space-y-2">
+          <h4 class="font-headline italic text-lg text-white">How does project pricing and billing work?</h4>
+          <p class="text-gray-400 leading-relaxed">
+            We provide transparent, fixed-scope estimates or milestone-based sprint billing. There are no hidden fees. All deliverables are clearly enumerated before work begins.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-[#0e0e0e] border border-white/5 space-y-2">
+          <h4 class="font-headline italic text-lg text-white">Do you offer post-launch support &amp; maintenance?</h4>
+          <p class="text-gray-400 leading-relaxed">
+            Yes. We include a complimentary 30-day post-launch warranty period for bug fixes, followed by optional monthly maintenance plans for updates and backups.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <%- include('../partials/footer') %>
+  <%- include('../partials/chatbot') %>
+  <%- include('../partials/modal') %>
+
+  <!-- Form Submission Script -->
+  <script>
+    document.getElementById('contact-form')?.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('contact-submit-btn');
+      const feedback = document.getElementById('contact-feedback');
+      
+      const payload = {
+        name: document.getElementById('contact-name').value.trim(),
+        email: document.getElementById('contact-email').value.trim(),
+        phone: document.getElementById('contact-phone').value.trim(),
+        package: document.getElementById('contact-service').value,
+        message: document.getElementById('contact-message').value.trim(),
+        price: 'Direct Inquiry'
+      };
+
+      btn.disabled = true;
+      btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-lg">progress_activity</span> Submitting...';
+      feedback.className = 'hidden';
+
+      try {
+        const response = await fetch('/api/inquiries', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          feedback.className = 'p-4 rounded-xl text-sm font-medium bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 block';
+          feedback.textContent = 'Thank you! Your message has been received. Our team will contact you shortly.';
+          document.getElementById('contact-form').reset();
+        } else {
+          throw new Error(result.error || 'Failed to submit inquiry');
+        }
+      } catch (err) {
+        feedback.className = 'p-4 rounded-xl text-sm font-medium bg-rose-500/10 border border-rose-500/30 text-rose-400 block';
+        feedback.textContent = 'Could not submit your message at this time. Please reach out directly to joelxorbit@gmail.com or via WhatsApp.';
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<span class="material-symbols-outlined text-lg">send</span> Submit Inquiry';
+      }
+    });
+  </script>
+
+</body>
+</html>

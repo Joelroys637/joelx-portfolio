@@ -2,27 +2,54 @@ const express = require('express');
 const router = express.Router();
 const pageController = require('../controllers/pageController');
 
-// SEO Technical routes
-router.get('/sitemap.xml', pageController.renderSitemap);
+// Technical SEO & Crawler Verification Routes
+router.get('/ads.txt', pageController.renderAdsTxt);
 router.get('/robots.txt', pageController.renderRobots);
+router.get('/sitemap.xml', pageController.renderSitemap);
 
+// Core Navigation Routes
 router.get('/', pageController.renderHome);
-router.get('/joelx-orbit-seo.html', pageController.renderHome); // for backward compatibility
-router.get('/services.html', pageController.renderServices); // backward compatibility
+router.get('/about', pageController.renderAbout);
+router.get('/about-us', pageController.renderAbout);
+router.get('/about.html', pageController.renderAbout);
+
 router.get('/services', pageController.renderServices);
-router.get('/quote.html', pageController.renderQuote); // backward compatibility
+router.get('/services.html', pageController.renderServices);
+
+router.get('/tools', pageController.renderTools);
+router.get('/products', pageController.renderTools);
+router.get('/tools.html', pageController.renderTools);
+
+router.get('/contact', pageController.renderContact);
+router.get('/contact-us', pageController.renderContact);
+router.get('/contact.html', pageController.renderContact);
+
 router.get('/quote', pageController.renderQuote);
+router.get('/quote.html', pageController.renderQuote);
+
 router.get('/gallery', pageController.renderGallery);
+router.get('/gallery.html', pageController.renderGallery);
+
+// Blog & Tutorial Routes
 router.get('/blog', pageController.renderBlog);
 router.get('/blog/', pageController.renderBlog);
 router.get('/blogs', (req, res) => res.redirect(301, '/blog'));
-router.get('/blog.html', pageController.renderBlog); // backward compatibility
+router.get('/blog.html', pageController.renderBlog);
 router.get('/blog/:slug', pageController.renderBlogPost);
+
+// Trust & Legal Policy Routes
 router.get('/terms', pageController.renderTerms);
 router.get('/terms-and-conditions', pageController.renderTerms);
 router.get('/terms-and-conditions.html', pageController.renderTerms);
+
 router.get('/privacy', pageController.renderPrivacy);
 router.get('/privacy-policy', pageController.renderPrivacy);
 router.get('/privacy-policy.html', pageController.renderPrivacy);
+
+router.get('/disclaimer', pageController.renderDisclaimer);
+router.get('/disclaimer.html', pageController.renderDisclaimer);
+
+// Backward compatibility legacy redirects
+router.get('/joelx-orbit-seo.html', (req, res) => res.redirect(301, '/'));
 
 module.exports = router;

@@ -1,12 +1,26 @@
 const fs = require('fs');
 const path = require('path');
-const Parser = require('rss-parser');
-const { GoogleGenerativeAI } = require('@google/generative-ai');
+let Parser;
+let GoogleGenerativeAI;
+try {
+  Parser = require('rss-parser');
+} catch (e) {
+  // Optional dependency for CI automated fetching
+}
+try {
+  const genAiModule = require('@google/generative-ai');
+  GoogleGenerativeAI = genAiModule.GoogleGenerativeAI;
+} catch (e) {
+  // Optional dependency
+}
 
-const parser = new Parser({
-  headers: { 'User-Agent': 'JoelXOrbitBot/1.0 (+https://joelxorbit.in)' },
-  timeout: 10000
-});
+let parser = null;
+if (Parser) {
+  parser = new Parser({
+    headers: { 'User-Agent': 'JoelXOrbitBot/1.0 (+https://joelxorbit.in)' },
+    timeout: 10000
+  });
+}
 
 const FEEDS = [
   'https://news.ycombinator.com/rss',

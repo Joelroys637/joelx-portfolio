@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <%- include('../partials/head') %>
+  <!-- QRCode.js lightweight library for interactive browser utility -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body class="bg-[#0e0e0e] text-white font-body selection:bg-primary/30 selection:text-primary overflow-x-hidden">
+
+  <%- include('../partials/header') %>
+
+  <!-- Ambient Glow Effects -->
+  <div class="fixed top-20 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-[#d2a373]/5 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+  <div class="fixed bottom-10 right-10 w-[450px] h-[300px] bg-[#f9c591]/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+  <!-- Main Content Canvas -->
+  <main class="pt-28 pb-32 max-w-7xl mx-auto px-6">
+
+    <!-- Header / Hero Section -->
+    <header class="mb-20 text-center space-y-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f9c591]/10 border border-[#f9c591]/20 text-[#f9c591] text-xs font-label font-bold tracking-widest uppercase">
+        <span class="material-symbols-outlined text-sm">construction</span>
+        Software Tools &amp; Products
+      </div>
+      <h1 class="font-headline italic text-4xl sm:text-5xl md:text-6xl text-white tracking-tight">
+        Built to Simplify <span class="text-[#f9c591]">Digital Workflows.</span>
+      </h1>
+      <p class="text-gray-400 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
+        Explore our curated suite of standalone desktop software, real-time communications platforms, and privacy-respecting browser developer utilities.
+      </p>
+    </header>
+
+    <!-- ============================================================
+         SECTION 1: INTERACTIVE IN-BROWSER UTILITY
+         ============================================================ -->
+    <section class="mb-24 p-8 sm:p-10 rounded-2xl bg-[#131313] border border-[#f9c591]/20 shadow-2xl relative">
+      <div class="mb-8">
+        <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#f9c591] font-label font-bold mb-2">
+          <span class="material-symbols-outlined text-sm">bolt</span> Interactive In-Browser Tool
+        </div>
+        <h2 class="font-headline italic text-3xl sm:text-4xl text-white">Live QR Code Generator &amp; Formatter</h2>
+        <p class="text-gray-400 text-sm mt-2 max-w-2xl">
+          Generate high-resolution, instant QR codes client-side in your browser. <strong>Privacy Guarantee:</strong> All processing is performed strictly locally inside your browser; no input strings or generated images are ever sent or stored on our servers.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Controls Column -->
+        <div class="lg:col-span-7 space-y-4">
+          <div>
+            <label for="qr-input" class="block text-xs font-label text-gray-400 mb-2 font-bold uppercase tracking-wider">Target URL or Plain Text *</label>
+            <input type="text" id="qr-input" value="https://joelxorbit.in" placeholder="Enter website URL, Wi-Fi string, or text note..." class="w-full bg-[#0e0e0e] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#f9c591] transition-colors">
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label for="qr-size" class="block text-xs font-label text-gray-400 mb-2 font-bold uppercase tracking-wider">Resolution</label>
+              <select id="qr-size" class="w-full bg-[#0e0e0e] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#f9c591] transition-colors text-sm">
+                <option value="200">Standard (200 x 200)</option>
+                <option value="300" selected>High (300 x 300)</option>
+                <option value="400">Ultra (400 x 400)</option>
+              </select>
+            </div>
+            <div>
+              <label for="qr-ecc" class="block text-xs font-label text-gray-400 mb-2 font-bold uppercase tracking-wider">Error Correction</label>
+              <select id="qr-ecc" class="w-full bg-[#0e0e0e] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#f9c591] transition-colors text-sm">
+                <option value="M">Medium (15% Recovery)</option>
+                <option value="Q">Quality (25% Recovery)</option>
+                <option value="H" selected>High (30% Recovery)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="flex gap-4 pt-2">
+            <button id="qr-generate-btn" type="button" class="flex-1 py-3.5 rounded-xl bg-[#f9c591] text-[#0e0e0e] font-label font-bold text-sm tracking-wider uppercase hover:bg-[#c99668] transition-colors flex items-center justify-center gap-2 shadow-md">
+              <span class="material-symbols-outlined text-lg">qr_code_2</span>
+              Generate QR Code
+            </button>
+            <button id="qr-download-btn" type="button" class="px-6 py-3.5 rounded-xl border border-white/15 text-white font-label font-bold text-sm hover:border-[#f9c591] hover:text-[#f9c591] transition-colors flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-lg">download</span>
+              Download PNG
+            </button>
+          </div>
+        </div>
+
+        <!-- Preview Column -->
+        <div class="lg:col-span-5 flex flex-col items-center justify-center p-6 rounded-2xl bg-[#0e0e0e] border border-white/5 min-h-[280px]">
+          <div id="qrcode-canvas-container" class="p-4 bg-white rounded-xl shadow-2xl flex items-center justify-center">
+            <!-- QR renders here -->
+          </div>
+          <div class="text-[11px] text-gray-500 mt-4 text-center">
+            Scannable with any modern smartphone camera.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 2: PRODUCT DEEP-DIVES
+         ============================================================ -->
+    <div class="space-y-16">
+
+      <!-- Product 1: Sindhai IDE -->
+      <article class="p-8 sm:p-12 rounded-2xl bg-[#131313] border border-white/5 space-y-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#f9c591]/10 text-[#f9c591] text-xs font-label font-bold uppercase tracking-wider">
+              <span class="material-symbols-outlined text-sm">desktop_windows</span> Desktop Software &bull; Microsoft Store
+            </div>
+            <h2 class="font-headline italic text-3xl sm:text-4xl text-white">சிந்தை IDE (Sindhai IDE)</h2>
+            <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+              A beginner-friendly programming language and integrated development environment designed to allow students and educators to write, compile, and execute code in the Tamil language.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs text-gray-400">
+              <div class="p-3.5 rounded-xl bg-[#0e0e0e] border border-white/5">
+                <strong class="text-white block mb-1">Problem Solved:</strong>
+                Eliminates language barriers in software education for Tamil-speaking beginners and school students.
+              </div>
+              <div class="p-3.5 rounded-xl bg-[#0e0e0e] border border-white/5">
+                <strong class="text-white block mb-1">Target Audience:</strong>
+                Students, teachers, regional coding academies, and programming beginners.
+              </div>
+            </div>
+
+            <!-- Step-by-Step Instructions -->
+            <div class="space-y-2 pt-2">
+              <h4 class="text-xs uppercase tracking-wider text-[#f9c591] font-label font-bold">Step-by-Step Guide:</h4>
+              <ol class="list-decimal pl-5 space-y-1 text-sm text-gray-400">
+                <li>Download Sindhai IDE from the official Microsoft Store or our local offline installer.</li>
+                <li>Launch the application and create a new project file (<code class="text-white">.tamil</code>).</li>
+                <li>Write programming logic utilizing Tamil keywords (e.g. <code class="text-[#f9c591]">பதிப்பி "வணக்கம் உலகம்";</code>).</li>
+                <li>Click the Compile and Execute buttons to see instantaneous console output.</li>
+              </ol>
+            </div>
+
+            <!-- Privacy & Security -->
+            <div class="p-4 rounded-xl bg-[#1a1a1a] border border-white/5 text-xs text-gray-400 space-y-1">
+              <strong class="text-white flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-[#f9c591]">lock</span> Privacy &amp; Data Security:</strong>
+              <p>Sindhai IDE operates 100% locally on your machine. It has no background network telemetry, requires no internet connection to compile programs, and stores no personal user data.</p>
+            </div>
+
+            <div class="flex flex-wrap gap-4 pt-4">
+              <a href="https://apps.microsoft.com/store/detail/XPDNSMWSJBNGVQ" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-[#f9c591] text-[#0e0e0e] font-label font-bold text-sm hover:bg-[#c99668] transition-colors flex items-center gap-2">
+                <span class="material-symbols-outlined text-base">download</span> Get from Microsoft Store
+              </a>
+              <a href="/tamilide" class="px-6 py-3 rounded-xl border border-white/10 text-white font-label font-bold text-sm hover:border-[#f9c591] hover:text-[#f9c591] transition-colors flex items-center gap-2">
+                <span class="material-symbols-outlined text-base">article</span> View Documentation &amp; Installer
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0e0e0e]">
+            <img src="/images/sinthai.png" alt="சிந்தை IDE Interface" class="w-full h-auto object-cover">
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 2: StreamLine Video Call -->
+      <article class="p-8 sm:p-12 rounded-2xl bg-[#131313] border border-white/5 space-y-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-label font-bold uppercase tracking-wider">
+              <span class="material-symbols-outlined text-sm">videocam</span> WebRTC &bull; P2P Streaming
+            </div>
+            <h2 class="font-headline italic text-3xl sm:text-4xl text-white">StreamLine - Real-Time Video Call</h2>
+            <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+              A lightweight, peer-to-peer browser video calling application powered by WebRTC and Socket.io signaling. Enables instant encrypted audio/video rooms with zero software installations.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs text-gray-400">
+              <div class="p-3.5 rounded-xl bg-[#0e0e0e] border border-white/5">
+                <strong class="text-white block mb-1">Problem Solved:</strong>
+                Avoids heavy proprietary meeting software downloads when a fast, private 1-on-1 video call is needed.
+              </div>
+              <div class="p-3.5 rounded-xl bg-[#0e0e0e] border border-white/5">
+                <strong class="text-white block mb-1">Target Audience:</strong>
+                Remote professionals, developers, students, and privacy-conscious users.
+              </div>
+            </div>
+
+            <!-- Step-by-Step Instructions -->
+            <div class="space-y-2 pt-2">
+              <h4 class="text-xs uppercase tracking-wider text-purple-400 font-label font-bold">Step-by-Step Guide:</h4>
+              <ol class="list-decimal pl-5 space-y-1 text-sm text-gray-400">
+                <li>Launch StreamLine in any modern web browser.</li>
+                <li>Grant camera and microphone permissions when prompted.</li>
+                <li>Copy the unique room URL and send it to your participant.</li>
+                <li>Once connected, enjoy encrypted, low-latency video and audio transmission.</li>
+              </ol>
+            </div>
+
+            <!-- Privacy & Security -->
+            <div class="p-4 rounded-xl bg-[#1a1a1a] border border-white/5 text-xs text-gray-400 space-y-1">
+              <strong class="text-white flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-purple-400">shield</span> Privacy &amp; Data Security:</strong>
+              <p>StreamLine utilizes standard WebRTC DTLS/SRTP encryption. Audio and video streams are transmitted directly peer-to-peer between devices and are never recorded, routed, or stored on our servers.</p>
+            </div>
+
+            <div class="pt-4">
+              <a href="https://joelx-videocall.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#f9c591] text-[#0e0e0e] font-label font-bold text-sm hover:bg-[#c99668] transition-colors">
+                <span class="material-symbols-outlined text-base">open_in_new</span> Launch Live Demonstration
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0e0e0e]">
+            <img src="/assert/images/project image/videocall.png" alt="StreamLine WebRTC Video Call Interface" class="w-full h-auto object-cover">
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 3: JoelX Tools Hub -->
+      <article class="p-8 sm:p-12 rounded-2xl bg-[#131313] border border-white/5 space-y-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-label font-bold uppercase tracking-wider">
+              <span class="material-symbols-outlined text-sm">hub</span> Utility Suite
+            </div>
+            <h2 class="font-headline italic text-3xl sm:text-4xl text-white">JoelX Tools Hub</h2>
+            <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+              A centralized suite of web tools designed for batch certificate generation, barcode asset rendering, and developer formatting tasks.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs text-gray-400">
+              <div class="p-3.5 rounded-xl bg-[#0e0e0e] border border-white/5">
+                <strong class="text-white block mb-1">Problem Solved:</strong>
+                Saves hours of repetitive manual design work when creating batch credentials or generating assets.
+              </div>
+              <div class="p-3.5 rounded-xl bg-[#0e0e0e] border border-white/5">
+                <strong class="text-white block mb-1">Target Audience:</strong>
+                Event organizers, workshop conductors, corporate administrators, and designers.
+              </div>
+            </div>
+
+            <!-- Privacy & Security -->
+            <div class="p-4 rounded-xl bg-[#1a1a1a] border border-white/5 text-xs text-gray-400 space-y-1">
+              <strong class="text-white flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-cyan-400">lock</span> Privacy &amp; Data Security:</strong>
+              <p>Uploaded CSV rosters and recipient lists are parsed directly in your browser memory and are discarded immediately upon page refresh.</p>
+            </div>
+
+            <div class="pt-4">
+              <a href="https://tools.joelxorbit.in/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#f9c591] text-[#0e0e0e] font-label font-bold text-sm hover:bg-[#c99668] transition-colors">
+                <span class="material-symbols-outlined text-base">open_in_new</span> Open Tools Hub Platform
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0e0e0e]">
+            <img src="/images/qrcode_generator_ui_1786198997048.png" alt="JoelX Tools Interface" class="w-full h-auto object-cover">
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 4: AI Speech Synthesizer -->
+      <article class="p-8 sm:p-12 rounded-2xl bg-[#131313] border border-white/5 space-y-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-label font-bold uppercase tracking-wider">
+              <span class="material-symbols-outlined text-sm">record_voice_over</span> AI Voice Synthesis
+            </div>
+            <h2 class="font-headline italic text-3xl sm:text-4xl text-white">Speech AI - Text to Speech</h2>
+            <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+              A neural speech synthesis playground that converts long-form text articles and documentation into natural audio streams.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs text-gray-400">
+              <div class="p-3.5 rounded-xl bg-[#0e0e0e] border border-white/5">
+                <strong class="text-white block mb-1">Problem Solved:</strong>
+                Provides instant audio accessibility for auditory learners and voiceover prototyping.
+              </div>
+              <div class="p-3.5 rounded-xl bg-[#0e0e0e] border border-white/5">
+                <strong class="text-white block mb-1">Target Audience:</strong>
+                Educators, content creators, accessibility advocates.
+              </div>
+            </div>
+
+            <!-- Privacy & Security -->
+            <div class="p-4 rounded-xl bg-[#1a1a1a] border border-white/5 text-xs text-gray-400 space-y-1">
+              <strong class="text-white flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-emerald-400">lock</span> Privacy &amp; Data Security:</strong>
+              <p>Text inputs are sent over encrypted HTTPS, processed ephemerally, and converted to audio without persistent server logging or voice cloning storage.</p>
+            </div>
+
+            <div class="pt-4">
+              <a href="https://speech-ai.streamlit.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#f9c591] text-[#0e0e0e] font-label font-bold text-sm hover:bg-[#c99668] transition-colors">
+                <span class="material-symbols-outlined text-base">open_in_new</span> Test Speech AI Playground
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0e0e0e]">
+            <img src="/images/text_speech_ui_1786199018828.png" alt="Speech AI Interface" class="w-full h-auto object-cover">
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </main>
+
+  <%- include('../partials/footer') %>
+  <%- include('../partials/chatbot') %>
+  <%- include('../partials/modal') %>
+
+  <!-- Interactive QR Code Generation Script -->
+  <script>
+    let qrInstance = null;
+
+    function renderQR() {
+      const container = document.getElementById("qrcode-canvas-container");
+      const text = document.getElementById("qr-input").value.trim() || "https://joelxorbit.in";
+      const size = parseInt(document.getElementById("qr-size").value) || 300;
+      const eccLevel = document.getElementById("qr-ecc").value || "H";
+
+      container.innerHTML = "";
+
+      let correctLevel = QRCode.CorrectLevel.H;
+      if (eccLevel === "M") correctLevel = QRCode.CorrectLevel.M;
+      if (eccLevel === "Q") correctLevel = QRCode.CorrectLevel.Q;
+
+      qrInstance = new QRCode(container, {
+        text: text,
+        width: size,
+        height: size,
+        colorDark: "#0e0e0e",
+        colorLight: "#ffffff",
+        correctLevel: correctLevel
+      });
+    }
+
+    document.getElementById("qr-generate-btn")?.addEventListener("click", renderQR);
+    document.getElementById("qr-input")?.addEventListener("keypress", function(e) {
+      if (e.key === "Enter") renderQR();
+    });
+
+    document.getElementById("qr-download-btn")?.addEventListener("click", function() {
+      const img = document.querySelector("#qrcode-canvas-container img");
+      const canvas = document.querySelector("#qrcode-canvas-container canvas");
+      let dataUrl = "";
+      if (img && img.src) {
+        dataUrl = img.src;
+      } else if (canvas) {
+        dataUrl = canvas.toDataURL("image/png");
+      }
+
+      if (dataUrl) {
+        const a = document.createElement("a");
+        a.href = dataUrl;
+        a.download = "joelxorbit-qrcode.png";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      }
+    });
+
+    // Initial render on load
+    window.addEventListener("DOMContentLoaded", renderQR);
+  </script>
+
+</body>
+</html>

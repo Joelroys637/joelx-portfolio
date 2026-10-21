@@ -1,0 +1,668 @@
+[
+  {
+    "id": "aspnet-student-crud-sqlserver-tutorial",
+    "slug": "aspnet-student-crud-sqlserver-tutorial",
+    "title": "Building a Student CRUD Application Using ASP.NET Core and SQL Server: Step-by-Step Architecture Guide",
+    "category": "Web Development",
+    "coverImage": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Developer writing ASP.NET Core and C# code connected to SQL Server database",
+    "tags": [
+      "ASP.NET Core",
+      "C#",
+      "SQL Server",
+      "Entity Framework Core",
+      "Web Development",
+      "CRUD Tutorial"
+    ],
+    "date": "October 15, 2026"
+  },
+  {
+    "id": "python-qr-code-generator-tutorial",
+    "slug": "python-qr-code-generator-tutorial",
+    "title": "Creating a Production-Ready QR Code Generator Using Python: CLI, GUI & Web Integration",
+    "category": "Web Development",
+    "coverImage": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "QR Code Generator architecture and Python script on laptop screen",
+    "tags": [
+      "Python",
+      "QR Code",
+      "Pillow",
+      "Flask",
+      "Software Tools",
+      "Tutorial"
+    ],
+    "date": "October 14, 2026"
+  },
+  {
+    "id": "flutter-welcome-screen-ui-beginners",
+    "slug": "flutter-welcome-screen-ui-beginners",
+    "title": "Building a Modern Flutter Welcome & Authentication Screen: Clean UI Architecture for Beginners",
+    "category": "Mobile Development",
+    "coverImage": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Flutter mobile application welcome screen running on Android and iOS devices",
+    "tags": [
+      "Flutter",
+      "Dart",
+      "Mobile App Development",
+      "UI Design",
+      "iOS",
+      "Android"
+    ],
+    "date": "October 13, 2026"
+  },
+  {
+    "id": "deploy-react-node-website-vercel-guide",
+    "slug": "deploy-react-node-website-vercel-guide",
+    "title": "Deploying a Full-Stack React and Node.js Express Application on Vercel: The Complete DevOps Guide",
+    "category": "Cloud & DevOps",
+    "coverImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Serverless cloud deployment architecture on Vercel edge infrastructure",
+    "tags": [
+      "Vercel",
+      "Node.js",
+      "Express",
+      "DevOps",
+      "Serverless",
+      "Deployment Guide"
+    ],
+    "date": "October 11, 2026"
+  },
+  {
+    "id": "webrtc-video-calling-application-guide",
+    "slug": "webrtc-video-calling-application-guide",
+    "title": "Building a Real-Time WebRTC Video Calling Application with Node.js and Socket.io: Signaling & P2P Streams",
+    "category": "Web Development",
+    "coverImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Real-time WebRTC audio and video streaming signaling server diagram",
+    "tags": [
+      "WebRTC",
+      "Socket.io",
+      "Node.js",
+      "Video Calling",
+      "P2P",
+      "Full-Stack Tutorial"
+    ],
+    "date": "October 09, 2026"
+  },
+  {
+    "id": "connect-web-app-firebase-firestore-nodejs",
+    "slug": "connect-web-app-firebase-firestore-nodejs",
+    "title": "Connecting a Web Application to Firebase Firestore Using Node.js: Safe Initialization & Architecture",
+    "category": "Cloud & DevOps",
+    "coverImage": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Firebase Firestore NoSQL database integration with Node.js and Express",
+    "tags": [
+      "Firebase",
+      "Firestore",
+      "Node.js",
+      "Cloud Database",
+      "Security",
+      "Backend"
+    ],
+    "date": "October 07, 2026"
+  },
+  {
+    "id": "agentic-ai-enterprise-sdlc-2026",
+    "slug": "agentic-ai-enterprise-sdlc-2026",
+    "title": "Agentic AI & Autonomous Workflows: How AI Agents are Revolutionizing Modern IT & Software Engineering",
+    "category": "Artificial Intelligence",
+    "coverImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Agentic AI autonomous multi-agent architecture and reasoning nodes",
+    "tags": [
+      "Agentic AI",
+      "AI Agents",
+      "LLMs",
+      "Software Engineering",
+      "Automation",
+      "SDLC"
+    ],
+    "date": "October 05, 2026"
+  },
+  {
+    "id": "cloud-native-platform-engineering-2026",
+    "slug": "cloud-native-platform-engineering-2026",
+    "title": "Cloud-Native Platform Engineering & Edge Runtimes: Beyond Raw Kubernetes",
+    "category": "Cloud & DevOps",
+    "coverImage": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Cloud native server hardware and automated platform engineering",
+    "tags": [
+      "Cloud Native",
+      "Platform Engineering",
+      "Kubernetes",
+      "DevOps",
+      "Edge Computing"
+    ],
+    "date": "October 03, 2026"
+  },
+  {
+    "id": "zero-trust-ai-cybersecurity-trends",
+    "slug": "zero-trust-ai-cybersecurity-trends",
+    "title": "Zero-Trust Architecture & AI-Driven Threat Hunting in Enterprise Cybersecurity",
+    "category": "Cybersecurity",
+    "coverImage": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Cybersecurity zero trust shield and automated defense monitor",
+    "tags": [
+      "Cybersecurity",
+      "Zero Trust",
+      "mTLS",
+      "Threat Detection",
+      "Information Security"
+    ],
+    "date": "October 01, 2026"
+  },
+  {
+    "id": "full-stack-web-modern-ecosystem-2026",
+    "slug": "full-stack-web-modern-ecosystem-2026",
+    "title": "The Modern Full-Stack Frontier: TypeScript, Rust Tooling & High-Performance Web",
+    "category": "Web Development",
+    "coverImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Modern web development with full stack TypeScript and Rust compilers",
+    "tags": [
+      "TypeScript",
+      "Rust",
+      "Web Development",
+      "Next.js",
+      "Performance"
+    ],
+    "date": "September 28, 2026"
+  },
+  {
+    "id": "mobile-app-trends-flutter-kmp-2026",
+    "slug": "mobile-app-trends-flutter-kmp-2026",
+    "title": "Cross-Platform Mobile App Engineering: Flutter vs Kotlin Multiplatform (KMP)",
+    "category": "Mobile Development",
+    "coverImage": "https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Comparison between Flutter and Kotlin Multiplatform mobile development architectures",
+    "tags": [
+      "Flutter",
+      "Kotlin Multiplatform",
+      "KMP",
+      "Mobile Development",
+      "iOS",
+      "Android"
+    ],
+    "date": "September 25, 2026"
+  },
+  {
+    "id": "rag-vector-databases-enterprise-data-2026",
+    "slug": "rag-vector-databases-enterprise-data-2026",
+    "title": "RAG 2.0 & Vector Databases: Architecting Enterprise Knowledge Engines",
+    "category": "Data & AI",
+    "coverImage": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Vector database embeddings graph and enterprise RAG architecture",
+    "tags": [
+      "RAG",
+      "Vector Database",
+      "Pinecone",
+      "Milvus",
+      "AI",
+      "Embeddings"
+    ],
+    "date": "September 22, 2026"
+  },
+  {
+    "id": "high-throughput-rest-api-express-redis",
+    "slug": "high-throughput-rest-api-express-redis",
+    "title": "Building High-Throughput REST APIs with Express, Redis Caching & Rate Limiting",
+    "category": "Web Development",
+    "coverImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "High throughput server metrics and Redis cache performance dashboard",
+    "tags": [
+      "Node.js",
+      "Express",
+      "Redis",
+      "REST API",
+      "Performance",
+      "Caching"
+    ],
+    "date": "September 19, 2026"
+  },
+  {
+    "id": "postgresql-indexing-query-optimization-guide",
+    "slug": "postgresql-indexing-query-optimization-guide",
+    "title": "PostgreSQL Indexing & Query Optimization: EXPLAIN ANALYZE Deep Dive",
+    "category": "Data & AI",
+    "coverImage": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "PostgreSQL query execution plan analysis and database indexing",
+    "tags": [
+      "PostgreSQL",
+      "SQL",
+      "Database Indexing",
+      "Performance",
+      "Optimization"
+    ],
+    "date": "September 16, 2026"
+  },
+  {
+    "id": "desktop-invoicing-app-vbnet-sqlite",
+    "slug": "desktop-invoicing-app-vbnet-sqlite",
+    "title": "Building an Offline-First Desktop Invoicing Application Using VB.NET / C# and SQLite",
+    "category": "Web Development",
+    "coverImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Desktop business invoicing software UI and SQLite database architecture",
+    "tags": [
+      "VB.NET",
+      "C#",
+      "SQLite",
+      "Desktop App",
+      "Windows Forms",
+      "Software Tools"
+    ],
+    "date": "September 14, 2026"
+  },
+  {
+    "id": "docker-multistage-builds-node-react",
+    "slug": "docker-multistage-builds-node-react",
+    "title": "Docker Multi-Stage Builds for Node.js and React: Slashing Container Size by 80%",
+    "category": "Cloud & DevOps",
+    "coverImage": "https://images.unsplash.com/photo-1605745341112-85968b19335b?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Docker containers and lightweight microservices deployment diagram",
+    "tags": [
+      "Docker",
+      "DevOps",
+      "Node.js",
+      "React",
+      "Containers",
+      "Security"
+    ],
+    "date": "September 11, 2026"
+  },
+  {
+    "id": "oauth2-openid-connect-implementation-guide",
+    "slug": "oauth2-openid-connect-implementation-guide",
+    "title": "Implementing OAuth 2.0 & OpenID Connect (OIDC) with PKCE in Modern Web Apps",
+    "category": "Cybersecurity",
+    "coverImage": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "OAuth 2.0 security token flow and encrypted access keys",
+    "tags": [
+      "OAuth2",
+      "OIDC",
+      "Security",
+      "Authentication",
+      "PKCE",
+      "Web Security"
+    ],
+    "date": "September 08, 2026"
+  },
+  {
+    "id": "microservices-grpc-vs-rest-vs-kafka",
+    "slug": "microservices-grpc-vs-rest-vs-kafka",
+    "title": "Microservices Communication: When to Choose gRPC, REST, or Apache Kafka",
+    "category": "Cloud & DevOps",
+    "coverImage": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Fiber optic high-speed inter-service communication network and message queues",
+    "tags": [
+      "Microservices",
+      "gRPC",
+      "REST API",
+      "Kafka",
+      "Architecture",
+      "Distributed Systems"
+    ],
+    "date": "September 05, 2026"
+  },
+  {
+    "id": "real-time-chat-websocket-redis-pubsub",
+    "slug": "real-time-chat-websocket-redis-pubsub",
+    "title": "Scaling Real-Time Chat Across Multiple Node.js Instances with WebSockets & Redis Pub/Sub",
+    "category": "Web Development",
+    "coverImage": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Real time collaborative chat messaging architecture with WebSocket nodes",
+    "tags": [
+      "WebSockets",
+      "Socket.io",
+      "Redis",
+      "Real-Time",
+      "Node.js",
+      "Scalability"
+    ],
+    "date": "September 02, 2026"
+  },
+  {
+    "id": "owasp-top-10-web-security-defense-guide",
+    "slug": "owasp-top-10-web-security-defense-guide",
+    "title": "OWASP Top 10 Web Application Vulnerabilities: Practical Hardening & Defense",
+    "category": "Cybersecurity",
+    "coverImage": "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "OWASP top 10 cyber security vulnerability remediation checklist and defense monitor",
+    "tags": [
+      "OWASP",
+      "Cybersecurity",
+      "Web Security",
+      "Penetration Testing",
+      "Security Audit"
+    ],
+    "date": "August 30, 2026"
+  },
+  {
+    "id": "flutter-state-management-riverpod-vs-bloc",
+    "slug": "flutter-state-management-riverpod-vs-bloc",
+    "title": "Flutter State Management at Scale: Riverpod vs BLoC Architecture",
+    "category": "Mobile Development",
+    "coverImage": "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Flutter state management architecture comparing Riverpod and BLoC reactive streams",
+    "tags": [
+      "Flutter",
+      "Riverpod",
+      "BLoC",
+      "State Management",
+      "Mobile Architecture",
+      "Dart"
+    ],
+    "date": "August 27, 2026"
+  },
+  {
+    "id": "vanilla-js-ecommerce-cart-checkout-architecture",
+    "slug": "vanilla-js-ecommerce-cart-checkout-architecture",
+    "title": "Building an E-Commerce Cart & Checkout Engine in Pure Vanilla JavaScript",
+    "category": "Web Development",
+    "coverImage": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Vanilla JavaScript e-commerce shopping cart and checkout architecture",
+    "tags": [
+      "JavaScript",
+      "Vanilla JS",
+      "E-Commerce",
+      "Web Development",
+      "Performance"
+    ],
+    "date": "August 24, 2026"
+  },
+  {
+    "id": "github-actions-ci-cd-pipeline-automation",
+    "slug": "github-actions-ci-cd-pipeline-automation",
+    "title": "Enterprise CI/CD Pipelines with GitHub Actions: Multi-Stage Testing & Zero-Downtime Deployment",
+    "category": "Cloud & DevOps",
+    "coverImage": "https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Automated GitHub Actions CI CD continuous integration workflow diagram",
+    "tags": [
+      "GitHub Actions",
+      "CI/CD",
+      "DevOps",
+      "Automation",
+      "Testing",
+      "Deployment"
+    ],
+    "date": "August 21, 2026"
+  },
+  {
+    "id": "nextjs-app-router-server-components-guide",
+    "slug": "nextjs-app-router-server-components-guide",
+    "title": "Mastering Next.js App Router: React Server Components, Streaming & Suspense",
+    "category": "Web Development",
+    "coverImage": "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Next.js App router React Server Components streaming architecture blueprints",
+    "tags": [
+      "Next.js",
+      "React",
+      "Server Components",
+      "App Router",
+      "Web Development"
+    ],
+    "date": "August 18, 2026"
+  },
+  {
+    "id": "core-web-vitals-performance-optimization",
+    "slug": "core-web-vitals-performance-optimization",
+    "title": "Mastering Core Web Vitals (LCP, INP, CLS): Practical Frontend Optimization Guide",
+    "category": "Web Development",
+    "coverImage": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Google Core Web Vitals performance metrics and Lighthouse speed analytics",
+    "tags": [
+      "Core Web Vitals",
+      "Lighthouse",
+      "SEO",
+      "Performance",
+      "Web Development"
+    ],
+    "date": "August 15, 2026"
+  },
+  {
+    "id": "aws-lambda-api-gateway-serverless-architecture",
+    "slug": "aws-lambda-api-gateway-serverless-architecture",
+    "title": "Serverless Backend Architecture with AWS Lambda, API Gateway & DynamoDB",
+    "category": "Cloud & DevOps",
+    "coverImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "AWS Lambda serverless architecture code execution and DynamoDB storage",
+    "tags": [
+      "AWS",
+      "Serverless",
+      "AWS Lambda",
+      "DynamoDB",
+      "Cloud Architecture"
+    ],
+    "date": "August 12, 2026"
+  },
+  {
+    "id": "python-automation-file-system-watchdog",
+    "slug": "python-automation-file-system-watchdog",
+    "title": "Automated File Management & Directory Monitoring in Python with Watchdog",
+    "category": "Data & AI",
+    "coverImage": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Python automated file system script and directory event listener execution",
+    "tags": [
+      "Python",
+      "Automation",
+      "Watchdog",
+      "File System",
+      "Scripting",
+      "Tools"
+    ],
+    "date": "August 09, 2026"
+  },
+  {
+    "id": "mongodb-aggregation-pipeline-vs-sql-joins",
+    "slug": "mongodb-aggregation-pipeline-vs-sql-joins",
+    "title": "MongoDB Aggregation Pipeline vs SQL Joins: Performance & Analytical Queries",
+    "category": "Data & AI",
+    "coverImage": "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "MongoDB aggregation pipeline stages and relational SQL analytics comparison",
+    "tags": [
+      "MongoDB",
+      "NoSQL",
+      "SQL",
+      "Database",
+      "Aggregation Pipeline",
+      "Data Engineering"
+    ],
+    "date": "August 06, 2026"
+  },
+  {
+    "id": "jwt-authentication-refresh-token-rotation",
+    "slug": "jwt-authentication-refresh-token-rotation",
+    "title": "Bulletproof JWT Authentication in Node.js: HttpOnly Cookies & Refresh Token Rotation",
+    "category": "Cybersecurity",
+    "coverImage": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Secure JSON Web Token authentication with HttpOnly cookies and encrypted tokens",
+    "tags": [
+      "JWT",
+      "Node.js",
+      "Express",
+      "Authentication",
+      "Cybersecurity",
+      "Cookies"
+    ],
+    "date": "August 03, 2026"
+  },
+  {
+    "id": "microservices-circuit-breaker-retry-pattern",
+    "slug": "microservices-circuit-breaker-retry-pattern",
+    "title": "Resilient Distributed Systems: Implementing Circuit Breakers & Retries with Opossum",
+    "category": "Cloud & DevOps",
+    "coverImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Microservices circuit breaker microchip and fault tolerance architecture",
+    "tags": [
+      "Microservices",
+      "Circuit Breaker",
+      "Resilience",
+      "DevOps",
+      "Node.js",
+      "Opossum"
+    ],
+    "date": "July 31, 2026"
+  },
+  {
+    "id": "pwa-offline-first-service-worker-guide",
+    "slug": "pwa-offline-first-service-worker-guide",
+    "title": "Building High-Performance Offline-First Progressive Web Apps (PWA) with Service Workers",
+    "category": "Web Development",
+    "coverImage": "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Progressive Web App offline-first caching and responsive interface on phone and tablet",
+    "tags": [
+      "PWA",
+      "Service Worker",
+      "Offline-First",
+      "JavaScript",
+      "Web Development"
+    ],
+    "date": "July 28, 2026"
+  },
+  {
+    "id": "modern-css-grid-subgrid-layout-mastery",
+    "slug": "modern-css-grid-subgrid-layout-mastery",
+    "title": "Modern CSS Grid & Subgrid Architecture: Complex Layouts Without Media Query Clutter",
+    "category": "Web Development",
+    "coverImage": "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Modern CSS grid and subgrid architectural layout visualization and geometric blueprint",
+    "tags": [
+      "CSS",
+      "CSS Grid",
+      "Subgrid",
+      "Web Design",
+      "Frontend"
+    ],
+    "date": "July 25, 2026"
+  },
+  {
+    "id": "rabbitmq-event-driven-microservices-nodejs",
+    "slug": "rabbitmq-event-driven-microservices-nodejs",
+    "title": "Reliable Event-Driven Microservices with RabbitMQ & Node.js AMQP",
+    "category": "Cloud & DevOps",
+    "coverImage": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "RabbitMQ message broker queues and distributed event driven worker relays",
+    "tags": [
+      "RabbitMQ",
+      "Microservices",
+      "AMQP",
+      "Node.js",
+      "Event-Driven",
+      "DevOps"
+    ],
+    "date": "July 22, 2026"
+  },
+  {
+    "id": "mobile-app-60fps-performance-memory-profiling",
+    "slug": "mobile-app-60fps-performance-memory-profiling",
+    "title": "Eliminating Jank & Memory Leaks in Mobile Applications: Flutter & React Native Profiling",
+    "category": "Mobile Development",
+    "coverImage": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Mobile developers profiling application memory leaks and 60fps frame rate benchmarks",
+    "tags": [
+      "Mobile Development",
+      "Performance",
+      "Flutter",
+      "React Native",
+      "Debugging"
+    ],
+    "date": "July 19, 2026"
+  },
+  {
+    "id": "chrome-extension-manifest-v3-typescript",
+    "slug": "chrome-extension-manifest-v3-typescript",
+    "title": "Building Modern Chrome Extensions with Manifest V3 and TypeScript",
+    "category": "Web Development",
+    "coverImage": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Chrome Extension development with Manifest V3 and TypeScript code in browser",
+    "tags": [
+      "Chrome Extension",
+      "Manifest V3",
+      "TypeScript",
+      "JavaScript",
+      "Software Tools"
+    ],
+    "date": "July 16, 2026"
+  },
+  {
+    "id": "kubernetes-ingress-cert-manager-ssl-automation",
+    "slug": "kubernetes-ingress-cert-manager-ssl-automation",
+    "title": "Kubernetes Ingress & Automated Let's Encrypt SSL with Cert-Manager",
+    "category": "Cloud & DevOps",
+    "coverImage": "https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Kubernetes ingress controller server rack and cert-manager automated TLS SSL issuance",
+    "tags": [
+      "Kubernetes",
+      "DevOps",
+      "SSL",
+      "Cert-Manager",
+      "Ingress",
+      "Security"
+    ],
+    "date": "July 13, 2026"
+  },
+  {
+    "id": "graphql-schema-design-dataloader-n-plus-one",
+    "slug": "graphql-schema-design-dataloader-n-plus-one",
+    "title": "High-Performance GraphQL API Design: Solving the N+1 Problem with DataLoader",
+    "category": "Web Development",
+    "coverImage": "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "GraphQL API schema design and DataLoader batching solving N plus 1 query problem",
+    "tags": [
+      "GraphQL",
+      "DataLoader",
+      "API Design",
+      "Node.js",
+      "Performance",
+      "Web Development"
+    ],
+    "date": "July 10, 2026"
+  },
+  {
+    "id": "python-web-scraping-playwright-beautifulsoup",
+    "slug": "python-web-scraping-playwright-beautifulsoup",
+    "title": "Ethical Web Scraping & Headless Automation with Python, Playwright & BeautifulSoup",
+    "category": "Data & AI",
+    "coverImage": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Python automated headless web scraper using Playwright and BeautifulSoup parsing",
+    "tags": [
+      "Python",
+      "Web Scraping",
+      "Playwright",
+      "BeautifulSoup",
+      "Data Extraction"
+    ],
+    "date": "July 07, 2026"
+  },
+  {
+    "id": "rbac-role-based-access-control-enterprise",
+    "slug": "rbac-role-based-access-control-enterprise",
+    "title": "Designing Enterprise Role-Based Access Control (RBAC) in Express & SQL",
+    "category": "Cybersecurity",
+    "coverImage": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Enterprise role based access control matrix and permission middleware terminal",
+    "tags": [
+      "RBAC",
+      "Authorization",
+      "Cybersecurity",
+      "Express",
+      "Node.js",
+      "Security"
+    ],
+    "date": "July 04, 2026"
+  },
+  {
+    "id": "cloud-finops-cost-reduction-strategies",
+    "slug": "cloud-finops-cost-reduction-strategies",
+    "title": "Cloud FinOps: Slashing AWS & GCP Infrastructure Bills by 40% Without Sacrificing Performance",
+    "category": "Cloud & DevOps",
+    "coverImage": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
+    "imageAlt": "Cloud FinOps cost reduction analytics, resource graphs, and ledger optimization",
+    "tags": [
+      "FinOps",
+      "Cloud Cost",
+      "AWS",
+      "GCP",
+      "DevOps",
+      "Cloud Architecture"
+    ],
+    "date": "July 01, 2026"
+  }
+]

@@ -1216,6 +1216,10 @@ input:where([type='file']):focus {
   height: 4rem;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
 .h-4 {
   height: 1rem;
 }
@@ -1256,6 +1260,10 @@ input:where([type='file']):focus {
   height: 600px;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .h-full {
   height: 100%;
 }
@@ -1278,6 +1286,10 @@ input:where([type='file']):focus {
 
 .min-h-0 {
   min-height: 0px;
+}
+
+.min-h-\[280px\] {
+  min-height: 280px;
 }
 
 .min-h-\[300px\] {
@@ -1316,6 +1328,10 @@ input:where([type='file']):focus {
   width: 4rem;
 }
 
+.w-24 {
+  width: 6rem;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -1346,6 +1362,14 @@ input:where([type='file']):focus {
 
 .w-\[400px\] {
   width: 400px;
+}
+
+.w-\[450px\] {
+  width: 450px;
+}
+
+.w-\[550px\] {
+  width: 550px;
 }
 
 .w-\[600px\] {
@@ -1406,6 +1430,14 @@ input:where([type='file']):focus {
 
 .max-w-sm {
   max-width: 24rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
+.max-w-xs {
+  max-width: 20rem;
 }
 
 .flex-1 {
@@ -1530,6 +1562,16 @@ input:where([type='file']):focus {
   animation: bounce 1s infinite;
 }
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
 .cursor-not-allowed {
   cursor: not-allowed;
 }
@@ -1554,6 +1596,10 @@ input:where([type='file']):focus {
 
 .snap-center {
   scroll-snap-align: center;
+}
+
+.list-decimal {
+  list-style-type: decimal;
 }
 
 .appearance-none {
@@ -1642,8 +1688,16 @@ input:where([type='file']):focus {
   gap: 1rem;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-7 {
+  gap: 1.75rem;
 }
 
 .gap-8 {
@@ -1669,6 +1723,12 @@ input:where([type='file']):focus {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.375rem * var(--tw-space-y-reverse));
+}
+
+.space-y-16 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(4rem * var(--tw-space-y-reverse));
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1741,6 +1801,10 @@ input:where([type='file']):focus {
   white-space: nowrap;
 }
 
+.break-all {
+  word-break: break-all;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
@@ -1783,6 +1847,10 @@ input:where([type='file']):focus {
 
 .border {
   border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
 }
 
 .border-4 {
@@ -1859,6 +1927,10 @@ input:where([type='file']):focus {
   border-color: rgb(0 0 0 / 0.1);
 }
 
+.border-emerald-500\/30 {
+  border-color: rgb(16 185 129 / 0.3);
+}
+
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
@@ -1866,6 +1938,10 @@ input:where([type='file']):focus {
 
 .border-red-500\/20 {
   border-color: rgb(239 68 68 / 0.2);
+}
+
+.border-rose-500\/30 {
+  border-color: rgb(244 63 94 / 0.3);
 }
 
 .border-white\/10 {
@@ -1999,13 +2075,29 @@ input:where([type='file']):focus {
   background-color: rgb(0 0 0 / 0.95);
 }
 
+.bg-cyan-500\/10 {
+  background-color: rgb(6 182 212 / 0.1);
+}
+
+.bg-emerald-500\/10 {
+  background-color: rgb(16 185 129 / 0.1);
+}
+
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(249 197 145 / var(--tw-bg-opacity, 1));
 }
 
+.bg-purple-500\/10 {
+  background-color: rgb(168 85 247 / 0.1);
+}
+
 .bg-red-500\/10 {
   background-color: rgb(239 68 68 / 0.1);
+}
+
+.bg-rose-500\/10 {
+  background-color: rgb(244 63 94 / 0.1);
 }
 
 .bg-surface-container-low {
@@ -2032,6 +2124,10 @@ input:where([type='file']):focus {
 
 .bg-white\/\[0\.02\] {
   background-color: rgb(255 255 255 / 0.02);
+}
+
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
 .bg-gradient-to-br {
@@ -2094,6 +2190,12 @@ input:where([type='file']):focus {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-white {
+  --tw-gradient-from: #fff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .via-\[\#0e0e0e\]\/80 {
   --tw-gradient-to: rgb(14 14 14 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), rgb(14 14 14 / 0.8) var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -2124,12 +2226,21 @@ input:where([type='file']):focus {
   --tw-gradient-stops: var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
+.via-white\/80 {
+  --tw-gradient-to: rgb(255 255 255 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(255 255 255 / 0.8) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
 .to-\[\#0e0e0e\] {
   --tw-gradient-to: #0e0e0e var(--tw-gradient-to-position);
 }
 
 .to-\[\#131313\] {
   --tw-gradient-to: #131313 var(--tw-gradient-to-position);
+}
+
+.to-\[\#1a1a1a\] {
+  --tw-gradient-to: #1a1a1a var(--tw-gradient-to-position);
 }
 
 .to-\[\#333333\] {
@@ -2148,8 +2259,17 @@ input:where([type='file']):focus {
   --tw-gradient-to: #e8a86a var(--tw-gradient-to-position);
 }
 
+.to-\[\#f9c591\]\/30 {
+  --tw-gradient-to: rgb(249 197 145 / 0.3) var(--tw-gradient-to-position);
+}
+
 .to-transparent {
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
 .object-contain {
@@ -2348,6 +2468,10 @@ input:where([type='file']):focus {
   padding-left: 1rem;
 }
 
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
 .pr-10 {
   padding-right: 2.5rem;
 }
@@ -2400,6 +2524,10 @@ input:where([type='file']):focus {
   padding-top: 2rem;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
 }
@@ -2442,6 +2570,11 @@ input:where([type='file']):focus {
 
 .text-6xl {
   font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
   line-height: 1;
 }
 
@@ -2570,8 +2703,14 @@ input:where([type='file']):focus {
   color: rgb(249 197 145 / var(--tw-text-opacity, 1));
 }
 
-.text-\[\#f9c591\]\/40 {
-  color: rgb(249 197 145 / 0.4);
+.text-cyan-400 {
+  --tw-text-opacity: 1;
+  color: rgb(34 211 238 / var(--tw-text-opacity, 1));
+}
+
+.text-emerald-400 {
+  --tw-text-opacity: 1;
+  color: rgb(52 211 153 / var(--tw-text-opacity, 1));
 }
 
 .text-gray-300 {
@@ -2614,9 +2753,23 @@ input:where([type='file']):focus {
   color: rgb(199 151 103 / var(--tw-text-opacity, 1));
 }
 
+.text-purple-400 {
+  --tw-text-opacity: 1;
+  color: rgb(192 132 252 / var(--tw-text-opacity, 1));
+}
+
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity, 1));
+}
+
+.text-rose-400 {
+  --tw-text-opacity: 1;
+  color: rgb(251 113 133 / var(--tw-text-opacity, 1));
+}
+
+.text-transparent {
+  color: transparent;
 }
 
 .text-white {
@@ -2626,6 +2779,10 @@ input:where([type='file']):focus {
 
 .text-white\/20 {
   color: rgb(255 255 255 / 0.2);
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .placeholder-gray-500::-moz-placeholder {
@@ -3119,6 +3276,11 @@ body {
   background-color: rgb(26 26 26 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-\[\#20b858\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 184 88 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-\[\#c99668\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(201 150 104 / var(--tw-bg-opacity, 1));
@@ -3154,6 +3316,11 @@ body {
   color: rgb(14 14 14 / var(--tw-text-opacity, 1));
 }
 
+.hover\:text-\[\#25D366\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(37 211 102 / var(--tw-text-opacity, 1));
+}
+
 .hover\:text-\[\#c99668\]:hover {
   --tw-text-opacity: 1;
   color: rgb(201 150 104 / var(--tw-text-opacity, 1));
@@ -3169,11 +3336,6 @@ body {
 }
 
 .hover\:text-\[\#f9c591\]:hover {
-  --tw-text-opacity: 1;
-  color: rgb(249 197 145 / var(--tw-text-opacity, 1));
-}
-
-.hover\:text-primary:hover {
   --tw-text-opacity: 1;
   color: rgb(249 197 145 / var(--tw-text-opacity, 1));
 }
@@ -3346,6 +3508,10 @@ body {
     border-radius: 1.5rem;
   }
 
+  .sm\:p-10 {
+    padding: 2.5rem;
+  }
+
   .sm\:p-12 {
     padding: 3rem;
   }
@@ -3379,6 +3545,11 @@ body {
 
   .sm\:text-5xl {
     font-size: 3rem;
+    line-height: 1;
+  }
+
+  .sm\:text-9xl {
+    font-size: 8rem;
     line-height: 1;
   }
 
@@ -3467,6 +3638,10 @@ body {
 
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .md\:flex-row {

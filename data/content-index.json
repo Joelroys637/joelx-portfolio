@@ -1,137 +1,202 @@
 [
   {
-    "id": "nordwand-mono-a-monospace-font-for-coders-and-adventurers-2026",
-    "slug": "nordwand-mono-a-monospace-font-for-coders-and-adventurers-2026",
-    "title": "Modern Engineering Trends: Nordwand Mono – A monospace font for coders and adventurers",
-    "primaryKeyword": "modern engineering 1792485809703",
-    "secondaryKeywords": [
-      "software architecture",
-      "fullstack development",
-      "cloud computing"
-    ],
-    "searchIntent": "informational",
-    "category": "Web Development",
-    "date": "October 20, 2026",
-    "sourceUrl": "https://github.com/tywr/Nordwand-Mono"
+    "slug": "aspnet-student-crud-sqlserver-tutorial",
+    "title": "Building a Student CRUD Application Using ASP.NET Core and SQL Server: Step-by-Step Architecture Guide",
+    "primaryKeyword": "ASP.NET Core"
   },
   {
-    "id": "linux-7-3-released-2026",
-    "slug": "linux-7-3-released-2026",
-    "title": "Modern Engineering Trends: Linux 7.3 Released",
-    "primaryKeyword": "modern engineering 1792400869618",
-    "secondaryKeywords": [
-      "software architecture",
-      "fullstack development",
-      "cloud computing"
-    ],
-    "searchIntent": "informational",
-    "category": "Web Development",
-    "date": "October 19, 2026",
-    "sourceUrl": "https://lwn.net/Articles/1101143/"
+    "slug": "python-qr-code-generator-tutorial",
+    "title": "Creating a Production-Ready QR Code Generator Using Python: CLI, GUI & Web Integration",
+    "primaryKeyword": "Python"
   },
   {
-    "id": "deepseek-search-and-fetch-0-75-per-1000-successful-requests-2026",
-    "slug": "deepseek-search-and-fetch-0-75-per-1000-successful-requests-2026",
-    "title": "Modern Engineering Trends: DeepSeek search and fetch – $0.75 per 1000 successful requests",
-    "primaryKeyword": "modern engineering 1792312743517",
-    "secondaryKeywords": [
-      "software architecture",
-      "fullstack development",
-      "cloud computing"
-    ],
-    "searchIntent": "informational",
-    "category": "Web Development",
-    "date": "October 18, 2026",
-    "sourceUrl": "https://api-docs.deepseek.com/guides/search/"
+    "slug": "flutter-welcome-screen-ui-beginners",
+    "title": "Building a Modern Flutter Welcome & Authentication Screen: Clean UI Architecture for Beginners",
+    "primaryKeyword": "Flutter"
   },
   {
-    "id": "agentic-ai-enterprise-sdlc-2026",
+    "slug": "deploy-react-node-website-vercel-guide",
+    "title": "Deploying a Full-Stack React and Node.js Express Application on Vercel: The Complete DevOps Guide",
+    "primaryKeyword": "Vercel"
+  },
+  {
+    "slug": "webrtc-video-calling-application-guide",
+    "title": "Building a Real-Time WebRTC Video Calling Application with Node.js and Socket.io: Signaling & P2P Streams",
+    "primaryKeyword": "WebRTC"
+  },
+  {
+    "slug": "connect-web-app-firebase-firestore-nodejs",
+    "title": "Connecting a Web Application to Firebase Firestore Using Node.js: Safe Initialization & Architecture",
+    "primaryKeyword": "Firebase"
+  },
+  {
     "slug": "agentic-ai-enterprise-sdlc-2026",
     "title": "Agentic AI & Autonomous Workflows: How AI Agents are Revolutionizing Modern IT & Software Engineering",
-    "primaryKeyword": "agentic ai enterprise sdlc",
-    "secondaryKeywords": [
-      "llm autonomous workflows",
-      "ai agents software engineering",
-      "devops automation"
-    ],
-    "searchIntent": "informational",
-    "category": "Artificial Intelligence",
-    "date": "October 16, 2025",
-    "sourceUrl": "https://joelxorbit.in/blog/agentic-ai-enterprise-sdlc-2026"
+    "primaryKeyword": "Agentic AI"
   },
   {
-    "id": "cloud-native-platform-engineering-2026",
     "slug": "cloud-native-platform-engineering-2026",
     "title": "Cloud-Native Platform Engineering & Edge Runtimes: Beyond Raw Kubernetes",
-    "primaryKeyword": "cloud native platform engineering",
-    "secondaryKeywords": [
-      "edge runtimes",
-      "internal developer platforms",
-      "micro-vms"
-    ],
-    "searchIntent": "informational",
-    "category": "Cloud & DevOps",
-    "date": "October 12, 2025",
-    "sourceUrl": "https://joelxorbit.in/blog/cloud-native-platform-engineering-2026"
+    "primaryKeyword": "Cloud Native"
   },
   {
-    "id": "zero-trust-ai-cybersecurity-trends",
     "slug": "zero-trust-ai-cybersecurity-trends",
     "title": "Zero-Trust Architecture & AI-Driven Threat Hunting in Enterprise Cybersecurity",
-    "primaryKeyword": "zero trust ai cybersecurity",
-    "secondaryKeywords": [
-      "threat hunting",
-      "ztna",
-      "devsecops"
-    ],
-    "searchIntent": "informational",
-    "category": "Cybersecurity",
-    "date": "October 08, 2025",
-    "sourceUrl": "https://joelxorbit.in/blog/zero-trust-ai-cybersecurity-trends"
+    "primaryKeyword": "Cybersecurity"
   },
   {
-    "id": "full-stack-web-modern-ecosystem-2026",
     "slug": "full-stack-web-modern-ecosystem-2026",
     "title": "The Modern Full-Stack Frontier: TypeScript, Rust Tooling & High-Performance Web",
-    "primaryKeyword": "modern full stack web development",
-    "secondaryKeywords": [
-      "rust tooling web",
-      "typescript full stack",
-      "frontend performance"
-    ],
-    "searchIntent": "informational",
-    "category": "Web Development",
-    "date": "October 05, 2025",
-    "sourceUrl": "https://joelxorbit.in/blog/full-stack-web-modern-ecosystem-2026"
+    "primaryKeyword": "TypeScript"
   },
   {
-    "id": "mobile-app-trends-flutter-kmp-2026",
     "slug": "mobile-app-trends-flutter-kmp-2026",
     "title": "Cross-Platform Mobile App Engineering: Flutter vs Kotlin Multiplatform (KMP)",
-    "primaryKeyword": "flutter vs kotlin multiplatform",
-    "secondaryKeywords": [
-      "cross platform mobile app development",
-      "kmp mobile",
-      "flutter 2026"
-    ],
-    "searchIntent": "commercial",
-    "category": "Mobile Development",
-    "date": "September 28, 2025",
-    "sourceUrl": "https://joelxorbit.in/blog/mobile-app-trends-flutter-kmp-2026"
+    "primaryKeyword": "Flutter"
   },
   {
-    "id": "rag-vector-databases-enterprise-data-2026",
     "slug": "rag-vector-databases-enterprise-data-2026",
     "title": "RAG 2.0 & Vector Databases: Architecting Enterprise Knowledge Engines",
-    "primaryKeyword": "rag vector databases enterprise",
-    "secondaryKeywords": [
-      "hybrid search rag",
-      "enterprise knowledge engine",
-      "pgvector"
-    ],
-    "searchIntent": "informational",
-    "category": "Data & AI",
-    "date": "September 20, 2025",
-    "sourceUrl": "https://joelxorbit.in/blog/rag-vector-databases-enterprise-data-2026"
+    "primaryKeyword": "RAG"
+  },
+  {
+    "slug": "high-throughput-rest-api-express-redis",
+    "title": "Building High-Throughput REST APIs with Express, Redis Caching & Rate Limiting",
+    "primaryKeyword": "Node.js"
+  },
+  {
+    "slug": "postgresql-indexing-query-optimization-guide",
+    "title": "PostgreSQL Indexing & Query Optimization: EXPLAIN ANALYZE Deep Dive",
+    "primaryKeyword": "PostgreSQL"
+  },
+  {
+    "slug": "desktop-invoicing-app-vbnet-sqlite",
+    "title": "Building an Offline-First Desktop Invoicing Application Using VB.NET / C# and SQLite",
+    "primaryKeyword": "VB.NET"
+  },
+  {
+    "slug": "docker-multistage-builds-node-react",
+    "title": "Docker Multi-Stage Builds for Node.js and React: Slashing Container Size by 80%",
+    "primaryKeyword": "Docker"
+  },
+  {
+    "slug": "oauth2-openid-connect-implementation-guide",
+    "title": "Implementing OAuth 2.0 & OpenID Connect (OIDC) with PKCE in Modern Web Apps",
+    "primaryKeyword": "OAuth2"
+  },
+  {
+    "slug": "microservices-grpc-vs-rest-vs-kafka",
+    "title": "Microservices Communication: When to Choose gRPC, REST, or Apache Kafka",
+    "primaryKeyword": "Microservices"
+  },
+  {
+    "slug": "real-time-chat-websocket-redis-pubsub",
+    "title": "Scaling Real-Time Chat Across Multiple Node.js Instances with WebSockets & Redis Pub/Sub",
+    "primaryKeyword": "WebSockets"
+  },
+  {
+    "slug": "owasp-top-10-web-security-defense-guide",
+    "title": "OWASP Top 10 Web Application Vulnerabilities: Practical Hardening & Defense",
+    "primaryKeyword": "OWASP"
+  },
+  {
+    "slug": "flutter-state-management-riverpod-vs-bloc",
+    "title": "Flutter State Management at Scale: Riverpod vs BLoC Architecture",
+    "primaryKeyword": "Flutter"
+  },
+  {
+    "slug": "vanilla-js-ecommerce-cart-checkout-architecture",
+    "title": "Building an E-Commerce Cart & Checkout Engine in Pure Vanilla JavaScript",
+    "primaryKeyword": "JavaScript"
+  },
+  {
+    "slug": "github-actions-ci-cd-pipeline-automation",
+    "title": "Enterprise CI/CD Pipelines with GitHub Actions: Multi-Stage Testing & Zero-Downtime Deployment",
+    "primaryKeyword": "GitHub Actions"
+  },
+  {
+    "slug": "nextjs-app-router-server-components-guide",
+    "title": "Mastering Next.js App Router: React Server Components, Streaming & Suspense",
+    "primaryKeyword": "Next.js"
+  },
+  {
+    "slug": "core-web-vitals-performance-optimization",
+    "title": "Mastering Core Web Vitals (LCP, INP, CLS): Practical Frontend Optimization Guide",
+    "primaryKeyword": "Core Web Vitals"
+  },
+  {
+    "slug": "aws-lambda-api-gateway-serverless-architecture",
+    "title": "Serverless Backend Architecture with AWS Lambda, API Gateway & DynamoDB",
+    "primaryKeyword": "AWS"
+  },
+  {
+    "slug": "python-automation-file-system-watchdog",
+    "title": "Automated File Management & Directory Monitoring in Python with Watchdog",
+    "primaryKeyword": "Python"
+  },
+  {
+    "slug": "mongodb-aggregation-pipeline-vs-sql-joins",
+    "title": "MongoDB Aggregation Pipeline vs SQL Joins: Performance & Analytical Queries",
+    "primaryKeyword": "MongoDB"
+  },
+  {
+    "slug": "jwt-authentication-refresh-token-rotation",
+    "title": "Bulletproof JWT Authentication in Node.js: HttpOnly Cookies & Refresh Token Rotation",
+    "primaryKeyword": "JWT"
+  },
+  {
+    "slug": "microservices-circuit-breaker-retry-pattern",
+    "title": "Resilient Distributed Systems: Implementing Circuit Breakers & Retries with Opossum",
+    "primaryKeyword": "Microservices"
+  },
+  {
+    "slug": "pwa-offline-first-service-worker-guide",
+    "title": "Building High-Performance Offline-First Progressive Web Apps (PWA) with Service Workers",
+    "primaryKeyword": "PWA"
+  },
+  {
+    "slug": "modern-css-grid-subgrid-layout-mastery",
+    "title": "Modern CSS Grid & Subgrid Architecture: Complex Layouts Without Media Query Clutter",
+    "primaryKeyword": "CSS"
+  },
+  {
+    "slug": "rabbitmq-event-driven-microservices-nodejs",
+    "title": "Reliable Event-Driven Microservices with RabbitMQ & Node.js AMQP",
+    "primaryKeyword": "RabbitMQ"
+  },
+  {
+    "slug": "mobile-app-60fps-performance-memory-profiling",
+    "title": "Eliminating Jank & Memory Leaks in Mobile Applications: Flutter & React Native Profiling",
+    "primaryKeyword": "Mobile Development"
+  },
+  {
+    "slug": "chrome-extension-manifest-v3-typescript",
+    "title": "Building Modern Chrome Extensions with Manifest V3 and TypeScript",
+    "primaryKeyword": "Chrome Extension"
+  },
+  {
+    "slug": "kubernetes-ingress-cert-manager-ssl-automation",
+    "title": "Kubernetes Ingress & Automated Let's Encrypt SSL with Cert-Manager",
+    "primaryKeyword": "Kubernetes"
+  },
+  {
+    "slug": "graphql-schema-design-dataloader-n-plus-one",
+    "title": "High-Performance GraphQL API Design: Solving the N+1 Problem with DataLoader",
+    "primaryKeyword": "GraphQL"
+  },
+  {
+    "slug": "python-web-scraping-playwright-beautifulsoup",
+    "title": "Ethical Web Scraping & Headless Automation with Python, Playwright & BeautifulSoup",
+    "primaryKeyword": "Python"
+  },
+  {
+    "slug": "rbac-role-based-access-control-enterprise",
+    "title": "Designing Enterprise Role-Based Access Control (RBAC) in Express & SQL",
+    "primaryKeyword": "RBAC"
+  },
+  {
+    "slug": "cloud-finops-cost-reduction-strategies",
+    "title": "Cloud FinOps: Slashing AWS & GCP Infrastructure Bills by 40% Without Sacrificing Performance",
+    "primaryKeyword": "FinOps"
   }
 ]

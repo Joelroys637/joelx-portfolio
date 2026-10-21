@@ -1,9 +1,10 @@
 name: Automated Daily IT Blog & SEO Engine
 
 on:
-  schedule:
-    # 03:30 UTC = 09:00 AM IST (India Standard Time)
-    - cron: '30 3 * * *'
+  # Automated cron schedule disabled to prevent thin/unreviewed AI content generation.
+  # Manual trigger with PR review required.
+  # schedule:
+  #   - cron: '30 3 * * *'
   workflow_dispatch:
     inputs:
       dry_run:

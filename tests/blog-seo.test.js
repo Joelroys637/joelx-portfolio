@@ -72,12 +72,12 @@ function testSitemapAndRobotsGeneration() {
 
   pageController.renderSitemap({}, mockResSitemap);
   assert(sitemapXml.includes('<?xml version="1.0" encoding="UTF-8"?>'), "Sitemap must be XML");
-  assert(sitemapXml.includes('https://joelxorbit.in/'), "Sitemap must contain base domain");
-  assert(sitemapXml.includes('https://joelxorbit.in/blog/agentic-ai-enterprise-sdlc-2026'), "Sitemap must contain blog URLs");
+  assert(sitemapXml.includes('https://www.joelxorbit.in'), "Sitemap must contain base domain");
+  assert(sitemapXml.includes('https://www.joelxorbit.in/blog/agentic-ai-enterprise-sdlc-2026'), "Sitemap must contain blog URLs");
 
   pageController.renderRobots({}, mockResRobots);
   assert(robotsTxt.includes('User-agent: *'), "Robots.txt must contain User-agent");
-  assert(robotsTxt.includes('Sitemap: https://joelxorbit.in/sitemap.xml'), "Robots.txt must reference sitemap");
+  assert(robotsTxt.includes('Sitemap: https://www.joelxorbit.in/sitemap.xml'), "Robots.txt must reference sitemap");
 
   console.log("✅ testSitemapAndRobotsGeneration passed");
 }

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <%- include('../partials/head') %>
+</head>
+<body class="bg-[#0e0e0e] text-white font-body selection:bg-primary/30 selection:text-primary overflow-x-hidden">
+
+  <%- include('../partials/header') %>
+
+  <!-- Ambient Glow Effects -->
+  <div class="fixed top-20 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-[#d2a373]/5 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+  <div class="fixed bottom-10 right-10 w-[450px] h-[300px] bg-[#f9c591]/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+  <!-- Main Content Canvas -->
+  <main class="pt-28 pb-32 max-w-7xl mx-auto px-6">
+
+    <!-- Header / Hero Section -->
+    <header class="mb-20 text-center space-y-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f9c591]/10 border border-[#f9c591]/20 text-[#f9c591] text-xs font-label font-bold tracking-widest uppercase">
+        <span class="material-symbols-outlined text-sm">verified</span>
+        About JoelX Orbit
+      </div>
+      <h1 class="font-headline italic text-4xl sm:text-5xl md:text-6xl text-white tracking-tight">
+        Engineering Software with <span class="text-[#f9c591]">Precision &amp; Purpose.</span>
+      </h1>
+      <p class="text-gray-400 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
+        JoelX Orbit is an independent technology and software engineering initiative founded by Joel Roys, based in Tiruchirappalli, Tamil Nadu, India. We specialize in building reliable web applications, cross-platform mobile apps, desktop systems, and technical developer utilities.
+      </p>
+    </header>
+
+    <!-- Company Core Pillars -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+      <div class="p-8 rounded-2xl bg-[#131313] border border-white/5 space-y-4 hover:border-[#f9c591]/30 transition-all">
+        <div class="w-12 h-12 rounded-xl bg-[#f9c591]/10 flex items-center justify-center text-[#f9c591]">
+          <span class="material-symbols-outlined text-2xl">code_blocks</span>
+        </div>
+        <h3 class="font-headline italic text-2xl text-white">Full-Stack Development</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          From modern responsive frontend interfaces using HTML, Tailwind CSS, and React, to resilient backend APIs powered by Node.js, Express, ASP.NET Core, and Python.
+        </p>
+      </div>
+
+      <div class="p-8 rounded-2xl bg-[#131313] border border-white/5 space-y-4 hover:border-[#f9c591]/30 transition-all">
+        <div class="w-12 h-12 rounded-xl bg-[#f9c591]/10 flex items-center justify-center text-[#f9c591]">
+          <span class="material-symbols-outlined text-2xl">devices</span>
+        </div>
+        <h3 class="font-headline italic text-2xl text-white">Mobile &amp; Desktop Software</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          We craft cross-platform mobile applications in Flutter and standalone desktop software using VB.NET, Electron, and Python, tailored for business operational efficiency.
+        </p>
+      </div>
+
+      <div class="p-8 rounded-2xl bg-[#131313] border border-white/5 space-y-4 hover:border-[#f9c591]/30 transition-all">
+        <div class="w-12 h-12 rounded-xl bg-[#f9c591]/10 flex items-center justify-center text-[#f9c591]">
+          <span class="material-symbols-outlined text-2xl">psychology</span>
+        </div>
+        <h3 class="font-headline italic text-2xl text-white">Open Developer Tools</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          We actively build and publish genuine developer products, including our Tamil programming IDE (Sindhai IDE) on the Microsoft Store, real-time WebRTC tools, and QR utilities.
+        </p>
+      </div>
+    </section>
+
+    <!-- Detailed Background & Origin Story -->
+    <section class="mb-24 p-8 sm:p-12 rounded-2xl bg-[#131313] border border-white/5 space-y-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-8 space-y-5">
+          <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#f9c591] font-label font-bold">
+            <span class="h-[1px] w-6 bg-[#f9c591]"></span> Our Story &amp; Philosophy
+          </div>
+          <h2 class="font-headline italic text-3xl sm:text-4xl text-white">
+            Practical Technology, Honest Execution.
+          </h2>
+          <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+            JoelX Orbit was started with a direct objective: to replace bloated, confusing software consulting with direct, transparent, and high-performance digital craftsmanship. We believe every digital product should be fast, accessible, secure, and genuinely valuable to its users.
+          </p>
+          <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
+            We don't rely on hype or fabricated claims. We demonstrate our capability through real published applications, open source utilities, verified client deliverables, and practical technical tutorials that help fellow developers solve real-world engineering challenges.
+          </p>
+        </div>
+
+        <div class="lg:col-span-4 flex justify-center">
+          <div class="p-6 rounded-2xl bg-[#0e0e0e] border border-white/10 text-center space-y-4 max-w-xs w-full">
+            <div class="w-24 h-24 mx-auto rounded-full overflow-hidden border-2 border-[#f9c591]/40 shadow-xl">
+              <img src="/joelx.png" alt="Joel Roys - Lead Architect" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-headline italic text-xl text-white">Joel Roys</h4>
+              <p class="text-xs text-[#f9c591] font-label font-bold tracking-wider uppercase mt-1">Founder &amp; Lead Architect</p>
+              <p class="text-xs text-gray-400 mt-2">Full-stack software developer with deep passion for systems engineering, web performance, and developer accessibility.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Verified Tech Stack -->
+    <section class="mb-24 space-y-8">
+      <div class="text-center space-y-3">
+        <h2 class="font-headline italic text-3xl sm:text-4xl text-white">
+          Technologies We Master &amp; Deploy
+        </h2>
+        <p class="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base">
+          Proven, production-tested languages and frameworks chosen for stability, security, and developer ergonomics.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4">
+        <div class="p-4 rounded-xl bg-[#131313] border border-white/5 text-center">
+          <div class="font-bold text-white text-sm">JavaScript / TypeScript</div>
+          <div class="text-[11px] text-gray-500 mt-1">Node.js, Express, React</div>
+        </div>
+        <div class="p-4 rounded-xl bg-[#131313] border border-white/5 text-center">
+          <div class="font-bold text-white text-sm">Python</div>
+          <div class="text-[11px] text-gray-500 mt-1">Flask, Automation, PIL</div>
+        </div>
+        <div class="p-4 rounded-xl bg-[#131313] border border-white/5 text-center">
+          <div class="font-bold text-white text-sm">C# &amp; .NET Core</div>
+          <div class="text-[11px] text-gray-500 mt-1">ASP.NET Core MVC, EF Core</div>
+        </div>
+        <div class="p-4 rounded-xl bg-[#131313] border border-white/5 text-center">
+          <div class="font-bold text-white text-sm">Flutter &amp; Dart</div>
+          <div class="text-[11px] text-gray-500 mt-1">Cross-Platform Mobile</div>
+        </div>
+        <div class="p-4 rounded-xl bg-[#131313] border border-white/5 text-center">
+          <div class="font-bold text-white text-sm">Databases</div>
+          <div class="text-[11px] text-gray-500 mt-1">SQL Server, Firestore</div>
+        </div>
+        <div class="p-4 rounded-xl bg-[#131313] border border-white/5 text-center">
+          <div class="font-bold text-white text-sm">Cloud &amp; DevOps</div>
+          <div class="text-[11px] text-gray-500 mt-1">Vercel, Git, REST APIs</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="p-10 rounded-2xl bg-gradient-to-r from-[#1a1a1a] via-[#131313] to-[#1a1a1a] border border-[#f9c591]/20 text-center space-y-6">
+      <h2 class="font-headline italic text-3xl sm:text-4xl text-white">
+        Ready to Discuss Your Next Technical Initiative?
+      </h2>
+      <p class="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base">
+        Whether you need a custom web application, a cross-platform mobile product, or technical consultation, we are here to help.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+        <a href="/contact" class="px-8 py-3.5 rounded-full bg-[#f9c591] text-[#0e0e0e] font-label font-bold text-sm tracking-wide hover:bg-[#c99668] transition-colors shadow-lg">
+          Get in Touch
+        </a>
+        <a href="/services" class="px-8 py-3.5 rounded-full border border-white/10 text-gray-300 font-label font-bold text-sm tracking-wide hover:border-[#f9c591]/40 hover:text-white transition-colors">
+          View Services &amp; Pricing
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <%- include('../partials/footer') %>
+  <%- include('../partials/chatbot') %>
+  <%- include('../partials/modal') %>
+
+</body>
+</html>

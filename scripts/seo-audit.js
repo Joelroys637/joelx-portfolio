@@ -1,6 +1,6 @@
 const { blogs } = require('../data/blogs');
 
-const BASE_DOMAIN = 'https://joelxorbit.in';
+const BASE_DOMAIN = 'https://www.joelxorbit.in';
 
 function runSeoAudit() {
   console.log("================ JOELX ORBIT SEO AUDIT REPORT ================\n");

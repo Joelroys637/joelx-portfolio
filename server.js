@@ -57,15 +57,20 @@ app.use('/tamilide', (req, res, next) => {
     next();
 }, express.static(path.join(__dirname, 'tamilproject')));
 
-// Use routes
-const routes = require('./routes/index');
-const apiRoutes = require('./routes/api');
-app.use('/', routes);
-app.use('/api', apiRoutes);
-
 // Setup EJS
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+// Use routes
+const routes = require('./routes/index');
+const apiRoutes = require('./routes/api');
+const pageController = require('./controllers/pageController');
+
+app.use('/', routes);
+app.use('/api', apiRoutes);
+
+// Catch-all 404 handler for any unmatched routes
+app.use(pageController.render404);
 
 // Start the server (locally)
 if (process.env.NODE_ENV !== 'production') {
