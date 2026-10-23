@@ -17,7 +17,7 @@ const articlesBatch1 = [
     icon: "code_blocks",
     gradient: "from-amber-500/20 via-orange-500/10 to-transparent",
     tagColor: "text-[#f9c591] bg-[#f9c591]/10 border-[#f9c591]/30",
-    featured: true,
+    featured: false,
     date: "October 15, 2026",
     readTime: "15 min read",
     author: authorJoel,

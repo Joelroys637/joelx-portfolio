@@ -68,8 +68,8 @@ console.log(`  - Average Words per Article: ${avgWords}`);
 const uniqueImages = new Set(blogs.map(b => b.coverImage));
 console.log(`\nUnique Images Check: ${uniqueImages.size} unique URLs out of ${blogs.length}`);
 
-if (excessiveDuplicates === 0 && maxSimilarity < 0.35 && uniqueImages.size === 40) {
-  console.log('\n✅ 100% SUCCESS: All 40 articles are distinct, unique, and free of duplicate/templated text!');
+if (excessiveDuplicates === 0 && maxSimilarity < 0.35 && uniqueImages.size === blogs.length) {
+  console.log(`\n✅ 100% SUCCESS: All ${blogs.length} articles are distinct, unique, and free of duplicate/templated text!`);
 } else {
   console.error('\n❌ FAILED: Duplicate or templated content detected!');
   process.exit(1);

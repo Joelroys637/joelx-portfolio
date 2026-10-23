@@ -1,5 +1,10 @@
 [
   {
+    "slug": "php-vulnerabilities-cve-2024-4577-exploit-prevention",
+    "title": "PHP Security Alert: Breaking Down the Dual Critical Vulnerabilities (CVE-2024-4577 & Multipart Form Parser Bugs) and Enterprise Hardening Defense Guide",
+    "primaryKeyword": "PHP Vulnerability CVE-2024-4577"
+  },
+  {
     "slug": "aspnet-student-crud-sqlserver-tutorial",
     "title": "Building a Student CRUD Application Using ASP.NET Core and SQL Server: Step-by-Step Architecture Guide",
     "primaryKeyword": "ASP.NET Core"

@@ -46,8 +46,8 @@ async function run() {
   console.log('Total blogs:', blogs.length);
   console.log('Unique images count:', uniqueImgs.size);
   
-  if (cardCount === 40 && missingLinks === 0 && failedPages === 0 && uniqueImgs.size === 40) {
-    console.log('\n✅ ALL 40 BLOGS, SEPARATE PAGES, AND 40 UNIQUE IMAGES ARE 100% OPERATIONAL!');
+  if (cardCount === blogs.length && missingLinks === 0 && failedPages === 0 && uniqueImgs.size === blogs.length) {
+    console.log(`\n✅ ALL ${blogs.length} BLOGS, SEPARATE PAGES, AND ${blogs.length} UNIQUE IMAGES ARE 100% OPERATIONAL!`);
   } else {
     console.error('\n❌ ISSUES DETECTED!');
     process.exit(1);

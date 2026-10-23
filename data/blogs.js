@@ -10,12 +10,14 @@ const categories = [
   "Data & AI"
 ];
 
+const phpSecurityArticle = require('./article-php-security');
 const batch1 = require('./articles-1-10');
 const batch2 = require('./articles-11-20');
 const batch3 = require('./articles-21-30');
 const batch4 = require('./articles-31-40');
 
 const blogs = [
+  phpSecurityArticle,
   ...batch1,
   ...batch2,
   ...batch3,
