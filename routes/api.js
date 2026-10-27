@@ -1,6 +1,7 @@
+const { getApps } = require('firebase-admin/app');
+const { FieldValue, getFirestore } = require('firebase-admin/firestore');
 const express = require('express');
 const router = express.Router();
-const admin = require('firebase-admin');
 const nodemailer = require('nodemailer');
 const path = require('path');
 
@@ -9,11 +10,11 @@ const path = require('path');
 // API endpoint to handle inquiry submission
 router.post('/inquiries', async (req, res) => {
     try {
-        if (!admin.apps.length) {
+        if (!getApps().length) {
             console.error("Firebase is not initialized. Cannot save inquiry.");
             return res.status(500).json({ error: 'Database configuration error' });
         }
-        const db = admin.firestore();
+        const db = getFirestore();
         const data = req.body;
         // Validate required fields
         if (!data.name || !data.phone || !data.package || !data.email) {
@@ -21,7 +22,7 @@ router.post('/inquiries', async (req, res) => {
         }
         
         // Add timestamp
-        data.createdAt = admin.firestore.FieldValue.serverTimestamp();
+        data.createdAt = FieldValue.serverTimestamp();
         
         // Save to Firestore 'inquiries' collection
         const docRef = await db.collection('inquiries').add(data);

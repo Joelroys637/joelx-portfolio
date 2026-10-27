@@ -1,7 +1,7 @@
+const { cert, initializeApp } = require('firebase-admin/app');
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const admin = require('firebase-admin');
 
 // Initialize Firebase Admin
 let serviceAccount;
@@ -26,8 +26,8 @@ try {
     }
 
     if (serviceAccount) {
-        admin.initializeApp({
-          credential: admin.credential.cert(serviceAccount)
+        initializeApp({
+          credential: cert(serviceAccount)
         });
     }
 } catch (error) {
