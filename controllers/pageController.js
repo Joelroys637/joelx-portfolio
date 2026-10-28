@@ -7,7 +7,7 @@ const BASE_URL = 'https://www.joelxorbit.in';
 exports.renderHome = (req, res) => {
   const seo = {
     title: "JoelX Orbit | Web Development, Mobile Apps & Technical Software Solutions",
-    description: "JoelX Orbit is an IT software development company founded by Joel Roys in Tiruchirappalli, Tamil Nadu, India. Specializing in high-performance web applications, cross-platform mobile apps (Flutter), custom CRM software, and developer tools.",
+    description: "JoelX Orbit is an IT software development company founded by Leo Joel Roys in Tiruchirappalli, Tamil Nadu, India. Specializing in high-performance web applications, cross-platform mobile apps (Flutter), custom CRM software, and developer tools.",
     keywords: "web development, mobile app development, Flutter apps, desktop applications, custom CRM, ASP.NET Core, Python, Node.js, developer tools, JoelX Orbit, Tamil IDE",
     canonicalUrl: `${BASE_URL}/`,
     ogType: "website",
@@ -31,7 +31,7 @@ exports.renderHome = (req, res) => {
         "email": "joelxorbit@gmail.com",
         "founder": {
           "@type": "Person",
-          "name": "Joel Roys"
+          "name": "Leo Joel Roys"
         },
         "address": {
           "@type": "PostalAddress",
@@ -50,8 +50,8 @@ exports.renderHome = (req, res) => {
 exports.renderAbout = (req, res) => {
   const seo = {
     title: "About Us | JoelX Orbit - Software Engineering & Company Mission",
-    description: "Learn about JoelX Orbit, founded by Joel Roys in Tiruchirappalli, Tamil Nadu. Discover our mission, full-stack tech stack, developer tools, and client-first engineering philosophy.",
-    keywords: "about JoelX Orbit, Joel Roys, software engineering company, Tiruchirappalli web development, IT solutions Tamil Nadu",
+    description: "Learn about JoelX Orbit, founded by Leo Joel Roys in Tiruchirappalli, Tamil Nadu. Discover our mission, full-stack tech stack, developer tools, and client-first engineering philosophy.",
+    keywords: "about JoelX Orbit, Leo Joel Roys, software engineering company, Tiruchirappalli web development, IT solutions Tamil Nadu",
     canonicalUrl: `${BASE_URL}/about`,
     ogType: "website",
     ogImage: `${BASE_URL}/joelx.png`,
@@ -283,7 +283,7 @@ exports.renderBlogPost = (req, res) => {
         "dateModified": post.date,
         "author": {
           "@type": "Person",
-          "name": post.author ? post.author.name : "Joel Roys",
+          "name": post.author ? post.author.name : "Leo Joel Roys",
           "jobTitle": post.author ? post.author.role : "Lead Architect & Full-Stack Engineer"
         },
         "publisher": {

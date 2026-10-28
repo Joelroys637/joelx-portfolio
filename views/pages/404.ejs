@@ -1,86 +1,105 @@
 <!DOCTYPE html>
 <html class="dark" lang="en">
+
 <head>
   <%- include('../partials/head') %>
 </head>
-<body class="bg-[#0e0e0e] text-white font-body selection:bg-primary/30 selection:text-primary overflow-x-hidden min-h-screen flex flex-col justify-between">
+
+<body
+  class="bg-[#0e0e0e] text-white font-body selection:bg-primary/30 selection:text-primary overflow-x-hidden min-h-screen flex flex-col justify-between">
 
   <%- include('../partials/header') %>
 
-  <!-- Ambient Glow Effects -->
-  <div class="fixed top-24 left-1/2 -translate-x-1/2 w-[550px] h-[350px] bg-[#d2a373]/5 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+    <!-- Ambient Glow Effects -->
+    <div
+      class="fixed top-24 left-1/2 -translate-x-1/2 w-[550px] h-[350px] bg-[#d2a373]/5 rounded-full blur-[140px] pointer-events-none -z-10">
+    </div>
 
-  <!-- Main Error Canvas -->
-  <main class="pt-32 pb-24 px-6 max-w-4xl mx-auto flex-grow flex items-center justify-center text-center">
-    <div class="space-y-8">
-      
-      <!-- 404 Badge & Graphic -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f9c591]/10 border border-[#f9c591]/20 text-[#f9c591] text-xs font-label font-bold tracking-widest uppercase">
-        <span class="material-symbols-outlined text-sm">error</span>
-        HTTP 404 - Resource Not Found
-      </div>
+    <!-- Main Error Canvas -->
+    <main class="pt-32 pb-24 px-6 max-w-4xl mx-auto flex-grow flex items-center justify-center text-center">
+      <div class="space-y-8">
 
-      <h1 class="text-7xl sm:text-9xl font-headline italic font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-white via-white/80 to-[#f9c591]/30 tracking-tight">
-        404
-      </h1>
+        <!-- 404 Badge & Graphic -->
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f9c591]/10 border border-[#f9c591]/20 text-[#f9c591] text-xs font-label font-bold tracking-widest uppercase">
+          <span class="material-symbols-outlined text-sm">error</span>
+          HTTP 404 - Resource Not Found
+        </div>
 
-      <div class="space-y-3 max-w-xl mx-auto">
-        <h2 class="text-2xl sm:text-3xl font-headline italic text-white">
-          The requested page orbit could not be located.
-        </h2>
-        <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
-          The page or technical document you are seeking may have been renamed, moved to a new route, or is temporarily undergoing maintenance.
-        </p>
-      </div>
+        <h1
+          class="text-7xl sm:text-9xl font-headline italic font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-white via-white/80 to-[#f9c591]/30 tracking-tight">
+          404
+        </h1>
 
-      <!-- Quick Navigation Destinations -->
-      <div class="pt-6">
-        <h3 class="text-xs uppercase tracking-widest text-[#f9c591] font-label font-bold mb-4">
-          Helpful Destinations
-        </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto text-left">
-          <a href="/" class="p-4 rounded-xl bg-[#131313] border border-white/5 hover:border-[#f9c591]/30 transition-all group">
-            <span class="material-symbols-outlined text-[#f9c591] text-2xl mb-1 group-hover:scale-110 transition-transform">home</span>
-            <div class="font-bold text-white text-sm">Homepage</div>
-            <div class="text-gray-500 text-xs mt-0.5">Start fresh</div>
+        <div class="space-y-3 max-w-xl mx-auto">
+          <h2 class="text-2xl sm:text-3xl font-headline italic text-white">
+            The requested page Joelx orbit could not be located.
+          </h2>
+          <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+            The page or technical document you are seeking may have been renamed, moved to a new route, or is
+            temporarily undergoing maintenance.
+          </p>
+        </div>
+
+        <!-- Quick Navigation Destinations -->
+        <div class="pt-6">
+          <h3 class="text-xs uppercase tracking-widest text-[#f9c591] font-label font-bold mb-4">
+            Helpful Destinations
+          </h3>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto text-left">
+            <a href="/"
+              class="p-4 rounded-xl bg-[#131313] border border-white/5 hover:border-[#f9c591]/30 transition-all group">
+              <span
+                class="material-symbols-outlined text-[#f9c591] text-2xl mb-1 group-hover:scale-110 transition-transform">home</span>
+              <div class="font-bold text-white text-sm">Homepage</div>
+              <div class="text-gray-500 text-xs mt-0.5">Start fresh</div>
+            </a>
+
+            <a href="/services"
+              class="p-4 rounded-xl bg-[#131313] border border-white/5 hover:border-[#f9c591]/30 transition-all group">
+              <span
+                class="material-symbols-outlined text-[#f9c591] text-2xl mb-1 group-hover:scale-110 transition-transform">terminal</span>
+              <div class="font-bold text-white text-sm">Services</div>
+              <div class="text-gray-500 text-xs mt-0.5">What we build</div>
+            </a>
+
+            <a href="/tools"
+              class="p-4 rounded-xl bg-[#131313] border border-white/5 hover:border-[#f9c591]/30 transition-all group">
+              <span
+                class="material-symbols-outlined text-[#f9c591] text-2xl mb-1 group-hover:scale-110 transition-transform">construction</span>
+              <div class="font-bold text-white text-sm">Tools Hub</div>
+              <div class="text-gray-500 text-xs mt-0.5">Explore utilities</div>
+            </a>
+
+            <a href="/blog"
+              class="p-4 rounded-xl bg-[#131313] border border-white/5 hover:border-[#f9c591]/30 transition-all group">
+              <span
+                class="material-symbols-outlined text-[#f9c591] text-2xl mb-1 group-hover:scale-110 transition-transform">article</span>
+              <div class="font-bold text-white text-sm">Tech Blog</div>
+              <div class="text-gray-500 text-xs mt-0.5">Tutorials &amp; guides</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Action Button -->
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/"
+            class="px-8 py-3.5 rounded-full bg-[#f9c591] text-[#0e0e0e] font-label font-bold text-sm tracking-wide hover:bg-[#c99668] transition-colors shadow-lg">
+            Return to Homepage
           </a>
-
-          <a href="/services" class="p-4 rounded-xl bg-[#131313] border border-white/5 hover:border-[#f9c591]/30 transition-all group">
-            <span class="material-symbols-outlined text-[#f9c591] text-2xl mb-1 group-hover:scale-110 transition-transform">terminal</span>
-            <div class="font-bold text-white text-sm">Services</div>
-            <div class="text-gray-500 text-xs mt-0.5">What we build</div>
-          </a>
-
-          <a href="/tools" class="p-4 rounded-xl bg-[#131313] border border-white/5 hover:border-[#f9c591]/30 transition-all group">
-            <span class="material-symbols-outlined text-[#f9c591] text-2xl mb-1 group-hover:scale-110 transition-transform">construction</span>
-            <div class="font-bold text-white text-sm">Tools Hub</div>
-            <div class="text-gray-500 text-xs mt-0.5">Explore utilities</div>
-          </a>
-
-          <a href="/blog" class="p-4 rounded-xl bg-[#131313] border border-white/5 hover:border-[#f9c591]/30 transition-all group">
-            <span class="material-symbols-outlined text-[#f9c591] text-2xl mb-1 group-hover:scale-110 transition-transform">article</span>
-            <div class="font-bold text-white text-sm">Tech Blog</div>
-            <div class="text-gray-500 text-xs mt-0.5">Tutorials &amp; guides</div>
+          <a href="/contact"
+            class="px-8 py-3.5 rounded-full border border-white/10 text-gray-300 font-label font-bold text-sm tracking-wide hover:border-[#f9c591]/40 hover:text-white transition-colors">
+            Contact Support
           </a>
         </div>
+
       </div>
+    </main>
 
-      <!-- Action Button -->
-      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/" class="px-8 py-3.5 rounded-full bg-[#f9c591] text-[#0e0e0e] font-label font-bold text-sm tracking-wide hover:bg-[#c99668] transition-colors shadow-lg">
-          Return to Homepage
-        </a>
-        <a href="/contact" class="px-8 py-3.5 rounded-full border border-white/10 text-gray-300 font-label font-bold text-sm tracking-wide hover:border-[#f9c591]/40 hover:text-white transition-colors">
-          Contact Support
-        </a>
-      </div>
-
-    </div>
-  </main>
-
-  <%- include('../partials/footer') %>
-  <%- include('../partials/chatbot') %>
-  <%- include('../partials/modal') %>
+    <%- include('../partials/footer') %>
+      <%- include('../partials/chatbot') %>
+        <%- include('../partials/modal') %>
 
 </body>
+
 </html>

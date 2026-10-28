@@ -4,42 +4,48 @@
 
 <head>
   <%- include('../partials/head') %>
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper@11.0.5/swiper-bundle.min.css" />
-  <style>
-    .productSwiper {
-      width: 100%;
-      padding-top: 50px;
-      padding-bottom: 70px;
-      overflow: visible;
-    }
-    .productSwiper .swiper-slide {
-      width: 320px;
-      height: 480px;
-      transition: all 0.3s ease;
-      background-position: center;
-      background-size: cover;
-    }
-    @media (min-width: 768px) {
-      .productSwiper .swiper-slide {
-        width: 380px;
-        height: 520px;
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@11.0.5/swiper-bundle.min.css" />
+    <style>
+      .productSwiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 70px;
+        overflow: visible;
       }
-    }
-    .productSwiper .swiper-slide-active {
-      filter: drop-shadow(0 20px 40px rgba(249,197,145,0.15));
-    }
-    .productSwiper .swiper-pagination-bullet {
-      background: rgba(255, 255, 255, 0.4);
-    }
-    .productSwiper .swiper-pagination-bullet-active {
-      background: #f9c591;
-    }
-    /* Dim inactive slides slightly for more focus on center */
-    .productSwiper .swiper-slide:not(.swiper-slide-active) {
-      opacity: 0.6;
-    }
-  </style>
+
+      .productSwiper .swiper-slide {
+        width: 320px;
+        height: 480px;
+        transition: all 0.3s ease;
+        background-position: center;
+        background-size: cover;
+      }
+
+      @media (min-width: 768px) {
+        .productSwiper .swiper-slide {
+          width: 380px;
+          height: 520px;
+        }
+      }
+
+      .productSwiper .swiper-slide-active {
+        filter: drop-shadow(0 20px 40px rgba(249, 197, 145, 0.15));
+      }
+
+      .productSwiper .swiper-pagination-bullet {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      .productSwiper .swiper-pagination-bullet-active {
+        background: #f9c591;
+      }
+
+      /* Dim inactive slides slightly for more focus on center */
+      .productSwiper .swiper-slide:not(.swiper-slide-active) {
+        opacity: 0.6;
+      }
+    </style>
 </head>
 
 <body class="bg-[#0e0e0e] text-white font-body selection:bg-primary/30 selection:text-primary overflow-x-hidden">
@@ -52,7 +58,8 @@
       <!-- Hero Section -->
       <header class="mb-32 mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div class="space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f9c591]/10 border border-[#f9c591]/20 text-[#f9c591] text-xs font-label font-bold tracking-widest uppercase">
+          <div
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f9c591]/10 border border-[#f9c591]/20 text-[#f9c591] text-xs font-label font-bold tracking-widest uppercase">
             <span class="material-symbols-outlined text-sm">terminal</span>
             IT Solutions &bull; Software Engineering
           </div>
@@ -60,18 +67,22 @@
             Build Resilient <br /> <span class="text-[#f9c591]">Digital Products.</span>
           </h1>
           <p class="font-body text-gray-400 max-w-md text-[15px] leading-relaxed">
-            From high-performance responsive web applications to cross-platform mobile apps (Flutter), desktop tools, and enterprise automation—crafted with purpose and precision.
+            From high-performance responsive web applications to cross-platform mobile apps (Flutter), desktop tools,
+            and enterprise automation—crafted with purpose and precision.
           </p>
 
           <!-- Primary Hero Actions -->
           <div class="flex flex-wrap items-center gap-4 pt-2">
-            <a href="/services" class="px-6 py-3 rounded-full bg-[#f9c591] text-[#0e0e0e] font-label font-bold text-sm hover:bg-[#c99668] transition-colors shadow-lg">
+            <a href="/services"
+              class="px-6 py-3 rounded-full bg-[#f9c591] text-[#0e0e0e] font-label font-bold text-sm hover:bg-[#c99668] transition-colors shadow-lg">
               Explore Services
             </a>
-            <a href="/tools" class="px-6 py-3 rounded-full border border-white/10 text-white font-label font-bold text-sm hover:border-[#f9c591]/50 hover:text-[#f9c591] transition-colors">
+            <a href="/tools"
+              class="px-6 py-3 rounded-full border border-white/10 text-white font-label font-bold text-sm hover:border-[#f9c591]/50 hover:text-[#f9c591] transition-colors">
               Software Tools Hub
             </a>
-            <a href="/blog" class="px-6 py-3 rounded-full border border-white/5 text-gray-400 font-label font-bold text-sm hover:text-white transition-colors">
+            <a href="/blog"
+              class="px-6 py-3 rounded-full border border-white/5 text-gray-400 font-label font-bold text-sm hover:text-white transition-colors">
               Tech Tutorials
             </a>
           </div>
@@ -149,13 +160,19 @@
               world.
             </p>
             <p>
-              Founded by Joel Roys in Tiruchirappalli, Tamil Nadu, we combine creativity, technical rigor, and modern development practices to deliver high quality solutions that are reliable, scalable, and user-friendly. From open developer utilities to bespoke client solutions, we deliver digital products that stand out.
+              Founded by Leo Joel Roys in Tiruchirappalli, Tamil Nadu, we combine creativity, technical rigor, and
+              modern development practices to deliver high quality solutions that are reliable, scalable, and
+              user-friendly. From open developer utilities to bespoke client solutions, we deliver digital products that
+              stand out.
             </p>
           </div>
           <div class="mt-8 pt-6 border-t border-white/5 flex flex-wrap gap-4 items-center justify-between">
-            <span class="text-xs text-gray-500 font-label">Tiruchirappalli, Tamil Nadu, India &bull; Established Engineering Practice</span>
-            <a href="/about" class="inline-flex items-center gap-2 text-sm text-[#f9c591] font-label font-bold hover:underline">
-              Read Our Full Company Profile &amp; Mission <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            <span class="text-xs text-gray-500 font-label">Tiruchirappalli, Tamil Nadu, India &bull; Established
+              Engineering Practice</span>
+            <a href="/about"
+              class="inline-flex items-center gap-2 text-sm text-[#f9c591] font-label font-bold hover:underline">
+              Read Our Full Company Profile &amp; Mission <span
+                class="material-symbols-outlined text-sm">arrow_forward</span>
             </a>
           </div>
         </div>
@@ -413,12 +430,14 @@
             </div>
           </a>
         </div>
-        
+
         <!-- Explore Gallery Button -->
         <div class="mt-12 flex justify-center animate-bounce">
-          <a href="/gallery" class="inline-flex items-center gap-3 bg-transparent border border-[#f9c591]/30 text-white font-label font-bold tracking-widest uppercase text-sm px-8 py-4 rounded-full hover:bg-[#f9c591] hover:text-[#0e0e0e] hover:border-[#f9c591] transition-all duration-300 group shadow-[0_0_20px_rgba(249,197,145,0.05)] hover:shadow-[0_0_30px_rgba(249,197,145,0.2)]">
+          <a href="/gallery"
+            class="inline-flex items-center gap-3 bg-transparent border border-[#f9c591]/30 text-white font-label font-bold tracking-widest uppercase text-sm px-8 py-4 rounded-full hover:bg-[#f9c591] hover:text-[#0e0e0e] hover:border-[#f9c591] transition-all duration-300 group shadow-[0_0_20px_rgba(249,197,145,0.05)] hover:shadow-[0_0_30px_rgba(249,197,145,0.2)]">
             Explore Our Gallery
-            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            <span
+              class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </a>
         </div>
       </section>
@@ -439,27 +458,34 @@
         <!-- Swiper Container -->
         <div class="swiper productSwiper">
           <div class="swiper-wrapper">
-            
+
             <!-- Product 1: JoelX Tools -->
-            <div class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden" onclick="window.open('https://tools.joelxorbit.in/', '_blank')">
-              <img src="/images/qrcode_generator_ui_1786198997048.png" alt="JoelX Tools" class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
-              
+            <div
+              class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden"
+              onclick="window.open('https://tools.joelxorbit.in/', '_blank')">
+              <img src="/images/qrcode_generator_ui_1786198997048.png" alt="JoelX Tools"
+                class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
+
               <!-- Dark overlay for text readability -->
               <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/80 to-transparent z-10"></div>
-              
+
               <!-- Badge -->
-              <div class="absolute top-[45%] left-6 -translate-y-1/2 bg-[#f9c591]/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold z-20 border border-[#f9c591]/30">
+              <div
+                class="absolute top-[45%] left-6 -translate-y-1/2 bg-[#f9c591]/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold z-20 border border-[#f9c591]/30">
                 TOOLS HUB
               </div>
-              
+
               <!-- Number -->
-              <div class="absolute top-4 right-6 text-6xl md:text-8xl font-headline italic font-bold text-white/20 z-10 select-none">
+              <div
+                class="absolute top-4 right-6 text-6xl md:text-8xl font-headline italic font-bold text-white/20 z-10 select-none">
                 01
               </div>
-              
+
               <!-- Content -->
               <div class="absolute bottom-0 left-0 w-full z-20 flex flex-col justify-end p-6 md:p-8">
-                <h3 class="text-white font-headline italic text-2xl md:text-3xl mb-2 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">JoelX Orbit Tools</h3>
+                <h3
+                  class="text-white font-headline italic text-2xl md:text-3xl mb-2 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">
+                  JoelX Orbit Tools</h3>
                 <p class="text-gray-400 text-sm md:text-[15px] leading-relaxed">
                   Generate professional certificates and create custom QR codes instantly in one unified platform.
                 </p>
@@ -467,21 +493,28 @@
             </div>
 
             <!-- Product 2: Text to Speech -->
-            <div class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden" onclick="window.open('https://speech-ai.streamlit.app/', '_blank')">
-              <img src="/images/text_speech_ui_1786199018828.png" alt="Text to Speech" class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
-              
+            <div
+              class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden"
+              onclick="window.open('https://speech-ai.streamlit.app/', '_blank')">
+              <img src="/images/text_speech_ui_1786199018828.png" alt="Text to Speech"
+                class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
+
               <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/80 to-transparent z-10"></div>
-              
-              <div class="absolute top-[45%] left-6 -translate-y-1/2 bg-[#f9c591]/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold z-20 border border-[#f9c591]/30">
+
+              <div
+                class="absolute top-[45%] left-6 -translate-y-1/2 bg-[#f9c591]/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold z-20 border border-[#f9c591]/30">
                 AI TOOL
               </div>
-              
-              <div class="absolute top-4 right-6 text-6xl md:text-8xl font-headline italic font-bold text-white/20 z-10 select-none">
+
+              <div
+                class="absolute top-4 right-6 text-6xl md:text-8xl font-headline italic font-bold text-white/20 z-10 select-none">
                 02
               </div>
-              
+
               <div class="absolute bottom-0 left-0 w-full z-20 flex flex-col justify-end p-6 md:p-8">
-                <h3 class="text-white font-headline italic text-2xl md:text-3xl mb-2 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">Text to Speech</h3>
+                <h3
+                  class="text-white font-headline italic text-2xl md:text-3xl mb-2 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">
+                  Text to Speech</h3>
                 <p class="text-gray-400 text-sm md:text-[15px] leading-relaxed">
                   Convert your text into natural-sounding speech using advanced AI voice generation.
                 </p>
@@ -489,22 +522,29 @@
             </div>
 
             <!-- Product 3: Sindhai IDE -->
-            <div class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden" onclick="window.open('https://apps.microsoft.com/store/detail/XPDNSMWSJBNGVQ', '_blank')">
-              
-              <img src="/images/sinthai.png" alt="சிந்தை IDE" class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
-              
+            <div
+              class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden"
+              onclick="window.open('https://apps.microsoft.com/store/detail/XPDNSMWSJBNGVQ', '_blank')">
+
+              <img src="/images/sinthai.png" alt="சிந்தை IDE"
+                class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
+
               <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/80 to-transparent z-10"></div>
-              
-              <div class="absolute top-[45%] left-6 -translate-y-1/2 bg-[#f9c591]/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold z-20 border border-[#f9c591]/30">
+
+              <div
+                class="absolute top-[45%] left-6 -translate-y-1/2 bg-[#f9c591]/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold z-20 border border-[#f9c591]/30">
                 TAMIL IDE
               </div>
-              
-              <div class="absolute top-4 right-6 text-6xl md:text-8xl font-headline italic font-bold text-white/20 z-10 select-none">
+
+              <div
+                class="absolute top-4 right-6 text-6xl md:text-8xl font-headline italic font-bold text-white/20 z-10 select-none">
                 03
               </div>
-              
+
               <div class="absolute bottom-0 left-0 w-full z-20 flex flex-col justify-end p-6 md:p-8">
-                <h3 class="text-white font-headline italic text-2xl md:text-3xl mb-2 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">சிந்தை IDE</h3>
+                <h3
+                  class="text-white font-headline italic text-2xl md:text-3xl mb-2 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">
+                  சிந்தை IDE</h3>
                 <p class="text-gray-400 text-sm md:text-[15px] leading-relaxed">
                   A beginner-friendly Tamil programming language and IDE published on the Microsoft Store.
                 </p>
@@ -512,22 +552,29 @@
             </div>
 
             <!-- Product 4: StreamLine - Video Call -->
-            <div class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden" onclick="window.open('https://joelx-videocall.vercel.app/', '_blank')">
-              
-              <img src="/assert/images/project image/videocall.png" alt="StreamLine - Video Call" class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
-              
+            <div
+              class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden"
+              onclick="window.open('https://joelx-videocall.vercel.app/', '_blank')">
+
+              <img src="/assert/images/project image/videocall.png" alt="StreamLine - Video Call"
+                class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
+
               <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/80 to-transparent z-10"></div>
-              
-              <div class="absolute top-[45%] left-6 -translate-y-1/2 bg-[#f9c591]/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold z-20 border border-[#f9c591]/30">
+
+              <div
+                class="absolute top-[45%] left-6 -translate-y-1/2 bg-[#f9c591]/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold z-20 border border-[#f9c591]/30">
                 WebRTC
               </div>
-              
-              <div class="absolute top-4 right-6 text-6xl md:text-8xl font-headline italic font-bold text-white/20 z-10 select-none">
+
+              <div
+                class="absolute top-4 right-6 text-6xl md:text-8xl font-headline italic font-bold text-white/20 z-10 select-none">
                 04
               </div>
-              
+
               <div class="absolute bottom-0 left-0 w-full z-20 flex flex-col justify-end p-6 md:p-8">
-                <h3 class="text-white font-headline italic text-2xl md:text-3xl mb-2 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">StreamLine - Video Call</h3>
+                <h3
+                  class="text-white font-headline italic text-2xl md:text-3xl mb-2 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">
+                  StreamLine - Video Call</h3>
                 <p class="text-gray-400 text-sm md:text-[15px] leading-relaxed">
                   WebRTC Video Chat Application.
                 </p>
@@ -535,16 +582,18 @@
             </div>
 
           </div>
-          
+
           <!-- Pagination -->
           <div class="swiper-pagination relative mt-10"></div>
         </div>
 
         <!-- Explore Tools Button -->
         <div class="mt-8 flex justify-center">
-          <a href="/tools" class="inline-flex items-center gap-3 bg-[#131313] border border-[#f9c591]/30 text-white font-label font-bold tracking-widest uppercase text-sm px-8 py-3.5 rounded-full hover:bg-[#f9c591] hover:text-[#0e0e0e] transition-all duration-300 group shadow-lg">
+          <a href="/tools"
+            class="inline-flex items-center gap-3 bg-[#131313] border border-[#f9c591]/30 text-white font-label font-bold tracking-widest uppercase text-sm px-8 py-3.5 rounded-full hover:bg-[#f9c591] hover:text-[#0e0e0e] transition-all duration-300 group shadow-lg">
             Explore All Tools, Privacy &amp; Live Demo
-            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            <span
+              class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </a>
         </div>
       </section>
@@ -570,9 +619,12 @@
 
           <!-- Currency Selector -->
           <div class="flex justify-center mt-8">
-            <div class="relative bg-[#131313] border border-white/10 rounded-full px-4 py-2 flex items-center transition-all hover:border-[#f9c591]/50">
+            <div
+              class="relative bg-[#131313] border border-white/10 rounded-full px-4 py-2 flex items-center transition-all hover:border-[#f9c591]/50">
               <span class="material-symbols-outlined text-[#f9c591] text-sm pl-1 pointer-events-none">payments</span>
-              <select id="currencySelector" class="appearance-none bg-[#131313] text-white font-label text-sm outline-none cursor-pointer pl-2 pr-6 py-1 border-none focus:ring-0" style="background-color: #131313 !important;">
+              <select id="currencySelector"
+                class="appearance-none bg-[#131313] text-white font-label text-sm outline-none cursor-pointer pl-2 pr-6 py-1 border-none focus:ring-0"
+                style="background-color: #131313 !important;">
                 <option class="bg-[#131313] text-white" value="USD">USD ($)</option>
                 <option class="bg-[#131313] text-white" value="EUR">EUR (€)</option>
                 <option class="bg-[#131313] text-white" value="GBP">GBP (£)</option>
@@ -585,7 +637,8 @@
                 <option class="bg-[#131313] text-white" value="MYR">MYR (RM)</option>
                 <option class="bg-[#131313] text-white" value="SGD">SGD (S$)</option>
               </select>
-              <div class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 flex items-center text-gray-400">
+              <div
+                class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 flex items-center text-gray-400">
                 <span class="material-symbols-outlined text-sm">expand_more</span>
               </div>
             </div>
@@ -723,14 +776,14 @@
                 el.textContent = `${symbol}${convertedPrice}`;
               });
             });
-            
-            window.getCurrentCurrencyInfo = function() {
+
+            window.getCurrentCurrencyInfo = function () {
               const selectedCurrency = currencySelector.value;
               return exchangeRates[selectedCurrency];
             };
           });
 
-          window.openDynamicModal = function(pkg, basePrice) {
+          window.openDynamicModal = function (pkg, basePrice) {
             let finalPrice = basePrice;
             if (window.getCurrentCurrencyInfo) {
               const { rate, symbol } = window.getCurrentCurrencyInfo();
@@ -918,9 +971,14 @@
           </h2>
         </div>
 
-        <div class="w-full rounded-2xl overflow-hidden border border-white/5 shadow-[0_10px_40px_rgba(249,197,145,0.05)] bg-[#131313] p-2">
+        <div
+          class="w-full rounded-2xl overflow-hidden border border-white/5 shadow-[0_10px_40px_rgba(249,197,145,0.05)] bg-[#131313] p-2">
           <div class="w-full h-full rounded-xl overflow-hidden relative group">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5225.941725964462!2d78.9391688621919!3d10.964138645436176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baae7001aca93bd%3A0x3727c1bf2dbc8c5c!2sJoelx%20orbit!5e0!3m2!1sen!2sin!4v1791631477322!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" class="opacity-90 group-hover:opacity-100 transition-opacity duration-300"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5225.941725964462!2d78.9391688621919!3d10.964138645436176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baae7001aca93bd%3A0x3727c1bf2dbc8c5c!2sJoelx%20orbit!5e0!3m2!1sen!2sin!4v1791631477322!5m2!1sen!2sin"
+              width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              class="opacity-90 group-hover:opacity-100 transition-opacity duration-300"></iframe>
           </div>
         </div>
       </section>
@@ -928,29 +986,47 @@
       <!-- ============================================================
        SEO CONTENT SECTION (Optimized for Search Engines)
        ============================================================ -->
-      <section class="max-w-7xl mx-auto px-4 md:px-6 mb-24 text-gray-400 font-body text-[15px] leading-relaxed space-y-8">
+      <section
+        class="max-w-7xl mx-auto px-4 md:px-6 mb-24 text-gray-400 font-body text-[15px] leading-relaxed space-y-8">
         <div class="border-t border-white/5 pt-16">
-          <h2 class="text-[#f9c591] font-headline italic text-3xl mb-4">Joelx Orbit: The Premier Global IT & Software Development Company</h2>
+          <h2 class="text-[#f9c591] font-headline italic text-3xl mb-4">Joelx Orbit: The Premier Global IT & Software
+            Development Company</h2>
           <p class="mb-4">
-            Welcome to <strong>Joelx Orbit</strong>, the industry-leading <strong>global IT service company</strong> and innovative digital agency. We specialize in providing top-tier <strong>web development</strong>, <strong>mobile app development</strong> (including native Android, iOS, Flutter, and React Native), custom CRM software, and robust desktop applications. Our dedicated tech experts transform your business with scalable, secure, and modern solutions tailored specifically to your unique requirements.
+            Welcome to <strong>Joelx Orbit</strong>, the industry-leading <strong>global IT service company</strong> and
+            innovative digital agency. We specialize in providing top-tier <strong>web development</strong>,
+            <strong>mobile app development</strong> (including native Android, iOS, Flutter, and React Native), custom
+            CRM software, and robust desktop applications. Our dedicated tech experts transform your business with
+            scalable, secure, and modern solutions tailored specifically to your unique requirements.
           </p>
           <p>
-            Whether you need a cutting-edge corporate website, a high-converting eCommerce platform, or a complex custom web application, our <strong>web development experts</strong> utilize the latest technologies like React, Node.js, and Next.js to deliver unparalleled performance. In the mobile space, our <strong>app development</strong> team builds applications that offer seamless user experiences, driving engagement and growth for your brand on both Google Play and the Apple App Store.
+            Whether you need a cutting-edge corporate website, a high-converting eCommerce platform, or a complex custom
+            web application, our <strong>web development experts</strong> utilize the latest technologies like React,
+            Node.js, and Next.js to deliver unparalleled performance. In the mobile space, our <strong>app
+              development</strong> team builds applications that offer seamless user experiences, driving engagement and
+            growth for your brand on both Google Play and the Apple App Store.
           </p>
         </div>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="bg-[#131313] p-8 rounded-2xl border border-white/5 shadow-lg">
             <h3 class="text-white font-headline text-2xl mb-3">Custom CRM & Desktop Apps</h3>
             <p>
-              Streamline your business operations with our bespoke <strong>CRM software development</strong> services. We design custom billing apps, enterprise resource planning (ERP) systems, and comprehensive customer relationship management tools that integrate flawlessly into your existing workflow. Additionally, our high-performance <strong>desktop application development</strong> ensures that your internal teams have the powerful, offline-capable tools they need to succeed in today's competitive landscape.
+              Streamline your business operations with our bespoke <strong>CRM software development</strong> services.
+              We design custom billing apps, enterprise resource planning (ERP) systems, and comprehensive customer
+              relationship management tools that integrate flawlessly into your existing workflow. Additionally, our
+              high-performance <strong>desktop application development</strong> ensures that your internal teams have
+              the powerful, offline-capable tools they need to succeed in today's competitive landscape.
             </p>
           </div>
-          
+
           <div class="bg-[#131313] p-8 rounded-2xl border border-white/5 shadow-lg">
             <h3 class="text-white font-headline text-2xl mb-3">Serving Clients Worldwide</h3>
             <p>
-              As a top-rated global tech partner, <strong>Joelx Orbit</strong> proudly delivers software and IT solutions to a diverse, international clientele. We have a proven track record of successful deployments across the globe, empowering businesses in Vietnam, Poland, Brazil, Mexico, Ukraine, Malaysia, Singapore, and beyond. Partner with the best IT company today to elevate your digital presence and achieve sustainable, long-term success.
+              As a top-rated global tech partner, <strong>Joelx Orbit</strong> proudly delivers software and IT
+              solutions to a diverse, international clientele. We have a proven track record of successful deployments
+              across the globe, empowering businesses in Vietnam, Poland, Brazil, Mexico, Ukraine, Malaysia, Singapore,
+              and beyond. Partner with the best IT company today to elevate your digital presence and achieve
+              sustainable, long-term success.
             </p>
           </div>
         </div>
@@ -960,32 +1036,32 @@
 
     <%- include('../partials/footer') %>
       <%- include('../partials/modal') %>
-      <%- include('../partials/chatbot') %>
-      
-        <!-- Swiper JS -->
-        <script src="https://unpkg.com/swiper@11.0.5/swiper-bundle.min.js"></script>
-        <script>
-          document.addEventListener('DOMContentLoaded', function() {
-            var swiper = new Swiper(".productSwiper", {
-              effect: "coverflow",
-              grabCursor: true,
-              centeredSlides: true,
-              slidesPerView: "auto",
-              loop: true,
-              coverflowEffect: {
-                rotate: 15,
-                stretch: 0,
-                depth: 250,
-                modifier: 1,
-                slideShadows: true,
-              },
-              pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-              },
+        <%- include('../partials/chatbot') %>
+
+          <!-- Swiper JS -->
+          <script src="https://unpkg.com/swiper@11.0.5/swiper-bundle.min.js"></script>
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              var swiper = new Swiper(".productSwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                loop: true,
+                coverflowEffect: {
+                  rotate: 15,
+                  stretch: 0,
+                  depth: 250,
+                  modifier: 1,
+                  slideShadows: true,
+                },
+                pagination: {
+                  el: ".swiper-pagination",
+                  clickable: true,
+                },
+              });
             });
-          });
-        </script>
+          </script>
 </body>
 
 </html>

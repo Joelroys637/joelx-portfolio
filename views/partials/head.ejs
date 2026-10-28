@@ -3,63 +3,65 @@
 <link rel="icon" href="/joelx.png" type="image/png" />
 <link rel="apple-touch-icon" href="/joelx.png" />
 
-<%
-  const currentSeo = (typeof seo !== 'undefined' && seo) ? seo : {};
-  const pageTitle = currentSeo.title || "JoelX Orbit | Web Development, Mobile Apps & Technical Software Solutions";
-  const pageDescription = currentSeo.description || "JoelX Orbit is an IT software development company founded by Joel Roys in Tiruchirappalli, Tamil Nadu, India. Specializing in high-performance web applications, cross-platform mobile apps (Flutter), custom CRM software, and developer tools.";
-  const pageKeywords = currentSeo.keywords || "web development, mobile app development, Flutter apps, desktop applications, custom CRM, ASP.NET Core, Python, Node.js, developer tools, JoelX Orbit, Tamil IDE";
-  const pageCanonical = currentSeo.canonicalUrl || "https://www.joelxorbit.in/";
-  const pageOgType = currentSeo.ogType || "website";
-  const pageOgImage = currentSeo.ogImage || "https://www.joelxorbit.in/joelx.png";
-  const pageStructuredData = currentSeo.structuredData || null;
-%>
+<% const currentSeo=(typeof seo !=='undefined' && seo) ? seo : {}; const pageTitle=currentSeo.title
+  || "JoelX Orbit | Web Development, Mobile Apps & Technical Software Solutions" ; const
+  pageDescription=currentSeo.description
+  || "JoelX Orbit is an IT software development company founded by Leo Joel Roys in Tiruchirappalli, Tamil Nadu, India. Specializing in high-performance web applications, cross-platform mobile apps (Flutter), custom CRM software, and developer tools."
+  ; const pageKeywords=currentSeo.keywords
+  || "web development, mobile app development, Flutter apps, desktop applications, custom CRM, ASP.NET Core, Python, Node.js, developer tools, JoelX Orbit, Tamil IDE"
+  ; const pageCanonical=currentSeo.canonicalUrl || "https://www.joelxorbit.in/" ; const pageOgType=currentSeo.ogType
+  || "website" ; const pageOgImage=currentSeo.ogImage || "https://www.joelxorbit.in/joelx.png" ; const
+  pageStructuredData=currentSeo.structuredData || null; %>
 
-<!-- ============================================================
+  <!-- ============================================================
      PRIMARY SEO META TAGS
      ============================================================ -->
-<title><%= pageTitle %></title>
-<meta name="description" content="<%= pageDescription %>" />
-<meta name="keywords" content="<%= pageKeywords %>" />
-<meta name="author" content="Joelx Orbit" />
-<meta name="google-site-verification" content="5uieVT_Zcf0XzZxJ9rmwJlKvO9L3PPYDgraSarxlq44" />
-<meta name="google-adsense-account" content="ca-pub-5342182227761563" />
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5342182227761563" crossorigin="anonymous"></script>
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-<meta name="theme-color" content="#d2a373" />
-<link rel="canonical" href="<%= pageCanonical %>" />
+  <title>
+    <%= pageTitle %>
+  </title>
+  <meta name="description" content="<%= pageDescription %>" />
+  <meta name="keywords" content="<%= pageKeywords %>" />
+  <meta name="author" content="Joelx Orbit" />
+  <meta name="google-site-verification" content="5uieVT_Zcf0XzZxJ9rmwJlKvO9L3PPYDgraSarxlq44" />
+  <meta name="google-adsense-account" content="ca-pub-5342182227761563" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5342182227761563"
+    crossorigin="anonymous"></script>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="theme-color" content="#d2a373" />
+  <link rel="canonical" href="<%= pageCanonical %>" />
 
-<!-- ============================================================
+  <!-- ============================================================
      OPEN GRAPH (FACEBOOK / LINKEDIN)
      ============================================================ -->
-<meta property="og:type" content="<%= pageOgType %>" />
-<meta property="og:url" content="<%= pageCanonical %>" />
-<meta property="og:title" content="<%= pageTitle %>" />
-<meta property="og:description" content="<%= pageDescription %>" />
-<meta property="og:image" content="<%= pageOgImage %>" />
-<meta property="og:site_name" content="Joelx Orbit" />
-<meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="<%= pageOgType %>" />
+  <meta property="og:url" content="<%= pageCanonical %>" />
+  <meta property="og:title" content="<%= pageTitle %>" />
+  <meta property="og:description" content="<%= pageDescription %>" />
+  <meta property="og:image" content="<%= pageOgImage %>" />
+  <meta property="og:site_name" content="Joelx Orbit" />
+  <meta property="og:locale" content="en_US" />
 
-<!-- ============================================================
+  <!-- ============================================================
      TWITTER CARD
      ============================================================ -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="<%= pageTitle %>" />
-<meta name="twitter:description" content="<%= pageDescription %>" />
-<meta name="twitter:image" content="<%= pageOgImage %>" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<%= pageTitle %>" />
+  <meta name="twitter:description" content="<%= pageDescription %>" />
+  <meta name="twitter:image" content="<%= pageOgImage %>" />
 
-<!-- ============================================================
+  <!-- ============================================================
      STRUCTURED DATA (JSON-LD) FOR ADVANCED SEO
      ============================================================ -->
-<% if (pageStructuredData) { %>
-  <% if (Array.isArray(pageStructuredData)) { %>
-    <% pageStructuredData.forEach(function(sd) { %>
-      <script type="application/ld+json"><%- JSON.stringify(sd) %></script>
-    <% }); %>
-  <% } else { %>
-    <script type="application/ld+json"><%- JSON.stringify(pageStructuredData) %></script>
-  <% } %>
-<% } else { %>
-  <script type="application/ld+json">
+  <% if (pageStructuredData) { %>
+    <% if (Array.isArray(pageStructuredData)) { %>
+      <% pageStructuredData.forEach(function(sd) { %>
+        <script type="application/ld+json"><%- JSON.stringify(sd) %></script>
+        <% }); %>
+          <% } else { %>
+            <script type="application/ld+json"><%- JSON.stringify(pageStructuredData) %></script>
+            <% } %>
+              <% } else { %>
+                <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -68,7 +70,7 @@
     "url": "https://www.joelxorbit.in/"
   }
   </script>
-  <script type="application/ld+json">
+                <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -80,7 +82,7 @@
     "email": "joelxorbit@gmail.com",
     "founder": {
       "@type": "Person",
-      "name": "Joel Roys"
+      "name": "Leo Joel Roys"
     },
     "address": {
       "@type": "PostalAddress",
@@ -89,11 +91,15 @@
       "postalCode": "620001",
       "addressCountry": "IN"
     },
-    "description": "IT software development company founded by Joel Roys in Tiruchirappalli, Tamil Nadu, India. Specializing in web application development, mobile apps, custom CRM solutions, desktop software, and developer tools."
+    "description": "IT software development company founded by Leo Joel Roys in Tiruchirappalli, Tamil Nadu, India. Specializing in web application development, mobile apps, custom CRM solutions, desktop software, and developer tools."
   }
   </script>
-<% } %>
+                <% } %>
 
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
-<link href="/styles.css" rel="stylesheet" />
+                  <link
+                    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+                    rel="stylesheet" />
+                  <link
+                    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                    rel="stylesheet" />
+                  <link href="/styles.css" rel="stylesheet" />

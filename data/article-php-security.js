@@ -15,7 +15,7 @@ const phpSecurityArticle = {
   icon: "security",
   gradient: "from-red-500/20 via-orange-500/10 to-transparent",
   tagColor: "text-[#ff7351] bg-[#ff7351]/10 border-[#ff7351]/30",
-  featured: true,
+  featured: false,
   date: "October 23, 2026",
   readTime: "18 min read",
   author: authorJoel,
