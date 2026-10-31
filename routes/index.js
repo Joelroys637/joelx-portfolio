@@ -1,11 +1,18 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
 const pageController = require('../controllers/pageController');
 
 // Technical SEO & Crawler Verification Routes
 router.get('/ads.txt', pageController.renderAdsTxt);
 router.get('/robots.txt', pageController.renderRobots);
 router.get('/sitemap.xml', pageController.renderSitemap);
+router.get('/sw.js', (req, res) => {
+  res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
+  res.setHeader('Service-Worker-Allowed', '/');
+  res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+  res.sendFile(path.join(__dirname, '../public/sw.js'));
+});
 
 // Core Navigation Routes
 router.get('/', pageController.renderHome);
