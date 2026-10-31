@@ -23,6 +23,7 @@ const routesToTest = [
   { path: '/robots.txt', expectedStatus: 200, checkContent: 'Mediapartners-Google' },
   { path: '/sitemap.xml', expectedStatus: 200, checkContent: '<loc>https://www.joelxorbit.in</loc>' },
   { path: '/sw.js', expectedStatus: 200, checkContent: '5gvci.com' },
+  { path: '/index.html', expectedStatus: 200, checkContent: 'f0dc61825ef35f9cb7cd23ad41a9e227' },
   { path: '/random-missing-route-test', expectedStatus: 404, checkContent: 'HTTP 404 - Resource Not Found' }
 ];
 

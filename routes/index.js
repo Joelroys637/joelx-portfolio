@@ -16,6 +16,7 @@ router.get('/sw.js', (req, res) => {
 
 // Core Navigation Routes
 router.get('/', pageController.renderHome);
+router.get('/index.html', pageController.renderHome);
 router.get('/about', pageController.renderAbout);
 router.get('/about-us', pageController.renderAbout);
 router.get('/about.html', pageController.renderAbout);
