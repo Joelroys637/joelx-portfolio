@@ -178,3 +178,24 @@ body {
 #main-nav.nav-light-mode #mobile-menu-btn {
     color: #0f172a !important;
 }
+
+
+/* ---- Horizontal Product Platforms Marquee (Right to Left) ---- */
+@keyframes marqueeScrollLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee-platforms {
+  display: flex;
+  width: max-content;
+  animation: marqueeScrollLeft 35s linear infinite;
+}
+
+.animate-marquee-platforms:hover {
+  animation-play-state: paused;
+}
