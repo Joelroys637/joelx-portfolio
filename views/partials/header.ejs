@@ -1,28 +1,26 @@
   <!-- TopAppBar -->
-  <nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/90 backdrop-blur-md px-6 h-14 border-b border-white/5">
+  <nav id="main-nav" class="fixed top-0 w-full z-50 bg-[#0e0e0e]/90 backdrop-blur-md px-6 h-14 border-b border-white/5 transition-all duration-300">
     <div class="flex items-center justify-between h-full max-w-7xl mx-auto">
       <div class="flex items-center gap-2">
         <a href="/" class="flex items-center gap-2 hover:opacity-90 transition-opacity">
-          <span class="text-xl font-body font-bold text-white tracking-tight">Joelx <span
-              class="text-[#d2a373]">Orbit</span></span>
+          <span class="nav-brand-title text-xl font-body font-bold text-white tracking-tight transition-colors">Joelx <span class="nav-brand-accent text-[#d2a373] transition-colors">Orbit</span></span>
         </a>
       </div>
 
       <!-- Desktop Menu -->
       <div class="hidden lg:flex gap-7 items-center">
-        <a class="text-[#d2a373] font-label text-sm font-semibold hover:text-[#d2a373]/80 transition-colors"
-          href="/">Home</a>
-        <a class="text-gray-300 hover:text-[#d2a373] transition-colors font-label text-sm font-semibold"
+        <a class="nav-link-item nav-link-active text-[#d2a373] font-label text-sm font-semibold hover:text-[#d2a373]/80 transition-colors" href="/">Home</a>
+        <a class="nav-link-item text-gray-300 hover:text-[#d2a373] transition-colors font-label text-sm font-semibold"
           href="/about">About</a>
-        <a class="text-gray-300 hover:text-[#d2a373] transition-colors font-label text-sm font-semibold"
+        <a class="nav-link-item text-gray-300 hover:text-[#d2a373] transition-colors font-label text-sm font-semibold"
           href="/services">Services</a>
-        <a class="text-gray-300 hover:text-[#d2a373] transition-colors font-label text-sm font-semibold"
+        <a class="nav-link-item text-gray-300 hover:text-[#d2a373] transition-colors font-label text-sm font-semibold"
           href="/tools">Tools</a>
-        <a class="text-gray-300 hover:text-[#d2a373] transition-colors font-label text-sm font-semibold"
+        <a class="nav-link-item text-gray-300 hover:text-[#d2a373] transition-colors font-label text-sm font-semibold"
           href="/gallery">Gallery</a>
-        <a class="text-gray-300 hover:text-[#d2a373] transition-colors font-label text-sm font-semibold"
+        <a class="nav-link-item text-gray-300 hover:text-[#d2a373] transition-colors font-label text-sm font-semibold"
           href="/blog">Blog</a>
-        <a class="text-gray-300 hover:text-[#d2a373] transition-colors font-label text-sm font-semibold"
+        <a class="nav-link-item text-gray-300 hover:text-[#d2a373] transition-colors font-label text-sm font-semibold"
           href="/contact">Contact</a>
       </div>
 
@@ -30,7 +28,7 @@
         <!-- Translate Widget Container -->
         <div id="google_translate_element" class="h-8 overflow-hidden rounded"></div>
         <button onclick="openGetInTouchModal('Custom Quote', 'TBD')"
-          class="px-6 py-2.5 rounded bg-[#d2a373] text-[#0e0e0e] font-label text-sm font-bold tracking-wide hover:bg-[#c99668] transition-colors">Request
+          class="nav-cta-btn px-6 py-2.5 rounded-full bg-[#d2a373] text-[#0e0e0e] font-label text-sm font-bold tracking-wide hover:bg-[#c99668] transition-all shadow-md">Request
           A Quote</button>
       </div>
 

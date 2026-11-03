@@ -87,3 +87,23 @@ if (projectsGallery && !projectsGallery.hasAttribute('data-autoscroll-bound')) {
   }, 2000);
 }
 
+
+
+// Homepage Hero Navbar Transition
+(function() {
+  const homeHero = document.getElementById('home-hero');
+  const mainNav = document.getElementById('main-nav');
+  if (homeHero && mainNav) {
+    function updateNavbar() {
+      const heroRect = homeHero.getBoundingClientRect();
+      if (heroRect.bottom <= 60) {
+        mainNav.classList.remove('nav-light-mode');
+      } else {
+        mainNav.classList.add('nav-light-mode');
+      }
+    }
+    window.addEventListener('scroll', updateNavbar, { passive: true });
+    window.addEventListener('resize', updateNavbar, { passive: true });
+    updateNavbar();
+  }
+})();

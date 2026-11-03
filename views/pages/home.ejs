@@ -52,92 +52,179 @@
 
   <%- include('../partials/header') %>
 
-    <!-- Main Content Canvas -->
-    <main class="pt-20 pb-32 px-6 max-w-7xl mx-auto">
+    <!-- ============================================================
+       FULL-WIDTH HERO HEADER SECTION (UI MATCHING REFERENCE)
+       ============================================================ -->
+    <header id="home-hero"
+      class="relative w-full bg-white text-slate-900 pt-24 sm:pt-28 md:pt-32 pb-20 md:pb-28 overflow-hidden border-b border-slate-100 select-none">
 
-      <!-- Hero Section -->
-      <header class="mb-32 mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6">
-          <div
-            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f9c591]/10 border border-[#f9c591]/20 text-[#f9c591] text-xs font-label font-bold tracking-widest uppercase">
-            <span class="material-symbols-outlined text-sm">terminal</span>
-            IT Solutions &bull; Software Engineering
-          </div>
-          <h1 class="font-body font-extrabold text-5xl md:text-[3.5rem] tracking-tight text-white leading-[1.15]">
-            Build Resilient <br /> <span class="text-[#f9c591]">Digital Products.</span>
+      <!-- Top-Right Purple / Violet Fluid Wave (From Reference UI) -->
+      <div
+        class="absolute -top-10 -right-10 md:-top-16 md:-right-16 w-[70vw] sm:w-[55vw] md:w-[48vw] max-w-[800px] aspect-[4/3] pointer-events-none z-0">
+        <svg class="w-full h-full" viewBox="0 0 600 480" fill="none" xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none">
+          <path d="M160,0 C220,130 300,190 420,230 C510,260 560,330 600,430 L600,0 Z" fill="url(#purpleWaveGrad)" />
+          <defs>
+            <linearGradient id="purpleWaveGrad" x1="200" y1="0" x2="600" y2="400" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#8b5cf6" />
+              <stop offset="45%" stop-color="#7c3aed" />
+              <stop offset="100%" stop-color="#6d28d9" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Soft Ambient Radial Glows -->
+      <div
+        class="absolute -top-20 -right-20 w-[420px] h-[420px] bg-purple-500/15 rounded-full blur-3xl pointer-events-none">
+      </div>
+      <div
+        class="absolute top-1/2 right-1/4 w-[350px] h-[350px] bg-cyan-400/15 rounded-full blur-3xl pointer-events-none">
+      </div>
+
+      <!-- Bottom Cyan / Turquoise Fluid Curved Wave (From Reference UI) -->
+      <div class="absolute bottom-0 right-0 left-0 w-full h-24 sm:h-32 md:h-40 pointer-events-none z-0 overflow-hidden">
+        <svg class="w-full h-full" viewBox="0 0 1440 160" fill="none" xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none">
+          <path d="M220,160 C420,80 620,120 860,60 C1080,5 1280,70 1440,30 L1440,160 L220,160 Z"
+            fill="url(#cyanWaveGrad)" />
+          <defs>
+            <linearGradient id="cyanWaveGrad" x1="220" y1="160" x2="1440" y2="30" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.18" />
+              <stop offset="50%" stop-color="#22d3ee" stop-opacity="0.25" />
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.32" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Hero Content Container -->
+      <div
+        class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+
+        <!-- Left Column: Modern Headline & CTAs -->
+        <div class="lg:col-span-6 space-y-6 sm:space-y-7">
+
+
+          <!-- Headline Matching Reference UI ("Web Design") -->
+          <h1
+            class="font-body font-black text-5xl sm:text-6xl lg:text-7xl tracking-tight text-slate-900 leading-[1.08]">
+            Web <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600">Design</span>
+            <span class="block text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-800 mt-2 font-body">&amp;
+              Development</span>
           </h1>
-          <p class="font-body text-gray-400 max-w-md text-[15px] leading-relaxed">
-            From high-performance responsive web applications to cross-platform mobile apps (Flutter), desktop tools,
-            and enterprise automation—crafted with purpose and precision.
+
+          <!-- Subtitle & Description -->
+          <p class="font-body text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
+            Build Resilient digital products. From high-performance responsive web applications to enterprise software,
+            cross-platform mobile tools, and automated business workflows—crafted with purposeful UI/UX, resilience, and
+            engineering precision.
           </p>
 
-          <!-- Primary Hero Actions -->
+          <!-- CTA Buttons Matching Reference Gradient Pill -->
           <div class="flex flex-wrap items-center gap-4 pt-2">
+            <!-- Primary Pill Button (Cyan to Indigo gradient) -->
             <a href="/services"
-              class="px-6 py-3 rounded-full bg-[#f9c591] text-[#0e0e0e] font-label font-bold text-sm hover:bg-[#c99668] transition-colors shadow-lg">
-              Explore Services
+              class="px-8 py-3.5 rounded-full bg-gradient-to-r from-[#00c6ff] via-[#0072ff] to-[#4a00e0] text-white font-label font-bold text-sm sm:text-base tracking-wide hover:shadow-[0_10px_30px_rgba(0,198,255,0.4)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-cyan-500/25">
+              <span>Explore Services</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
             </a>
+
+            <!-- Secondary Pill Button -->
             <a href="/tools"
-              class="px-6 py-3 rounded-full border border-white/10 text-white font-label font-bold text-sm hover:border-[#f9c591]/50 hover:text-[#f9c591] transition-colors">
+              class="px-7 py-3.5 rounded-full bg-white/95 hover:bg-white text-slate-700 hover:text-cyan-600 font-label font-bold text-sm sm:text-base border-2 border-slate-200/80 hover:border-cyan-400 hover:shadow-md transition-all duration-300">
               Software Tools Hub
             </a>
-            <a href="/blog"
-              class="px-6 py-3 rounded-full border border-white/5 text-gray-400 font-label font-bold text-sm hover:text-white transition-colors">
-              Tech Tutorials
+
+            <!-- Tertiary Link -->
+            <a href="/quote"
+              class="px-5 py-3 rounded-full text-slate-500 hover:text-slate-900 font-label font-semibold text-sm transition-colors flex items-center gap-1.5">
+              <span>Request Quote</span>
+              <span class="material-symbols-outlined text-xs">open_in_new</span>
             </a>
           </div>
-        </div>
-        <div class="relative flex justify-center lg:justify-end">
-          <!-- Decorative circle/blobs background -->
-          <div class="absolute inset-0 bg-[#f9c591]/5 rounded-full blur-3xl transform scale-125 -z-10"></div>
 
-          <!-- Floating blue circles -->
-          <div class="absolute -top-4 right-20 w-4 h-4 rounded-full bg-[#d2a373]/80 z-20"></div>
-          <div class="absolute bottom-8 -left-4 w-6 h-6 rounded-full bg-[#d2a373]/60 z-20"></div>
-
-          <!-- The main circular masked image container with border -->
+          <!-- Trust Signals / Highlights -->
           <div
-            class="relative w-[320px] h-[320px] md:w-[450px] md:h-[450px] rounded-full p-2 border border-white/10 overflow-visible">
-            <div class="w-full h-full rounded-full overflow-hidden relative z-10 border-4 border-[#131313] shadow-2xl">
-              <img src="joelx.png" alt="Developer coding" class="w-full h-full object-cover object-center scale-110" />
+            class="pt-4 flex flex-wrap items-center gap-6 text-xs text-slate-500 font-medium border-t border-slate-100">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-cyan-600 text-base">verified</span>
+              <span>Production Ready</span>
             </div>
-
-            <!-- Top right orange icon/badge -->
-            <div class="absolute -top-2 right-12 z-20 text-[#f9c591]">
-              <span class="material-symbols-outlined text-3xl">work</span>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-indigo-600 text-base">speed</span>
+              <span>Fast Performance</span>
             </div>
-
-            <!-- Top left wave pattern -->
-            <div class="absolute top-12 -left-12 z-0 opacity-40">
-              <svg width="80" height="80" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10,50 Q25,25 50,50 T90,50" fill="none" stroke="#f9c591" stroke-width="2" />
-                <path d="M10,60 Q25,35 50,60 T90,60" fill="none" stroke="#f9c591" stroke-width="2" />
-                <path d="M10,70 Q25,45 50,70 T90,70" fill="none" stroke="#f9c591" stroke-width="2" />
-                <path d="M10,80 Q25,55 50,80 T90,80" fill="none" stroke="#f9c591" stroke-width="2" />
-              </svg>
-            </div>
-
-            <!-- Bottom right dots grid -->
-            <div class="absolute -bottom-8 -right-8 z-0 grid grid-cols-5 gap-3 opacity-40">
-              <div class="w-1.5 h-1.5 bg-[#f9c591] rounded-full"></div>
-              <div class="w-1.5 h-1.5 bg-[#f9c591] rounded-full"></div>
-              <div class="w-1.5 h-1.5 bg-[#f9c591] rounded-full"></div>
-              <div class="w-1.5 h-1.5 bg-[#f9c591] rounded-full"></div>
-              <div class="w-1.5 h-1.5 bg-[#f9c591] rounded-full"></div>
-              <div class="w-1.5 h-1.5 bg-[#f9c591] rounded-full"></div>
-              <div class="w-1.5 h-1.5 bg-[#f9c591] rounded-full"></div>
-              <div class="w-1.5 h-1.5 bg-[#f9c591] rounded-full"></div>
-              <div class="w-1.5 h-1.5 bg-[#f9c591] rounded-full"></div>
-              <div class="w-1.5 h-1.5 bg-[#f9c591] rounded-full"></div>
-              <div class="w-1.5 h-1.5 bg-[#f9c591] rounded-full"></div>
-              <div class="w-1.5 h-1.5 bg-[#f9c591] rounded-full"></div>
-              <div class="w-1.5 h-1.5 bg-[#f9c591] rounded-full"></div>
-              <div class="w-1.5 h-1.5 bg-[#f9c591] rounded-full"></div>
-              <div class="w-1.5 h-1.5 bg-[#f9c591] rounded-full"></div>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-emerald-600 text-base">devices</span>
+              <span>Responsive UI/UX</span>
             </div>
           </div>
+
         </div>
-      </header>
+
+        <!-- Right Column: Featured Illustration (Uploaded by User) -->
+        <div class="lg:col-span-6 relative flex justify-center items-center">
+
+          <div class="relative w-full max-w-xl mx-auto flex items-center justify-center">
+
+            <!-- Subtle ambient backdrop behind illustration -->
+            <div
+              class="absolute -inset-2 bg-gradient-to-tr from-cyan-400/20 via-purple-500/25 to-indigo-500/20 rounded-3xl blur-2xl transform scale-95 pointer-events-none">
+            </div>
+
+            <!-- Illustration Card -->
+            <div
+              class="relative z-10 w-full overflow-hidden rounded-2xl group border border-slate-100/60 shadow-xl bg-white/90">
+              <img src="/images/hero-illustration.png" alt="Web Design and IT Solutions Workstation"
+                class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105 select-none" />
+            </div>
+
+            <!-- Floating Modern Badge 1: Top Left -->
+            <div
+              class="hidden sm:flex absolute -top-3 -left-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl shadow-xl border border-slate-100 items-center gap-2.5 z-20 hover:scale-105 transition-transform duration-300">
+              <div
+                class="w-8 h-8 rounded-lg bg-gradient-to-tr from-amber-400 to-orange-500 flex items-center justify-center text-white shadow-sm">
+                <span class="material-symbols-outlined text-lg">lightbulb</span>
+              </div>
+              <div>
+                <div class="text-[11px] font-bold text-slate-800 leading-tight">Innovative UI</div>
+                <div class="text-[9px] text-slate-500">Modern Aesthetic</div>
+              </div>
+            </div>
+
+            <!-- Floating Modern Badge 2: Bottom Right -->
+            <div
+              class="hidden sm:flex absolute -bottom-4 -right-2 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl shadow-xl border border-slate-100 items-center gap-2.5 z-20 hover:scale-105 transition-transform duration-300">
+              <div
+                class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center text-white shadow-sm">
+                <span class="material-symbols-outlined text-lg">code</span>
+              </div>
+              <div>
+                <div class="text-[11px] font-bold text-slate-800 leading-tight">Clean Architecture</div>
+                <div class="text-[9px] text-slate-500">Fast &amp; Scalable</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Smooth Transition Wave into Dark Section Below -->
+      <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none z-10 pointer-events-none">
+        <svg class="relative block w-full h-8 sm:h-12 md:h-16 text-[#0e0e0e]" viewBox="0 0 1200 120"
+          preserveAspectRatio="none">
+          <path d="M0,0 C300,90 600,30 1200,90 L1200,120 L0,120 Z" fill="currentColor"></path>
+        </svg>
+      </div>
+
+    </header>
+
+    <!-- Main Content Canvas (Dark Theme Container for About, Products, etc.) -->
+    <main class="pb-32 px-6 max-w-7xl mx-auto">
 
 
 
@@ -241,206 +328,7 @@
         </div>
       </section>
 
-      <!-- ============================================================
-       PROJECT GALLERY SECTION
-       ============================================================ -->
-      <section id="projects" class="mt-32 mb-16 max-w-7xl mx-auto">
-        <div class="mb-12 text-center">
-          <h2 class="font-body font-bold text-4xl text-white mb-4">Featured Projects</h2>
-          <p class="text-gray-400 max-w-2xl mx-auto text-[15px]">Explore some of our latest digital experiences.</p>
-        </div>
 
-        <!-- Project Gallery Horizontal Scroll -->
-        <div id="projects-gallery"
-          class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-12 hide-scrollbar scroll-smooth"
-          style="scrollbar-width: none; -ms-overflow-style: none;">
-          <style>
-            .hide-scrollbar::-webkit-scrollbar {
-              display: none;
-            }
-          </style>
-
-          <!-- Project 1: Photography -->
-          <a href="https://joelx-photo.netlify.app/" target="_blank"
-            class="block w-[85vw] md:w-[700px] shrink-0 snap-center group relative overflow-hidden rounded-2xl bg-[#131313] transition-all duration-500 hover:bg-[#1a1a1a] border border-white/5 hover:border-[#f9c591]/30 hover:shadow-[0_0_40px_rgba(249,197,145,0.1)]">
-            <div class="aspect-[16/10] overflow-hidden relative">
-              <img alt="Photography Project"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM3F4BS2d-WlgD-ICPZAjkzmoKYppSgMmA5kX_5XARSy-IRrta--Dp1AlvE1A3YBslemOxPx5IRG2o1XEY_NpHRI1NypBXfbaGnLypIZqqdqdNmPhKFcNrVGlmIiVowZao0dgkllVTNA_S9svFPOQuEWWRd7f-FMWeTz8PeSn_APjZc6c5gkXhM758RXBuY3-p7SFb9p2ZuAH0_EDbsAAF0q-DaOLp6UmR4OLQblz7jVNB10lyKII7Ks-R93_5_w3EWebfP9duRvcC" />
-              <div
-                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-sm">
-                <span
-                  class="bg-[#f9c591] text-[#0e0e0e] px-6 py-3 rounded-full font-label tracking-widest font-bold text-sm flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                  View Live <span class="material-symbols-outlined text-sm">open_in_new</span>
-                </span>
-              </div>
-            </div>
-            <div
-              class="p-8 flex flex-col justify-between absolute bottom-0 left-0 w-full z-10 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/90 to-transparent pt-20">
-              <div>
-                <span
-                  class="font-label text-[10px] uppercase tracking-widest text-[#f9c591] mb-2 block drop-shadow-md">Visual
-                  Identity</span>
-                <h3 class="font-headline text-3xl italic mb-4 text-white drop-shadow-lg">Photography</h3>
-              </div>
-              <div class="flex justify-between items-end">
-                <p class="text-gray-400 max-w-sm drop-shadow-md">Exploring the intersection of light, shadow, and
-                  digital
-                  grain through a curated lens.</p>
-                <span
-                  class="material-symbols-outlined text-[#f9c591] group-hover:translate-x-2 transition-transform">arrow_forward</span>
-              </div>
-            </div>
-          </a>
-
-          <!-- Project 2: Hotel -->
-          <a href="https://joelx-hotel.vercel.app/" target="_blank"
-            class="block w-[85vw] md:w-[450px] shrink-0 snap-center group relative overflow-hidden rounded-2xl bg-[#131313] transition-all duration-500 hover:bg-[#1a1a1a] border border-white/5 hover:border-[#f9c591]/30 hover:shadow-[0_0_30px_rgba(249,197,145,0.1)]">
-            <div class="aspect-square md:aspect-[4/5] overflow-hidden relative">
-              <img alt="Hotel Project"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvJjME3Mth2_g3t6j_Z7JkcbXFLRIrsNVgw7JGrkW8k6cslkhnXxSi0frPeIjR1inkhxIT98aT2AmKyaqMHDdBG2qh8H4AMcOzQ8nh6bDMKvgUee3USl8saVaRDlmJJ-uVhjeNgh2Lc-NlnSa7ybear5zEZofAaV9ajdELFSN0gRLVrFYr6He76DLat2oyYlz0OONgrPfaiA78OvEXcaFCpasd_AZMf1-S8rh8-p_daAg9jiQ34L9d_raRuQNEQ1eMWUvEQ00QlI-X" />
-              <div
-                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-sm">
-                <span
-                  class="bg-[#f9c591]/90 text-[#0e0e0e] p-4 rounded-full flex items-center justify-center transform scale-50 group-hover:scale-100 transition-transform duration-500 shadow-xl">
-                  <span class="material-symbols-outlined">north_east</span>
-                </span>
-              </div>
-            </div>
-            <div
-              class="p-6 absolute bottom-0 left-0 w-full z-10 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/90 to-transparent pt-12">
-              <span
-                class="font-label text-[10px] uppercase tracking-widest text-[#f9c591] mb-2 block drop-shadow-md">Hospitality</span>
-              <h3
-                class="font-headline text-2xl italic text-white group-hover:text-[#f9c591] transition-colors drop-shadow-lg">
-                Hotel</h3>
-            </div>
-          </a>
-
-          <!-- Project 3: E-Commerce -->
-          <a href="https://joelx-ecommerce.vercel.app/" target="_blank"
-            class="block w-[85vw] md:w-[450px] shrink-0 snap-center group relative overflow-hidden rounded-2xl bg-[#131313] transition-all duration-500 hover:bg-[#1a1a1a] border border-white/5 hover:border-[#f9c591]/30 hover:shadow-[0_0_30px_rgba(249,197,145,0.1)]">
-            <div class="aspect-square md:aspect-[4/5] overflow-hidden relative">
-              <img alt="E-Commerce Project"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuAbUuJocmhbUpSyTobInJ053y0YzktcvDk9gZyiu7uYXsf91IzFqb7v83tsY0f_zB5OShBkwDPeScSyYUIZMCXiIfMVCKTHoEGYdTO5pK0xzDTuAeUeFTzSEZC82NJ5o3FsWLOXOgKI-N-imiGO4uxA8ReihME7dQVH0A-IUeM6sbCk9T3kh-TNu0aCaDuxra63h4bNEcS74NGu5Xs3-RzHKjUlAs2yM-F5vrzyCu704-XiYvMiA_1FI4d_ahmktcDGC8HlT5iV0s" />
-              <div
-                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-sm">
-                <span
-                  class="bg-[#f9c591]/90 text-[#0e0e0e] p-4 rounded-full flex items-center justify-center transform scale-50 group-hover:scale-100 transition-transform duration-500 shadow-xl">
-                  <span class="material-symbols-outlined">north_east</span>
-                </span>
-              </div>
-            </div>
-            <div
-              class="p-6 absolute bottom-0 left-0 w-full z-10 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/90 to-transparent pt-12">
-              <span
-                class="font-label text-[10px] uppercase tracking-widest text-[#f9c591] mb-2 block drop-shadow-md">Retail
-                Design</span>
-              <h3
-                class="font-headline text-2xl italic text-white group-hover:text-[#f9c591] transition-colors drop-shadow-lg">
-                E-Commerce</h3>
-            </div>
-          </a>
-
-          <!-- Project 4: Restaurant -->
-          <a href="https://joelx-restaurant.onrender.com/" target="_blank"
-            class="block w-[85vw] md:w-[450px] shrink-0 snap-center group relative overflow-hidden rounded-2xl bg-[#131313] transition-all duration-500 hover:bg-[#1a1a1a] border border-white/5 hover:border-[#f9c591]/30 hover:shadow-[0_0_30px_rgba(249,197,145,0.1)]">
-            <div class="aspect-square md:aspect-[4/5] overflow-hidden relative">
-              <img alt="Restaurant Project"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVkZTT5y8hEY0Pf1ntQXzO9Gm6_CbznwCssfdTxAN-glU5DCYy-Agx1Wt3hIB9tmGUYeBl0zoHLLPQ7zRqyxlIPFNmUV1YsLW2UowJBRtkxPaxz2BCKz8-u4cyzWo49Sg8GCnEJNkdOFEFTbEoS7T8AK2DuKEE2_G7WbEuFgoRI6T-p-h3-1WgaAXaHdhyhRaiBkzSYFuM4O9v-T4WRtjS8cNxaCJye3PNAY1P6Fp-yW36oJzxORudsIRhwDMiJPcswghlCViOs0KV" />
-              <div
-                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-sm">
-                <span
-                  class="bg-[#f9c591]/90 text-[#0e0e0e] p-4 rounded-full flex items-center justify-center transform scale-50 group-hover:scale-100 transition-transform duration-500 shadow-xl">
-                  <span class="material-symbols-outlined">north_east</span>
-                </span>
-              </div>
-            </div>
-            <div
-              class="p-6 absolute bottom-0 left-0 w-full z-10 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/90 to-transparent pt-12">
-              <span
-                class="font-label text-[10px] uppercase tracking-widest text-[#f9c591] mb-2 block drop-shadow-md">Culinary
-                Arts</span>
-              <h3
-                class="font-headline text-2xl italic text-white group-hover:text-[#f9c591] transition-colors drop-shadow-lg">
-                Restaurant</h3>
-            </div>
-          </a>
-
-          <!-- Project 5: Construction -->
-          <a href="https://joelx-construction.netlify.app/" target="_blank"
-            class="block w-[85vw] md:w-[450px] shrink-0 snap-center group relative overflow-hidden rounded-2xl bg-[#131313] transition-all duration-500 hover:bg-[#1a1a1a] border border-white/5 hover:border-[#f9c591]/30 hover:shadow-[0_0_30px_rgba(249,197,145,0.1)]">
-            <div class="aspect-square md:aspect-[4/5] overflow-hidden relative">
-              <img alt="Construction Project"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQQFks3YNd-4L_MES0R9m-XHYRFq3PSTUBsaHGm20Yi4KODbkM-H03TlgJ6u4dwGo-FFapKzPzGHVhGitIFxK0kS2t2MGSJFg4AHh6r3i0IzlaN1lKXtDIHJEw0HZj33J0aC0F_Z0PE0IkxaGxCnbQsZ1goDUa8kcQayTbI8_2Tf4R6FNIB5q8NNqdB9L9VPw0YXhH4sgMDwgWYLd7LQDZncJ0os7UQKIZNbqidsYRRQwyLE7pIkbD5gWfM0kBCsJQIW2YEGlWuGbB" />
-              <div
-                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-sm">
-                <span
-                  class="bg-[#f9c591]/90 text-[#0e0e0e] p-4 rounded-full flex items-center justify-center transform scale-50 group-hover:scale-100 transition-transform duration-500 shadow-xl">
-                  <span class="material-symbols-outlined">north_east</span>
-                </span>
-              </div>
-            </div>
-            <div
-              class="p-6 absolute bottom-0 left-0 w-full z-10 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/90 to-transparent pt-12">
-              <span
-                class="font-label text-[10px] uppercase tracking-widest text-[#f9c591] mb-2 block drop-shadow-md">Architecture</span>
-              <h3
-                class="font-headline text-2xl italic text-white group-hover:text-[#f9c591] transition-colors drop-shadow-lg">
-                Construction</h3>
-            </div>
-          </a>
-
-          <!-- Project 6: Wedding -->
-          <a href="https://joelx-wedding.netlify.app/" target="_blank"
-            class="block w-[85vw] md:w-[700px] shrink-0 snap-center group relative overflow-hidden rounded-2xl bg-[#131313] transition-all duration-500 hover:bg-[#1a1a1a] border border-white/5 hover:border-[#f9c591]/30 hover:shadow-[0_0_40px_rgba(249,197,145,0.1)]">
-            <div class="aspect-[16/9] md:aspect-[16/10] overflow-hidden relative">
-              <img alt="Wedding Project"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500">
-              </div>
-              <div
-                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-sm">
-                <span
-                  class="bg-[#f9c591] text-[#0e0e0e] px-8 py-4 rounded-full font-label tracking-widest font-bold text-sm flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-xl">
-                  View Luxury Wedding Live <span class="material-symbols-outlined text-sm">open_in_new</span>
-                </span>
-              </div>
-            </div>
-            <div
-              class="p-8 flex flex-col justify-between absolute bottom-0 left-0 w-full z-10 bg-gradient-to-t from-[#0e0e0e] flex-col via-[#0e0e0e]/80 to-transparent pt-24 md:flex-row md:items-end">
-              <div>
-                <span
-                  class="font-label text-[10px] uppercase tracking-widest text-[#f9c591] mb-2 block drop-shadow-md">Event
-                  &amp; Identity</span>
-                <h3
-                  class="font-headline text-3xl italic mb-2 text-white drop-shadow-lg group-hover:text-[#f9c591] transition-colors">
-                  Luxury Wedding</h3>
-              </div>
-              <div class="flex items-center gap-6 mt-4 md:mt-0">
-                <span
-                  class="material-symbols-outlined text-[#f9c591] group-hover:translate-x-2 transition-transform">arrow_forward</span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Explore Gallery Button -->
-        <div class="mt-12 flex justify-center animate-bounce">
-          <a href="/gallery"
-            class="inline-flex items-center gap-3 bg-transparent border border-[#f9c591]/30 text-white font-label font-bold tracking-widest uppercase text-sm px-8 py-4 rounded-full hover:bg-[#f9c591] hover:text-[#0e0e0e] hover:border-[#f9c591] transition-all duration-300 group shadow-[0_0_20px_rgba(249,197,145,0.05)] hover:shadow-[0_0_30px_rgba(249,197,145,0.2)]">
-            Explore Our Gallery
-            <span
-              class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </a>
-        </div>
-      </section>
 
       <!-- ============================================================
        OUR PRODUCTS SECTION
@@ -461,63 +349,165 @@
 
             <!-- Product 1: JoelX Tools -->
             <div
-              class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden"
+              class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/15 hover:border-[#f9c591]/40 transition-all duration-300 overflow-hidden"
               onclick="window.open('https://tools.joelxorbit.in/', '_blank')">
-              <img src="/images/qrcode_generator_ui_1786198997048.png" alt="JoelX Tools"
-                class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
 
-              <!-- Dark overlay for text readability -->
-              <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/80 to-transparent z-10"></div>
+              <!-- Ambient backdrop filling the entire card -->
+              <img src="/images/toolsjoelxorbit.png" alt="" aria-hidden="true"
+                class="w-full h-full object-cover object-center absolute inset-0 opacity-20 blur-xl scale-125 z-0 pointer-events-none">
 
-              <!-- Badge -->
+              <!-- Dark gradient overlay for clean contrast -->
               <div
-                class="absolute top-[45%] left-6 -translate-y-1/2 bg-[#f9c591]/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold z-20 border border-[#f9c591]/30">
-                TOOLS HUB
+                class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/50 to-[#0e0e0e]/20 z-10 pointer-events-none">
               </div>
 
-              <!-- Number -->
+              <!-- Top Bar: Badge & Number -->
+              <div class="absolute top-5 left-5 z-20">
+                <span
+                  class="inline-block bg-[#f9c591]/20 backdrop-blur-md px-3.5 py-1 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold border border-[#f9c591]/30 shadow-sm">
+                  TOOLS HUB
+                </span>
+              </div>
               <div
-                class="absolute top-4 right-6 text-6xl md:text-8xl font-headline italic font-bold text-white/20 z-10 select-none">
+                class="absolute top-3 right-5 text-6xl md:text-7xl font-headline italic font-bold text-white/15 z-10 select-none">
                 01
               </div>
 
-              <!-- Content -->
-              <div class="absolute bottom-0 left-0 w-full z-20 flex flex-col justify-end p-6 md:p-8">
+              <!-- Full uncropped screenshot displayed cleanly in the card view -->
+              <div
+                class="absolute inset-x-4 top-16 bottom-36 flex items-center justify-center z-15 pointer-events-none">
+                <img src="/images/toolsjoelxorbit.png" alt="JoelX Orbit Tools"
+                  class="w-full h-full object-contain rounded-xl drop-shadow-2xl transition-transform duration-500 group-hover:scale-105">
+              </div>
+
+              <!-- Bottom Content: Title & Description -->
+              <div class="absolute bottom-0 left-0 w-full z-20 flex flex-col justify-end p-6 md:p-7">
                 <h3
-                  class="text-white font-headline italic text-2xl md:text-3xl mb-2 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">
-                  JoelX Orbit Tools</h3>
-                <p class="text-gray-400 text-sm md:text-[15px] leading-relaxed">
-                  Generate professional certificates and create custom QR codes instantly in one unified platform.
+                  class="text-white font-headline italic text-2xl md:text-3xl mb-1.5 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">
+                  JoelX Orbit Tools
+                </h3>
+                <p class="text-gray-400 text-xs sm:text-[13px] leading-relaxed line-clamp-2">
+                  Generate professional certificates, create custom QR codes, and convert media in one unified platform.
                 </p>
               </div>
             </div>
 
             <!-- Product 2: Sindhai IDE -->
             <div
-              class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/10 overflow-hidden"
+              class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/15 hover:border-[#f9c591]/40 transition-all duration-300 overflow-hidden"
               onclick="window.open('https://apps.microsoft.com/store/detail/XPDNSMWSJBNGVQ', '_blank')">
 
-              <img src="/images/sinthai.png" alt="சிந்தை IDE"
-                class="w-full h-full object-cover object-center absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300 z-0">
-
-              <div class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/80 to-transparent z-10"></div>
+              <img src="/images/sinthai.png" alt="" aria-hidden="true"
+                class="w-full h-full object-cover object-center absolute inset-0 opacity-20 blur-xl scale-125 z-0 pointer-events-none">
 
               <div
-                class="absolute top-[45%] left-6 -translate-y-1/2 bg-[#f9c591]/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold z-20 border border-[#f9c591]/30">
-                TAMIL IDE
+                class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/50 to-[#0e0e0e]/20 z-10 pointer-events-none">
               </div>
 
+              <div class="absolute top-5 left-5 z-20">
+                <span
+                  class="inline-block bg-[#f9c591]/20 backdrop-blur-md px-3.5 py-1 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold border border-[#f9c591]/30 shadow-sm">
+                  TAMIL IDE
+                </span>
+              </div>
               <div
-                class="absolute top-4 right-6 text-6xl md:text-8xl font-headline italic font-bold text-white/20 z-10 select-none">
+                class="absolute top-3 right-5 text-6xl md:text-7xl font-headline italic font-bold text-white/15 z-10 select-none">
                 02
               </div>
 
-              <div class="absolute bottom-0 left-0 w-full z-20 flex flex-col justify-end p-6 md:p-8">
+              <div
+                class="absolute inset-x-4 top-16 bottom-36 flex items-center justify-center z-15 pointer-events-none">
+                <img src="/images/sinthai.png" alt="சிந்தை IDE"
+                  class="w-full h-full object-contain rounded-xl drop-shadow-2xl transition-transform duration-500 group-hover:scale-105">
+              </div>
+
+              <div class="absolute bottom-0 left-0 w-full z-20 flex flex-col justify-end p-6 md:p-7">
                 <h3
-                  class="text-white font-headline italic text-2xl md:text-3xl mb-2 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">
-                  சிந்தை IDE</h3>
-                <p class="text-gray-400 text-sm md:text-[15px] leading-relaxed">
+                  class="text-white font-headline italic text-2xl md:text-3xl mb-1.5 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">
+                  சிந்தை IDE
+                </h3>
+                <p class="text-gray-400 text-xs sm:text-[13px] leading-relaxed line-clamp-2">
                   A beginner-friendly Tamil programming language and IDE published on the Microsoft Store.
+                </p>
+              </div>
+            </div>
+
+            <!-- Product 3: Video Converter -->
+            <div
+              class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/15 hover:border-[#f9c591]/40 transition-all duration-300 overflow-hidden"
+              onclick="window.open('https://tools.joelxorbit.in/videoconvert', '_blank')">
+
+              <img src="/images/videoconverter.png" alt="" aria-hidden="true"
+                class="w-full h-full object-cover object-center absolute inset-0 opacity-20 blur-xl scale-125 z-0 pointer-events-none">
+
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/50 to-[#0e0e0e]/20 z-10 pointer-events-none">
+              </div>
+
+              <div class="absolute top-5 left-5 z-20">
+                <span
+                  class="inline-block bg-[#f9c591]/20 backdrop-blur-md px-3.5 py-1 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold border border-[#f9c591]/30 shadow-sm">
+                  VIDEO CONVERTER
+                </span>
+              </div>
+              <div
+                class="absolute top-3 right-5 text-6xl md:text-7xl font-headline italic font-bold text-white/15 z-10 select-none">
+                03
+              </div>
+
+              <div
+                class="absolute inset-x-4 top-16 bottom-36 flex items-center justify-center z-15 pointer-events-none">
+                <img src="/images/videoconverter.png" alt="Free Social Media Video Downloader & Converter"
+                  class="w-full h-full object-contain rounded-xl drop-shadow-2xl transition-transform duration-500 group-hover:scale-105">
+              </div>
+
+              <div class="absolute bottom-0 left-0 w-full z-20 flex flex-col justify-end p-6 md:p-7">
+                <h3
+                  class="text-white font-headline italic text-2xl md:text-3xl mb-1.5 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">
+                  Video Converter &amp; Downloader
+                </h3>
+                <p class="text-gray-400 text-xs sm:text-[13px] leading-relaxed line-clamp-2">
+                  Free Social Media Video Downloader &amp; Converter for MP4, MP3, and HD video extraction.
+                </p>
+              </div>
+            </div>
+
+            <!-- Product 4: Image Converter -->
+            <div
+              class="swiper-slide relative bg-[#131313] rounded-2xl group cursor-pointer border border-[#f9c591]/15 hover:border-[#f9c591]/40 transition-all duration-300 overflow-hidden"
+              onclick="window.open('https://tools.joelxorbit.in/imageconvert', '_blank')">
+
+              <img src="/images/imageconverter.png" alt="" aria-hidden="true"
+                class="w-full h-full object-cover object-center absolute inset-0 opacity-20 blur-xl scale-125 z-0 pointer-events-none">
+
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/50 to-[#0e0e0e]/20 z-10 pointer-events-none">
+              </div>
+
+              <div class="absolute top-5 left-5 z-20">
+                <span
+                  class="inline-block bg-[#f9c591]/20 backdrop-blur-md px-3.5 py-1 rounded-full text-[#f9c591] font-label text-[10px] uppercase tracking-widest font-bold border border-[#f9c591]/30 shadow-sm">
+                  IMAGE CONVERTER
+                </span>
+              </div>
+              <div
+                class="absolute top-3 right-5 text-6xl md:text-7xl font-headline italic font-bold text-white/15 z-10 select-none">
+                04
+              </div>
+
+              <div
+                class="absolute inset-x-4 top-16 bottom-36 flex items-center justify-center z-15 pointer-events-none">
+                <img src="/images/imageconverter.png" alt="Free Image Converter Online"
+                  class="w-full h-full object-contain rounded-xl drop-shadow-2xl transition-transform duration-500 group-hover:scale-105">
+              </div>
+
+              <div class="absolute bottom-0 left-0 w-full z-20 flex flex-col justify-end p-6 md:p-7">
+                <h3
+                  class="text-white font-headline italic text-2xl md:text-3xl mb-1.5 drop-shadow-lg group-hover:text-[#f9c591] transition-colors">
+                  Online Image Converter
+                </h3>
+                <p class="text-gray-400 text-xs sm:text-[13px] leading-relaxed line-clamp-2">
+                  Fast online converter for PNG, JPG, WebP, AVIF, and PDF formats with lossless quality.
                 </p>
               </div>
             </div>
@@ -590,13 +580,16 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
           <!-- Basic Plan -->
-          <div class="pricing-card flex flex-col justify-between cursor-pointer" onclick="openDynamicModal('Basic', 6999)">
+          <div class="pricing-card flex flex-col justify-between cursor-pointer"
+            onclick="openDynamicModal('Basic', 6999)">
             <div>
               <div class="flex items-center justify-between mb-2">
                 <h3 class="font-headline italic text-2xl text-white">Basic</h3>
-                <span class="text-[11px] font-label px-2.5 py-0.5 rounded-full bg-white/5 text-gray-400 border border-white/10 uppercase tracking-wider font-semibold">Starter</span>
+                <span
+                  class="text-[11px] font-label px-2.5 py-0.5 rounded-full bg-white/5 text-gray-400 border border-white/10 uppercase tracking-wider font-semibold">Starter</span>
               </div>
-              <p class="text-xs text-gray-400 mb-4 font-body">Essential web presence for individuals, portfolios &amp; local businesses.</p>
+              <p class="text-xs text-gray-400 mb-4 font-body">Essential web presence for individuals, portfolios &amp;
+                local businesses.</p>
               <div class="mb-6">
                 <span class="price-value text-4xl font-bold text-[#f9c591]" data-base-price="6999">₹6,999</span>
                 <span class="text-xs text-gray-500 font-mono ml-1">/ project</span>
@@ -655,9 +648,12 @@
             <div>
               <div class="flex items-center justify-between mb-2">
                 <h3 class="font-headline italic text-3xl text-white">Silver</h3>
-                <span class="text-[11px] font-label px-2.5 py-0.5 rounded-full bg-[#f9c591]/15 text-[#f9c591] border border-[#f9c591]/30 uppercase tracking-wider font-bold">Pro Business</span>
+                <span
+                  class="text-[11px] font-label px-2.5 py-0.5 rounded-full bg-[#f9c591]/15 text-[#f9c591] border border-[#f9c591]/30 uppercase tracking-wider font-bold">Pro
+                  Business</span>
               </div>
-              <p class="text-xs text-gray-300 mb-4 font-body">Complete digital solution for growing companies, service providers &amp; startups.</p>
+              <p class="text-xs text-gray-300 mb-4 font-body">Complete digital solution for growing companies, service
+                providers &amp; startups.</p>
               <div class="mb-6">
                 <span class="price-value text-5xl font-bold text-[#f9c591]" data-base-price="15000">₹15,000</span>
                 <span class="text-xs text-gray-400 font-mono ml-1">/ project</span>
@@ -712,13 +708,16 @@
           </div>
 
           <!-- Gold Plan -->
-          <div class="pricing-card flex flex-col justify-between cursor-pointer" onclick="openDynamicModal('Gold', 25000)">
+          <div class="pricing-card flex flex-col justify-between cursor-pointer"
+            onclick="openDynamicModal('Gold', 25000)">
             <div>
               <div class="flex items-center justify-between mb-2">
                 <h3 class="font-headline italic text-2xl text-white">Gold</h3>
-                <span class="text-[11px] font-label px-2.5 py-0.5 rounded-full bg-amber-400/10 text-amber-300 border border-amber-400/25 uppercase tracking-wider font-bold">Enterprise</span>
+                <span
+                  class="text-[11px] font-label px-2.5 py-0.5 rounded-full bg-amber-400/10 text-amber-300 border border-amber-400/25 uppercase tracking-wider font-bold">Enterprise</span>
               </div>
-              <p class="text-xs text-gray-400 mb-4 font-body">Full-stack dynamic web applications, portals &amp; custom software systems.</p>
+              <p class="text-xs text-gray-400 mb-4 font-body">Full-stack dynamic web applications, portals &amp; custom
+                software systems.</p>
               <div class="mb-6">
                 <span class="price-value text-4xl font-bold text-[#f9c591]" data-base-price="25000">₹25,000</span>
                 <span class="text-xs text-gray-500 font-mono ml-1">/ project</span>
@@ -1084,7 +1083,7 @@
                 grabCursor: true,
                 centeredSlides: true,
                 slidesPerView: "auto",
-                loop: false,
+                loop: true,
                 coverflowEffect: {
                   rotate: 15,
                   stretch: 0,
