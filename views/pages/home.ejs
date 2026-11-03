@@ -625,17 +625,18 @@
               <select id="currencySelector"
                 class="appearance-none bg-[#131313] text-white font-label text-sm outline-none cursor-pointer pl-2 pr-6 py-1 border-none focus:ring-0"
                 style="background-color: #131313 !important;">
+                <option class="bg-[#131313] text-white" value="INR" selected>INR (₹)</option>
                 <option class="bg-[#131313] text-white" value="USD">USD ($)</option>
                 <option class="bg-[#131313] text-white" value="EUR">EUR (€)</option>
                 <option class="bg-[#131313] text-white" value="GBP">GBP (£)</option>
-                <option class="bg-[#131313] text-white" value="INR">INR (₹)</option>
+                <option class="bg-[#131313] text-white" value="AED">AED (AED)</option>
+                <option class="bg-[#131313] text-white" value="SGD">SGD (S$)</option>
+                <option class="bg-[#131313] text-white" value="MYR">MYR (RM)</option>
                 <option class="bg-[#131313] text-white" value="VND">VND (₫)</option>
                 <option class="bg-[#131313] text-white" value="PLN">PLN (zł)</option>
                 <option class="bg-[#131313] text-white" value="BRL">BRL (R$)</option>
                 <option class="bg-[#131313] text-white" value="MXN">MXN ($)</option>
                 <option class="bg-[#131313] text-white" value="UAH">UAH (₴)</option>
-                <option class="bg-[#131313] text-white" value="MYR">MYR (RM)</option>
-                <option class="bg-[#131313] text-white" value="SGD">SGD (S$)</option>
               </select>
               <div
                 class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 flex items-center text-gray-400">
@@ -648,99 +649,184 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
           <!-- Basic Plan -->
-          <div class="pricing-card cursor-pointer" onclick="openDynamicModal('Basic', 29)">
-            <h3 class="font-headline italic text-2xl text-white mb-2">Basic</h3>
-            <div class="mb-6">
-              <span class="price-value text-4xl font-bold text-[#f9c591]" data-base-price="29">$29</span>
+          <div class="pricing-card flex flex-col justify-between cursor-pointer" onclick="openDynamicModal('Basic', 6999)">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-headline italic text-2xl text-white">Basic</h3>
+                <span class="text-[11px] font-label px-2.5 py-0.5 rounded-full bg-white/5 text-gray-400 border border-white/10 uppercase tracking-wider font-semibold">Starter</span>
+              </div>
+              <p class="text-xs text-gray-400 mb-4 font-body">Essential web presence for individuals, portfolios &amp; local businesses.</p>
+              <div class="mb-6">
+                <span class="price-value text-4xl font-bold text-[#f9c591]" data-base-price="6999">₹6,999</span>
+                <span class="text-xs text-gray-500 font-mono ml-1">/ project</span>
+              </div>
+              <div class="space-y-3 mb-8 text-gray-300">
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Up to 3 Custom Web Pages (Home, About, Contact)</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">100% Mobile, Tablet &amp; Desktop Responsive</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Direct Contact Form &amp; Email Inquiry Routing</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Instant WhatsApp Click-to-Chat Button</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Free SSL Certificate (HTTPS Encryption)</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Basic On-Page SEO (Meta Tags, Title, Favicon)</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Google Maps &amp; Social Media Profile Linking</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">High-Speed Image &amp; Asset Optimization</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">1 Year Free Technical Support &amp; Maintenance</span>
+                </div>
+              </div>
             </div>
-            <div class="space-y-4 mb-8 text-gray-300">
-              <div class="pricing-feature">
-                <span class="material-symbols-outlined text-[#f9c591]">check_circle</span>
-                <span>Static web site</span>
-              </div>
-              <div class="pricing-feature">
-                <span class="material-symbols-outlined text-[#f9c591]">check_circle</span>
-                <span>Two pages</span>
-              </div>
-              <div class="pricing-feature">
-                <span class="material-symbols-outlined text-[#f9c591]">check_circle</span>
-                <span>Default domain</span>
-              </div>
-            </div>
-            <button onclick="openDynamicModal('Basic', 29); event.stopPropagation();"
-              class="w-full py-3 rounded-full border border-[#f9c591]/50 text-[#f9c591] font-label font-bold tracking-widest hover:bg-[#f9c591]/10 transition-colors">
+            <button onclick="openDynamicModal('Basic', 6999); event.stopPropagation();"
+              class="w-full py-3.5 rounded-full border border-[#f9c591]/50 text-[#f9c591] font-label font-bold tracking-widest hover:bg-[#f9c591]/10 transition-colors mt-auto">
               Get Started
             </button>
           </div>
 
           <!-- Silver Plan (Popular) -->
-          <div class="pricing-card popular transform md:-translate-y-4 cursor-pointer"
-            onclick="openDynamicModal('Silver', 59)">
+          <div class="pricing-card popular flex flex-col justify-between transform md:-translate-y-4 cursor-pointer"
+            onclick="openDynamicModal('Silver', 15000)">
             <div
-              class="absolute top-0 right-0 bg-gradient-to-r from-[#f9c591] to-[#e8a86a] text-[#0e0e0e] text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-bl-xl">
+              class="absolute top-0 right-0 bg-gradient-to-r from-[#f9c591] to-[#e8a86a] text-[#0e0e0e] text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-bl-xl shadow-md">
               Most Popular</div>
-            <h3 class="font-headline italic text-3xl text-white mb-2">Silver</h3>
-            <div class="mb-6">
-              <span class="price-value text-5xl font-bold text-[#f9c591]" data-base-price="59">$59</span>
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-headline italic text-3xl text-white">Silver</h3>
+                <span class="text-[11px] font-label px-2.5 py-0.5 rounded-full bg-[#f9c591]/15 text-[#f9c591] border border-[#f9c591]/30 uppercase tracking-wider font-bold">Pro Business</span>
+              </div>
+              <p class="text-xs text-gray-300 mb-4 font-body">Complete digital solution for growing companies, service providers &amp; startups.</p>
+              <div class="mb-6">
+                <span class="price-value text-5xl font-bold text-[#f9c591]" data-base-price="15000">₹15,000</span>
+                <span class="text-xs text-gray-400 font-mono ml-1">/ project</span>
+              </div>
+              <div class="space-y-3 mb-8 text-gray-300">
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Up to 10 High-Performance Custom Web Pages</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Premium UI/UX Design &amp; Smooth Interactive Animations</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Custom Domain Integration (.com / .in setup)</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Advanced On-Page SEO (Schema JSON-LD, Sitemap &amp; Robots)</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Interactive Portfolio, Gallery &amp; Services Showcase</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Lead Capture Forms with Email Alerts &amp; Anti-Spam</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Floating WhatsApp Chat &amp; Click-to-Call CTAs</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Google Analytics &amp; Search Console Integration</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Core Web Vitals &amp; PageSpeed 90+ Score</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">1 Year Dedicated Technical Support &amp; Maintenance</span>
+                </div>
+              </div>
             </div>
-            <div class="space-y-4 mb-8 text-gray-300">
-              <div class="pricing-feature">
-                <span class="material-symbols-outlined text-[#f9c591]">check_circle</span>
-                <span>Static web site</span>
-              </div>
-              <div class="pricing-feature">
-                <span class="material-symbols-outlined text-[#f9c591]">check_circle</span>
-                <span>SEO integration</span>
-              </div>
-              <div class="pricing-feature">
-                <span class="material-symbols-outlined text-[#f9c591]">check_circle</span>
-                <span>10 Pages</span>
-              </div>
-              <div class="pricing-feature">
-                <span class="material-symbols-outlined text-[#f9c591]">check_circle</span>
-                <span>Custom domain</span>
-              </div>
-            </div>
-            <button onclick="openDynamicModal('Silver', 59); event.stopPropagation();"
-              class="w-full py-4 rounded-full bg-gradient-to-r from-[#f9c591] to-[#e8a86a] text-[#0e0e0e] font-label font-bold tracking-widest hover:scale-[1.02] transition-transform shadow-lg shadow-[#f9c591]/20">
+            <button onclick="openDynamicModal('Silver', 15000); event.stopPropagation();"
+              class="w-full py-4 rounded-full bg-gradient-to-r from-[#f9c591] to-[#e8a86a] text-[#0e0e0e] font-label font-bold tracking-widest hover:scale-[1.02] transition-transform shadow-lg shadow-[#f9c591]/20 mt-auto">
               Choose Silver
             </button>
           </div>
 
           <!-- Gold Plan -->
-          <div class="pricing-card cursor-pointer" onclick="openDynamicModal('Gold', 109)">
-            <h3 class="font-headline italic text-2xl text-white mb-2">Gold</h3>
-            <div class="mb-6">
-              <span class="price-value text-4xl font-bold text-[#f9c591]" data-base-price="109">$109</span>
+          <div class="pricing-card flex flex-col justify-between cursor-pointer" onclick="openDynamicModal('Gold', 25000)">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-headline italic text-2xl text-white">Gold</h3>
+                <span class="text-[11px] font-label px-2.5 py-0.5 rounded-full bg-amber-400/10 text-amber-300 border border-amber-400/25 uppercase tracking-wider font-bold">Enterprise</span>
+              </div>
+              <p class="text-xs text-gray-400 mb-4 font-body">Full-stack dynamic web applications, portals &amp; custom software systems.</p>
+              <div class="mb-6">
+                <span class="price-value text-4xl font-bold text-[#f9c591]" data-base-price="25000">₹25,000</span>
+                <span class="text-xs text-gray-500 font-mono ml-1">/ project</span>
+              </div>
+              <div class="space-y-3 mb-8 text-gray-300">
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Full-Stack Dynamic Web Application Architecture</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Unlimited Custom Pages &amp; Modular Scale</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Secure Database (PostgreSQL / MongoDB / Firebase / SQL)</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">User Authentication &amp; Role-Based Access Control</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Payment Gateway Integration (Razorpay, Stripe, UPI)</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Custom Admin Dashboard &amp; CMS Management Portal</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">RESTful API Architecture &amp; 3rd-Party Integrations</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Automated Cloud Backups &amp; DDoS Security Shield</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">Custom Domain, Corporate Email &amp; Cloud Hosting</span>
+                </div>
+                <div class="pricing-feature flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#f9c591] text-lg shrink-0 mt-0.5">check_circle</span>
+                  <span class="text-sm">3 Years Priority Technical Support &amp; Updates</span>
+                </div>
+              </div>
             </div>
-            <div class="space-y-4 mb-8 text-gray-300">
-              <div class="pricing-feature">
-                <span class="material-symbols-outlined text-[#f9c591]">check_circle</span>
-                <span>Dynamic web site</span>
-              </div>
-              <div class="pricing-feature">
-                <span class="material-symbols-outlined text-[#f9c591]">check_circle</span>
-                <span>SEO integration</span>
-              </div>
-              <div class="pricing-feature">
-                <span class="material-symbols-outlined text-[#f9c591]">check_circle</span>
-                <span>Numbers of pages if need</span>
-              </div>
-              <div class="pricing-feature">
-                <span class="material-symbols-outlined text-[#f9c591]">check_circle</span>
-                <span>Data Base integration</span>
-              </div>
-              <div class="pricing-feature">
-                <span class="material-symbols-outlined text-[#f9c591]">check_circle</span>
-                <span>3 Years Support technical</span>
-              </div>
-              <div class="pricing-feature">
-                <span class="material-symbols-outlined text-[#f9c591]">check_circle</span>
-                <span>Custom domain</span>
-              </div>
-            </div>
-            <button onclick="openDynamicModal('Gold', 109); event.stopPropagation();"
-              class="w-full py-3 rounded-full border border-[#f9c591]/50 text-[#f9c591] font-label font-bold tracking-widest hover:bg-[#f9c591]/10 transition-colors">
+            <button onclick="openDynamicModal('Gold', 25000); event.stopPropagation();"
+              class="w-full py-3.5 rounded-full border border-[#f9c591]/50 text-[#f9c591] font-label font-bold tracking-widest hover:bg-[#f9c591]/10 transition-colors mt-auto">
               Go Gold
             </button>
           </div>
@@ -750,46 +836,56 @@
         <script>
           document.addEventListener('DOMContentLoaded', () => {
             const exchangeRates = {
-              'USD': { rate: 1, symbol: '$' },
-              'EUR': { rate: 0.92, symbol: '€' },
-              'GBP': { rate: 0.79, symbol: '£' },
-              'INR': { rate: 83.5, symbol: '₹' },
-              'VND': { rate: 25400, symbol: '₫' },
-              'PLN': { rate: 4.05, symbol: 'zł' },
-              'BRL': { rate: 5.45, symbol: 'R$' },
-              'MXN': { rate: 18.20, symbol: '$' },
-              'UAH': { rate: 41.50, symbol: '₴' },
-              'MYR': { rate: 4.75, symbol: 'RM' },
-              'SGD': { rate: 1.35, symbol: 'S$' }
+              'INR': { rate: 1, symbol: '₹', isINR: true },
+              'USD': { rate: 1 / 84, symbol: '$' },
+              'EUR': { rate: 1 / 91, symbol: '€' },
+              'GBP': { rate: 1 / 108, symbol: '£' },
+              'AED': { rate: 1 / 22.8, symbol: 'AED ' },
+              'SGD': { rate: 1 / 63, symbol: 'S$' },
+              'MYR': { rate: 1 / 19, symbol: 'RM' },
+              'VND': { rate: 300, symbol: '₫' },
+              'PLN': { rate: 1 / 21, symbol: 'zł' },
+              'BRL': { rate: 1 / 15, symbol: 'R$' },
+              'MXN': { rate: 1 / 4.6, symbol: '$' },
+              'UAH': { rate: 1 / 2, symbol: '₴' }
             };
 
             const currencySelector = document.getElementById('currencySelector');
             const priceElements = document.querySelectorAll('.price-value');
 
-            currencySelector.addEventListener('change', (e) => {
-              const selectedCurrency = e.target.value;
-              const { rate, symbol } = exchangeRates[selectedCurrency];
+            if (currencySelector) {
+              currencySelector.addEventListener('change', (e) => {
+                const selectedCurrency = e.target.value;
+                const { rate, symbol, isINR } = exchangeRates[selectedCurrency] || { rate: 1, symbol: '₹', isINR: true };
 
-              priceElements.forEach(el => {
-                const basePrice = parseFloat(el.getAttribute('data-base-price'));
-                const convertedPrice = Math.round(basePrice * rate);
-                el.textContent = `${symbol}${convertedPrice}`;
+                priceElements.forEach(el => {
+                  const basePrice = parseFloat(el.getAttribute('data-base-price'));
+                  if (isINR) {
+                    el.textContent = `${symbol}${basePrice.toLocaleString('en-IN')}`;
+                  } else {
+                    const convertedPrice = Math.round(basePrice * rate);
+                    el.textContent = `${symbol}${convertedPrice.toLocaleString()}`;
+                  }
+                });
               });
-            });
+            }
 
             window.getCurrentCurrencyInfo = function () {
-              const selectedCurrency = currencySelector.value;
-              return exchangeRates[selectedCurrency];
+              const selectedCurrency = currencySelector ? currencySelector.value : 'INR';
+              return exchangeRates[selectedCurrency] || { rate: 1, symbol: '₹', isINR: true };
             };
           });
 
           window.openDynamicModal = function (pkg, basePrice) {
-            let finalPrice = basePrice;
+            let finalPrice = `₹${Number(basePrice).toLocaleString('en-IN')}`;
             if (window.getCurrentCurrencyInfo) {
-              const { rate, symbol } = window.getCurrentCurrencyInfo();
-              finalPrice = `${symbol}${Math.round(basePrice * rate)}`;
-            } else {
-              finalPrice = `$${basePrice}`;
+              const { rate, symbol, isINR } = window.getCurrentCurrencyInfo();
+              if (isINR) {
+                finalPrice = `${symbol}${Number(basePrice).toLocaleString('en-IN')}`;
+              } else {
+                const converted = Math.round(basePrice * rate);
+                finalPrice = `${symbol}${converted.toLocaleString()}`;
+              }
             }
             if (typeof openGetInTouchModal === 'function') {
               openGetInTouchModal(pkg, finalPrice);
