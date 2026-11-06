@@ -1,5 +1,10 @@
 [
   {
+    "slug": "how-to-use-rea-reverse-engineering-guide",
+    "title": "How to Use REA: Step-by-Step Guide to the Reverse Engineer Anything GitHub Tool",
+    "primaryKeyword": "how to use rea"
+  },
+  {
     "slug": "step-by-step-rag-model-creation-deployment-guide",
     "title": "Step-by-Step Guide to Building and Deploying a Production RAG Model: From Document Chunking to Cloud API",
     "primaryKeyword": "RAG Model Creation and Deployment"
