@@ -10,6 +10,7 @@ const categories = [
   "Data & AI"
 ];
 
+const ragDeploymentArticle = require('./article-rag-deployment');
 const microsoftLayoffsArticle = require('./article-microsoft-layoffs');
 const phpSecurityArticle = require('./article-php-security');
 const batch1 = require('./articles-1-10');
@@ -18,6 +19,7 @@ const batch3 = require('./articles-21-30');
 const batch4 = require('./articles-31-40');
 
 const blogs = [
+  ragDeploymentArticle,
   microsoftLayoffsArticle,
   phpSecurityArticle,
   ...batch1,
